@@ -326,30 +326,4 @@ const FeatureItem: React.FC<{ title: string; description: string }> = ({
   </div>
 );
 
-// const Testimonial: React.FC<{
-//   name: string;
-//   position: string;
-//   message: string;
-// }> = ({ name, position, message }) => (
-//   <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-//     <p className="text-gray-700 mb-4">“{message}”</p>
-//     <h4 className="font-semibold text-lg">{name}</h4>
-//     <span className="text-sm text-gray-500">{position}</span>
-//   </div>
-// );
-
-const PricingItem: React.FC<{
-  product: string;
-  price: string;
-  validity: string;
-}> = ({ product, price, validity }) => {
-  return (
-    <div className="border max-w-6xl md:w-full mx-auto rounded-lg shadow-md bg-white p-6 transition-transform transform hover:scale-105">
-      <h3 className="text-xl font-semibold mb-4">{product}</h3>
-      <p className="text-2xl font-bold text-red-600">{price}</p>
-      <p className="text-gray-500 mt-2">{validity}</p>
-    </div>
-  );
-};
-
 export default CompleteCallManagementSolution;

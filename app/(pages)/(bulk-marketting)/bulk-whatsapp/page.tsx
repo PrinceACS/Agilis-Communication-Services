@@ -126,28 +126,6 @@ const BulkWhatsappPage: React.FC = () => {
     },
   ];
 
-  // Blog section for additional user education
-  const blogs = [
-    {
-      title: "5 Reasons Why WhatsApp Marketing is a Game-Changer",
-      description:
-        "Learn how WhatsApp can revolutionize your marketing efforts with its high engagement rates, global reach, and personal touch.",
-      link: "/blog/whatsapp-marketing-benefits",
-    },
-    {
-      title: "How to Build an Effective WhatsApp Marketing Strategy",
-      description:
-        "From segmenting your audience to crafting personalized messages, discover the key steps to launching a successful WhatsApp campaign.",
-      link: "/blog/whatsapp-strategy",
-    },
-    {
-      title: "Compliance Tips for WhatsApp Marketing",
-      description:
-        "Ensure your WhatsApp marketing campaigns adhere to legal guidelines with these essential compliance tips.",
-      link: "/blog/whatsapp-compliance",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-gray-100 text-gray-600">
       {/* Hero Section */}

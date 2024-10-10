@@ -14,8 +14,6 @@ import {
   Zap,
   Clock,
   ThumbsUp,
-  Mail,
-  Phone,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import ivr from "@/public/ivr.jpg";
@@ -229,66 +227,6 @@ const FeaturesSection: React.FC = () => (
           transition={{ duration: 0.5, delay: index * 0.1 }}
         >
           <FeatureCard {...feature} />
-        </motion.div>
-      ))}
-    </div>
-  </section>
-);
-
-const BenefitsSection: React.FC = () => (
-  <section
-    id="benefits"
-    className="py-20 px-10 rounded-3xl"
-    style={{ backgroundColor: theme.secondary, color: theme.primary }}
-  >
-    <h2
-      className="text-4xl font-bold mb-12 text-center"
-      style={{ color: theme.primary }}
-    >
-      Benefits of IVR
-    </h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-      {[
-        {
-          title: "Cost Reduction",
-          description:
-            "Minimize operational costs by automating routine inquiries and reducing the need for live agents.",
-          icon: <FaDollarSign />,
-        },
-        {
-          title: "Improved Efficiency",
-          description:
-            "Handle high call volumes seamlessly, reducing wait times and improving overall service quality.",
-          icon: <FaChartLine />,
-        },
-        {
-          title: "Enhanced Customer Experience",
-          description:
-            "Provide quick, accurate responses to customer queries, available 24/7.",
-          icon: <FaHeadset />,
-        },
-        {
-          title: "Data-Driven Insights",
-          description:
-            "Gather valuable data on customer interactions to inform business decisions and improve services.",
-          icon: <FaDatabase />,
-        },
-      ].map((benefit, index) => (
-        <motion.div
-          key={benefit.title}
-          className="bg-white text-gray-900 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
-        >
-          <div
-            className="flex items-center mb-4 text-3xl"
-            style={{ color: theme.accent }}
-          >
-            {benefit.icon}
-            <h3 className="ml-4 text-xl font-semibold">{benefit.title}</h3>
-          </div>
-          <p className="text-base">{benefit.description}</p>
         </motion.div>
       ))}
     </div>

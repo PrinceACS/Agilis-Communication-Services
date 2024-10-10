@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import {
   FaPhoneAlt,
   FaRobot,
@@ -130,28 +130,6 @@ const BulkVoiceCallPage: React.FC = () => {
       question: "Is there a limit on the number of recipients?",
       answer:
         "No, our platform allows you to send voice calls to an unlimited number of recipients, ensuring wide reach for your campaigns.",
-    },
-  ];
-
-  // Blog section for further insights
-  const blogs = [
-    {
-      title: "Why Bulk Voice Marketing is Essential for Customer Engagement",
-      description:
-        "Explore how voice marketing can revolutionize your customer engagement strategy.",
-      link: "/blog/bulk-voice-marketing-essentials",
-    },
-    {
-      title: "How to Optimize Your Voice Campaigns for Maximum ROI",
-      description:
-        "Learn the best practices for running cost-effective and impactful voice campaigns.",
-      link: "/blog/voice-campaign-optimization",
-    },
-    {
-      title: "Compliance Guidelines for Voice Call Campaigns",
-      description:
-        "Understand the legal requirements and best practices for running compliant voice call campaigns.",
-      link: "/blog/voice-call-compliance",
     },
   ];
 

@@ -114,10 +114,6 @@ export const CTACallToAction = () => {
     setShowDialog(true);
   };
 
-  const closeDialog = () => {
-    setShowDialog(false);
-  };
-
   return (
     <div className="space-y-6">
       <button
