@@ -2,9 +2,7 @@ import Image from "next/image";
 import React from "react";
 import ivr_benefits from "@/public/images/ivr_benefits.png";
 
-type Props = {};
-
-const Benefits = (props: Props) => {
+const Benefits = () => {
   return (
     <div className="my-16 mx-auto max-w-7xl px-6">
       {/* Header Section */}

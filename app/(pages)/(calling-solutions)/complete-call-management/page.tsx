@@ -38,8 +38,6 @@ const faqItems = [
 const CompleteCallManagementSolution: React.FC = () => {
   const faqRef = useRef<HTMLDivElement>(null);
   const isFaqInView = useInView(faqRef);
-  const autoManualRef = useRef<HTMLDivElement>(null);
-  const isAutoManualInView = useInView(autoManualRef);
 
   return (
     <div className="bg-white">

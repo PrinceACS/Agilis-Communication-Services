@@ -1,10 +1,7 @@
-import { title } from "process";
 import { useState } from "react"; // To handle toggle state
 
 // Sample data imports (or you can use actual imports)
 import { FaPhone, FaWhatsapp, FaSms, FaCloud, FaRobot } from "react-icons/fa";
-import { FiSettings } from "react-icons/fi";
-import { MdOutlineContactPhone } from "react-icons/md";
 
 // Accordion component for each category
 const Accordion = ({
@@ -75,11 +72,11 @@ const MobileNavbar = () => {
     //   href: "/call-masking",
     //   icon: <FaWhatsapp className="h-5 w-5 text-[#f8e67e]" />,
     // },
-    {
-      title: "Dialer",
-      href: "/dialer",
-      icon: <MdOutlineContactPhone className="h-5 w-5 text-[#f8e67e]" />,
-    },
+    // {
+    //   title: "Dialer",
+    //   href: "/dialer",
+    //   icon: <MdOutlineContactPhone className="h-5 w-5 text-[#f8e67e]" />,
+    // },
     {
       title: "Complete Calling Solutions",
       href: "/complete-call-management",

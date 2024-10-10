@@ -9,9 +9,8 @@ import {
 } from "@/components/ui/dialog";
 
 import Link from "next/link";
-type Props = {};
 
-const LoginModal = (props: Props) => {
+const LoginModal = () => {
   return (
     <DialogContent className="sm:max-w-[425px] bg-white">
       <DialogHeader>

@@ -1,28 +1,75 @@
 # Agilis Communication Services
 
-This codebase is a Next.js application that uses Tailwind CSS for styling. It is built using TypeScript and uses React as the frontend framework. The codebase is organized into several directories, including `app`, `components`, `lib`, and `pages`. The `app` directory contains the main application code, including the entrypoint, routing, and layout components. The `components` directory contains reusable React components that are used throughout the application. The `lib` directory contains utility functions and other miscellaneous code. The `pages` directory contains code for specific pages of the application.
-
-The codebase uses several third-party libraries, including `react-hook-form` for form validation and `react-query` for data fetching and caching.
-
-The codebase uses a monorepo structure, with multiple packages defined in the `package.json` file. The `next` package is used to build and serve the application, and the `tailwindcss` package is used for styling.
-
-The codebase follows a consistent coding style, with all code formatted according to the Prettier code formatter.
-
-The codebase includes a set of automated tests, written using Jest and React Testing Library. The tests are run using the `npm run test` command.
-
-The codebase is configured to use GitHub Actions for continuous integration and continuous deployment. The GitHub Actions configuration is defined in the `.github/workflows` directory.
-
-The codebase is licensed under the MIT license.
 
 ## What is Agilis Communication Services?
 
-Agilis Communication Services is a company that provides Cloud Telephony, Tax & IT services to businesses. This repository contains the codebase for the company's website.
-
+Agilis Communication Services is a company that provides Cloud Telephony, Tax & IT services  to businesses. This repository contains the codebase for the company's website.
 
 ## How to Contribute to this Repo
 
 Contributions are welcome! To contribute to this repository, follow these steps:
 
-### 1. Clone the Repository
+### Step 1: Fork the repository
+Fork this repository by clicking the "Fork" button at the top-right corner of this page. This will create a copy of the repository in your personal GitHub account.
 
-Clone the repository using the following command:
+### Step 2: Clone the repository
+Clone the forked repository to your local machine using the command line:
+
+git clone https://github.com/your-username/agilis-communication-services.git
+
+### Step 3: Install the dependencies
+Install the dependencies using the command line:
+
+npm install
+
+### Step 4: Make your changes
+Make your desired changes to the codebase. This can include fixing bugs, adding new features, updating documentation, etc.
+
+### Step 5: Commit your changes
+Commit your changes using the command line:
+
+git add .
+git commit -m "Your commit message"
+
+### Step 6: Push your changes
+Push your changes to your forked repository on GitHub:
+
+git push origin main
+
+### Step 7: Create a pull request
+Create a pull request to the main branch of this repository. This will alert the maintainers of this repository to review your changes.
+
+
+## Rules and Regulations
+
+The following rules and regulations are in place to ensure the safety and security of this repository:
+
+### 1. Code of Conduct
+
+* Be respectful of others' opinions and contributions.
+* Refrain from using profanity or insults.
+* Do not engage in personal attacks or harassment.
+
+### 2. Code Submissions
+
+* All code submissions must be made through pull requests.
+* Code must be reviewed and approved by at least one other person before being merged.
+* All code must pass automated testing and code style checks.
+
+### 3. Security
+
+* Do not push any sensitive information (such as passwords, API keys, etc.) to this repository.
+* Be careful when pushing third-party code to this repository. Make sure it is safe and secure.
+
+### 4. Intellectual Property
+
+* All code and content submitted to this repository must be owned by the submitter.
+* Do not submit any code or content that belongs to someone else.
+
+### 5. Copyright
+
+* All code and content submitted to this repository must be licensed under the MIT license.
+
+### 6. No Spamming
+
+* Do not post any spam or advertisements on this repository.

@@ -13,11 +13,9 @@ import { CTAButton } from "@/components/cta";
 import Demo from "@/components/company/demo";
 import FNQ from "@/components/company/fnq";
 import Link from "next/link";
-import { Phone, PhoneIcon } from "lucide-react";
+import { PhoneIcon } from "lucide-react";
 
 const DialerPage: React.FC = () => {
-  // Create refs for sections
-  const heroRef = useRef<HTMLDivElement>(null);
   const autoManualRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
   const dialerTypesRef = useRef<HTMLDivElement>(null);

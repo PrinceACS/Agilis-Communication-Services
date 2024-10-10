@@ -17,11 +17,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 const BulkVoiceCallPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<"auto" | "manual">("auto");
-
   // Refs for sections
   const heroRef = useRef<HTMLDivElement>(null);
-  const autoManualRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
   const benefitsRef = useRef<HTMLDivElement>(null);
   const faqRef = useRef<HTMLDivElement>(null);

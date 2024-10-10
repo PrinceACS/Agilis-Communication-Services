@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useRef } from "react";
 import {
-  FaPhoneAlt,
   FaRobot,
   FaUserAlt,
   FaChartLine,
@@ -19,16 +18,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const InboundCallingPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<"basic" | "advanced">("basic");
-
-  // Create refs for sections
-  const heroRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
   const benefitsRef = useRef<HTMLDivElement>(null);
   const faqRef = useRef<HTMLDivElement>(null);
 
-  // Check if the sections are in view
-  const isHeroInView = useInView(heroRef);
   const isFeaturesInView = useInView(featuresRef);
   const isBenefitsInView = useInView(benefitsRef);
   const isFaqInView = useInView(faqRef);

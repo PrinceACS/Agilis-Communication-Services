@@ -1,9 +1,7 @@
 import About from "@/components/company/about";
 import React from "react";
 
-type Props = {};
-
-const AboutPage = (props: Props) => {
+const AboutPage = () => {
   return <About />;
 };
 

@@ -142,7 +142,7 @@ export const CTACallToAction = () => {
               </p>
               <div className="flex items-center justify-center space-x-4 mt-4">
                 <a
-                  href="tel:+91 11 4960 5577"
+                  href="tel:+919810787931"
                   className="bg-primary text-primary-foreground px-4 py-2 rounded-md"
                 >
                   Call Now

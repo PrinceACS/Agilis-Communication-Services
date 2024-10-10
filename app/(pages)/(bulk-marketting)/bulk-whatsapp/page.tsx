@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import {
   FaWhatsapp,
   FaRobot,
@@ -20,16 +20,10 @@ import Link from "next/link";
 
 // Bulk WhatsApp Page
 const BulkWhatsappPage: React.FC = () => {
-  // Refs for sections
-  const heroRef = useRef<HTMLDivElement>(null);
-  const autoManualRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
   const benefitsRef = useRef<HTMLDivElement>(null);
   const faqRef = useRef<HTMLDivElement>(null);
 
-  // Check if the sections are in view
-  const isHeroInView = useInView(heroRef);
-  const isAutoManualInView = useInView(autoManualRef);
   const isFeaturesInView = useInView(featuresRef);
   const isBenefitsInView = useInView(benefitsRef);
   const isFaqInView = useInView(faqRef);

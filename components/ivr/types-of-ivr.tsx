@@ -5,9 +5,7 @@ import Link from "next/link";
 import ivr_toll_free from "@/public/images/toll_free_ivr.png";
 import ten_digit_ivr from "@/public/images/10digit_ivr.png";
 
-type Props = {};
-
-const TypesOfIVR = (props: Props) => {
+const TypesOfIVR = () => {
   return (
     <div className="mt-10 mx-auto px-4 md:px-16 justify-center">
       {/* Section Title */}

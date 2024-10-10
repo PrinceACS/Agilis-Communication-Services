@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const MarketAnalysis = (props: Props) => {
+const MarketAnalysis = () => {
   return (
     <div className="max-w-7xl mx-auto my-10 px-6">
       {/* Section Title */}

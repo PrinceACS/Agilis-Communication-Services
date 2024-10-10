@@ -1,10 +1,8 @@
 "use client";
 import React, { useState, useRef } from "react";
 import {
-  FaSms,
   FaEnvelopeOpenText,
   FaRobot,
-  FaUserAlt,
   FaChartLine,
   FaCogs,
   FaListAlt,
@@ -19,8 +17,6 @@ import bulk_sms_hero from "@/public/images/bulk-sms-hero.jpg";
 import Link from "next/link";
 
 const BulkSMSPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<"auto" | "manual">("auto");
-
   // Create refs for sections
   const heroRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
@@ -28,7 +24,6 @@ const BulkSMSPage: React.FC = () => {
   const faqRef = useRef<HTMLDivElement>(null);
 
   // Check if the sections are in view
-  const isHeroInView = useInView(heroRef);
   const isFeaturesInView = useInView(featuresRef);
   const isBenefitsInView = useInView(benefitsRef);
   const isFaqInView = useInView(faqRef);
