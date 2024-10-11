@@ -5,7 +5,12 @@ import DemoRequestEmail from "@/email/demo-form-email"; // Assuming you have a s
 import React from "react";
 import { getErrorMessage } from "@/lib/utils/utils";
 
+if (!process.env.RESEND_API_KEY) {
+  throw new Error("Missing RESEND_API_KEY");
+}
+
 const resend = new Resend(process.env.RESEND_API_KEY);
+
 
 export type SendEmailArgs = {
   senderEmail: string;
