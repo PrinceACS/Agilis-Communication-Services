@@ -10,7 +10,6 @@ import {
 } from "react-icons/fa";
 import FNQ from "@/components/company/fnq";
 import { motion, useInView } from "framer-motion";
-import Contact from "@/components/company/contact";
 import Demo from "@/components/company/demo";
 import Image from "next/image";
 import bulk_sms_hero from "@/public/images/bulk-sms-hero.jpg";
