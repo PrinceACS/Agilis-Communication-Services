@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Contact from "@/components/company/contact";
 import Testimonial from "@/components/company/Testimonial";
 import Demo from "@/components/company/demo";
