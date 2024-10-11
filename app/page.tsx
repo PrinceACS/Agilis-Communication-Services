@@ -1,7 +1,5 @@
 import HeroSection from "@/components/hero";
 import Services from "@/components/company/services";
-// import Navbar from "@/components/navbar";
-// import Header from "@/components/header";
 import Contact from "@/components/company/contact";
 import Testimonial from "@/components/company/Testimonial";
 import WorkWithUs from "@/components/company/work-wth-us";

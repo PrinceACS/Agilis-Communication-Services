@@ -3,7 +3,7 @@ import { Resend } from "resend";
 import ContactFormEmail from "@/email/contact-form-email";
 import DemoRequestEmail from "@/email/demo-form-email"; // Assuming you have a separate template for demo requests
 import React from "react";
-import { getErrorMessage, validateString } from "@/lib/utils/utils";
+import { getErrorMessage } from "@/lib/utils/utils";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 

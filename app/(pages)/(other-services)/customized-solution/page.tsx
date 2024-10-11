@@ -22,13 +22,7 @@ const CustomizedSolution = () => {
             needs.
           </p>
           <div className="flex flex-col md:flex-row items-center">
-            <div className="w-full md:w-1/2 bg-yellow-400">
-              {/* <Image
-                src={customized_solution}
-                alt="Customized Solution"
-                className="w-full h-auto"
-              /> */}
-            </div>
+            <div className="w-full md:w-1/2 bg-yellow-400"></div>
             <div className="w-full md:w-1/2 px-4 md:px-8">
               <h2 className="text-2xl font-bold mb-4">
                 Benefits of Customized Solution
