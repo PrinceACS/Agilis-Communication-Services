@@ -120,7 +120,7 @@ const CompleteCallManagementSolution: React.FC = () => {
           <p className="text-xl mb-8">
             Agilis Communication Services offers a tailored Autodialer and
             Manaual Dialer Solution that includes a variety of key features
-            designed to improve your business's communication strategies.
+            designed to improve your business&apos;s communication strategies.
           </p>
         </div>
       </section>

@@ -61,8 +61,8 @@ const WhyChooseAgilis = () => {
       >
         <p className="text-xl text-gray-700">
           At Agilis, we empower businesses with innovative solutions designed to
-          drive efficiency, reduce costs, and streamline operations. Here's why
-          businesses choose Agilis as their trusted partner:
+          drive efficiency, reduce costs, and streamline operations. Here&apos;s
+          why businesses choose Agilis as their trusted partner:
         </p>
       </motion.div>
 
