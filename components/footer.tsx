@@ -1,12 +1,22 @@
 import { MailIcon, PhoneIcon, MapPinIcon } from "lucide-react";
 import { FaLinkedinIn } from "react-icons/fa";
+import Image from "next/image";
+import acs_logo from "@/public/acs-logo-removebg-preview.png";
 
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 py-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Company Info */}
-        <div>
+        <div className="">
+          <div className="flex items-start">
+            <Image
+              src={acs_logo}
+              alt="Agilis Communication Services"
+              width={120}
+              height={50}
+            />
+          </div>
           <h3 className="text-lg font-semibold text-white">
             Agilis Communication
           </h3>

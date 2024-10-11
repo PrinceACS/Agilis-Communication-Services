@@ -20,7 +20,7 @@ const Navbar = () => {
         <NavigationMenuList>
           {/* Bulk Marketing */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="text-white hover:text-[#FFD700]">
+            <NavigationMenuTrigger className="text-white ">
               Bulk Marketing
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -52,7 +52,7 @@ const Navbar = () => {
 
           {/* Calling Solutions */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="text-white hover:text-[#FFD700]">
+            <NavigationMenuTrigger className="text-white ">
               Calling Solutions
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -124,13 +124,13 @@ const Navbar = () => {
               <NavigationMenuLink
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  "text-white hover:text-[#FFD700]"
+                  "text-white "
                 )}
               >
                 IVR
               </NavigationMenuLink>
             </Link> */}
-            <NavigationMenuTrigger className="text-white text-md  hover:text-[#FFD700]">
+            <NavigationMenuTrigger className="text-white text-md  ">
               IVR
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -162,7 +162,7 @@ const Navbar = () => {
 
           {/* Other Services */}
           {/* <NavigationMenuItem> */}
-          {/* <NavigationMenuTrigger className="text-white hover:text-[#FFD700]">
+          {/* <NavigationMenuTrigger className="text-white ">
               Other Services
             </NavigationMenuTrigger> */}
           {/* <NavigationMenuContent> */}
@@ -202,10 +202,7 @@ const Navbar = () => {
           {/* Documentation Link */}
           <NavigationMenuItem>
             <NavigationMenuTrigger
-              className={cn(
-                navigationMenuTriggerStyle(),
-                "text-white hover:text-[#FFD700]"
-              )}
+              className={cn(navigationMenuTriggerStyle(), "text-white ")}
             >
               Company
             </NavigationMenuTrigger>
@@ -254,9 +251,7 @@ const ListItem = React.forwardRef<
         >
           <div className="flex items-center space-x-2 text-[#f8e67e]">
             {icon}
-            <div className=" text-black font-medium leading-none hover:text-[#FFD700]">
-              {title}
-            </div>
+            <div className=" text-black font-medium leading-none ">{title}</div>
           </div>
           <p className="line-clamp-1 text-sm leading-snug text-muted-foreground">
             {children}

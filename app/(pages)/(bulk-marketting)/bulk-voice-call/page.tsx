@@ -192,7 +192,7 @@ const BulkVoiceCallPage: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md"
+                className="bg-white p-6 rounded-lg shadow-md hover:bg-gradient-to-t hover:from-yellow-500 hover:to-orange-300 transition-all duration-500"
                 initial={{ scale: 0.8, opacity: 0, y: 100 }}
                 animate={isFeaturesInView ? { scale: 1, opacity: 1, y: 0 } : {}}
                 transition={{
@@ -220,7 +220,7 @@ const BulkVoiceCallPage: React.FC = () => {
         animate={isBenefitsInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, delay: 0.05, ease: "easeInOut" }}
       >
-        <div className="container mx-auto p-10 bg-gray-900 text-white">
+        <div className="container mx-auto p-10 bg-gray-900 text-white ">
           <h2 className="text-3xl font-bold mb-8 text-center">
             Benefits of Bulk Voice Call Marketing
           </h2>
@@ -228,7 +228,7 @@ const BulkVoiceCallPage: React.FC = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md text-gray-900"
+                className="bg-white p-6 rounded-lg shadow-md text-gray-900 hover:bg-gradient-to-t hover:from-yellow-500 hover:to-orange-300 transition-all duration-500"
                 initial={{ scale: 0.8, opacity: 0, y: 100 }}
                 animate={isBenefitsInView ? { scale: 1, opacity: 1, y: 0 } : {}}
                 transition={{

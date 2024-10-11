@@ -13,7 +13,7 @@ const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="flex justify-between  sm:px-10 items-center px-4 md:px-20 py-3 bg-[#000000] shadow-md">
+    <header className="flex justify-between sticky z-50 w-full top-0 sm:px-10 items-center px-4 md:px-20 py-3 bg-[#000000] shadow-md">
       <Link href={"/"} className="text-center justify-center items-center">
         <div className="ml-12">
           <Image src={logo} alt="ACS Logo" width={100} height={100} />

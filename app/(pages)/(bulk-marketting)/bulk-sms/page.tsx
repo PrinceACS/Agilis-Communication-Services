@@ -142,8 +142,8 @@ const BulkSMSPage: React.FC = () => {
             <p className="text-xl md:text-2xl mb-8">
               Boost Engagement, Drive Sales, and Enhance Customer Relationships
             </p>
-            <button className="bg-black text-white border-2 border-amber-400 font-bold py-3 px-6 rounded-lg hover:bg-yellow-500 transition duration-300">
-              <Link href="demp">Request a Demo</Link>
+            <button className="bg-black text-white border-2 hover:text-black  hover:border-black border-amber-400 font-bold py-3 px-6 rounded-lg hover:bg-yellow-500 transition duration-300">
+              <Link href="#demo">Request a Demo</Link>
             </button>
           </div>
 
@@ -215,7 +215,7 @@ const BulkSMSPage: React.FC = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md"
+                className="bg-white p-6 rounded-lg shadow-md hover:bg-gradient-to-t hover:from-yellow-500 hover:to-orange-300 transition-all duration-500"
                 initial={{ scale: 0.9 }}
                 animate={isBenefitsInView ? { scale: 1 } : {}}
                 transition={{
@@ -229,24 +229,6 @@ const BulkSMSPage: React.FC = () => {
                 <p className="text-gray-700">{benefit.description}</p>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </motion.section>
-
-      {/* FAQ Section */}
-      <motion.section
-        ref={faqRef}
-        className="bg-gray-900 py-16"
-        initial={{ opacity: 0, y: 20 }}
-        animate={isFaqInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6 }}
-      >
-        <div className="container items-center md:flex md:flex-row lg:justify-center  mx-auto px-4">
-          <div className="max-w-4xl mx-auto lg:w-1/2 lg:pr-14">
-            <FNQ faqItems={faqItems} />
-          </div>
-          <div className="max-w-4xl mx-auto lg:w-1/2 lg:pl-16">
-            <Demo />
           </div>
         </div>
       </motion.section>
@@ -266,16 +248,21 @@ const BulkSMSPage: React.FC = () => {
         </div>
       </motion.section>
 
-      {/* Contact Section */}
+      {/* FAQ Section */}
       <motion.section
-        className="bg-gray-800 text-white py-16"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        ref={faqRef}
+        className="bg-gray-900 py-16"
+        initial={{ opacity: 0, y: 20 }}
+        animate={isFaqInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6 }}
       >
-        <div className="container justify-center mx-auto">
-          {/* <h2 className="text-3xl font-bold mb-8 text-center">Contact Us</h2> */}
-          <Contact />
+        <div className="container items-center md:flex md:flex-row lg:justify-center  mx-auto px-4">
+          <div className="max-w-4xl mx-auto lg:w-1/2 lg:pr-14">
+            <FNQ faqItems={faqItems} />
+          </div>
+          <div className="max-w-4xl mx-auto lg:w-1/2 lg:pl-16">
+            <Demo />
+          </div>
         </div>
       </motion.section>
     </div>

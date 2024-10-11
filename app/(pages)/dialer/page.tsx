@@ -13,7 +13,7 @@ import { CTAButton } from "@/components/cta";
 import Demo from "@/components/company/demo";
 import FNQ from "@/components/company/fnq";
 import Link from "next/link";
-import { PhoneIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const DialerPage: React.FC = () => {
   const autoManualRef = useRef<HTMLDivElement>(null);
@@ -203,9 +203,9 @@ const DialerPage: React.FC = () => {
                 conversations.
               </p>
               <Link href="/inbound-calling">
-                <button className="bg-yellow-500 text-white px-6 py-3 rounded-md font-bold hover:bg-yellow-600 transition duration-300">
-                  <PhoneIcon className="inline-block h-5 w-5 mr-2" />
-                  Inbound Calling{" "}
+                <button className="bg-yellow-500 hover:scale-95 text-white px-4 py-2 rounded-md font-bold hover:bg-yellow-600 transition duration-300">
+                  See More{" "}
+                  <ArrowRight className="inline-block h-5 w-5 ml-2 hover:scale-105" />
                 </button>
               </Link>
             </motion.div>
@@ -226,9 +226,9 @@ const DialerPage: React.FC = () => {
                 unique customer needs.
               </p>
               <Link href="/outbound-calling">
-                <button className="bg-yellow-500 text-white px-6 py-3 rounded-md font-bold hover:bg-yellow-600 transition duration-300">
-                  <PhoneIcon className="inline-block h-5 w-5 mr-2" />
-                  Outbound Calling
+                <button className="bg-yellow-500 hover:scale-95 text-white px-4 py-2 rounded-md font-bold hover:bg-yellow-600 transition duration-300">
+                  See More
+                  <ArrowRight className="inline-block h-5 w-5 ml-2 hover:scale-105" />
                 </button>
               </Link>
             </motion.div>
@@ -288,14 +288,14 @@ const DialerPage: React.FC = () => {
         transition={{ duration: 0.6, delay: 0.05, ease: "easeInOut" }}
       >
         <div className="container mx-auto p-10 bg-gray-900">
-          <h2 className="text-3xl font-bold mb-8 text-center">
+          <h2 className="text-3xl font-bold mb-8 text-gray-300 text-center">
             Types of Dialers
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {dialerTypes.map((type, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md"
+                className="bg-white p-6 rounded-lg shadow-md group hover:text-black transition-all duration-500 hover:bg-gradient-to-t hover:from-yellow-500 hover:to-orange-300"
                 initial={{ scale: 0.8, opacity: 0, y: 100 }}
                 animate={
                   isDialerTypesInView ? { scale: 1, opacity: 1, y: 0 } : {}
@@ -306,10 +306,10 @@ const DialerPage: React.FC = () => {
                   ease: "easeInOut",
                 }}
               >
-                <h3 className="text-xl font-semibold mb-2 text-yellow-500">
+                <h3 className="text-xl font-semibold mb-2  text-yellow-600 group-hover:text-black">
                   {type.title}
                 </h3>
-                <p className="text-pretty-gray text-black ">
+                <p className="text-pretty-gray group-hover:text-black ">
                   {type.description}
                 </p>
               </motion.div>
@@ -334,7 +334,7 @@ const DialerPage: React.FC = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md"
+                className="bg-white p-6 rounded-lg shadow-md hover:bg-gradient-to-t hover:from-yellow-500 hover:to-orange-300 transition-all duration-500"
                 initial={{ scale: 0.8, opacity: 0, y: 100 }}
                 animate={isBenefitsInView ? { scale: 1, opacity: 1, y: 0 } : {}}
                 transition={{
@@ -343,8 +343,10 @@ const DialerPage: React.FC = () => {
                   ease: "easeInOut",
                 }}
               >
-                <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                <p>{benefit.description}</p>
+                <h3 className="text-xl text-black font-semibold mb-2">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-950">{benefit.description}</p>
               </motion.div>
             ))}
           </div>

@@ -11,7 +11,6 @@ import {
 import FNQ from "@/components/company/fnq";
 import { motion, useInView } from "framer-motion";
 
-import Contact from "@/components/company/contact";
 import Demo from "@/components/company/demo";
 import bulk_whatsapp_hero from "@/public/images/bulk-whatsapp.jpg";
 
@@ -183,7 +182,7 @@ const BulkWhatsappPage: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md"
+                className="bg-white p-6 rounded-lg shadow-md hover:bg-gradient-to-t hover:from-yellow-500 hover:to-orange-300 transition-all duration-500"
                 initial={{ scale: 0.8, opacity: 0, y: 100 }}
                 animate={isFeaturesInView ? { scale: 1, opacity: 1, y: 0 } : {}}
                 transition={{
@@ -212,14 +211,14 @@ const BulkWhatsappPage: React.FC = () => {
         transition={{ duration: 0.6, delay: 0.05, ease: "easeInOut" }}
       >
         <div className="container mx-auto p-10 bg-gray-900">
-          <h2 className="text-3xl font-bold mb-8 text-center">
+          <h2 className="text-3xl text-gray-300 font-bold mb-8 text-center">
             Benefits of Bulk WhatsApp Marketing
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md"
+                className="bg-white p-6 rounded-lg shadow-md hover:bg-gradient-to-t hover:from-yellow-500 hover:to-orange-300 transition-all duration-500"
                 initial={{ scale: 0.8, opacity: 0, y: 100 }}
                 animate={isBenefitsInView ? { scale: 1, opacity: 1, y: 0 } : {}}
                 transition={{
@@ -246,11 +245,11 @@ const BulkWhatsappPage: React.FC = () => {
         animate={isFaqInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
       >
-        <div className="container lg:flex-row items-center  mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+        <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-2">
             <FNQ faqItems={faqItems} />
           </div>
-          <div className="max-w-4xl mx-auto">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-2">
             <Demo />
           </div>
         </div>
@@ -278,12 +277,6 @@ const BulkWhatsappPage: React.FC = () => {
           </div>
         </div>
       </section> */}
-
-      {/* Contact Section */}
-      <section className="bg-gray-800 text-white py-16">
-        <Contact />
-        <Demo />
-      </section>
     </div>
   );
 };

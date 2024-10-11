@@ -155,7 +155,7 @@ const PrivacyPolicy: React.FC = () => {
         <li className="flex gap-x-1 items-start">
           <MailIcon className="h-6 w-6 mr-1 text-[#d4af37]" />
           <strong>Email:</strong>
-          <span> privacy@agilis.com</span>
+          <span>Info@agiliscommunications.com</span>
         </li>
         <li className="flex gap-x-1 items-start">
           <PhoneIcon className="h-6 w-6 mr-1 text-[#d4af37]" />

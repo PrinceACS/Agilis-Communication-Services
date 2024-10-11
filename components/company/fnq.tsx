@@ -10,7 +10,7 @@ type FNQProps = {
 
 const FNQ = ({ faqItems }: FNQProps) => {
   return (
-    <div className="container mx-auto px-4 my-5 ">
+    <div className="container justify-start  mx-auto px-4 my-5 ">
       <h2 className="text-3xl text-yellow-50 font-bold mb-8 text-center">
         Frequently Asked Questions
       </h2>
