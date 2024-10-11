@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import customized_solution from "@/public/images/customized_solution.png";
 import Contact from "@/components/company/contact";
 import Testimonial from "@/components/company/Testimonial";
 import Demo from "@/components/company/demo";
@@ -24,12 +23,12 @@ const CustomizedSolution = () => {
             needs.
           </p>
           <div className="flex flex-col md:flex-row items-center">
-            <div className="w-full md:w-1/2">
-              <Image
+            <div className="w-full md:w-1/2 bg-yellow-400">
+              {/* <Image
                 src={customized_solution}
                 alt="Customized Solution"
                 className="w-full h-auto"
-              />
+              /> */}
             </div>
             <div className="w-full md:w-1/2 px-4 md:px-8">
               <h2 className="text-2xl font-bold mb-4">
