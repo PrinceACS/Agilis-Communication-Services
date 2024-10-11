@@ -1,4 +1,3 @@
-import About from "@/components/company/about";
 import HeroSection from "@/components/hero";
 import Services from "@/components/company/services";
 // import Navbar from "@/components/navbar";
