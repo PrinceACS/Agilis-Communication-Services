@@ -161,7 +161,7 @@ const DialerPage: React.FC = () => {
           </p>
           <p className="text-lg mb-8 font-semibold">
             At Agilis, we offer advanced dialer solutions that are designed to
-            streamline outbound calling operations, whether you're using
+            streamline outbound calling operations, whether you&apos;re using
             automatic or manual dialing. Our cutting-edge software optimizes
             call campaigns, reduces idle time, and helps your business engage
             with customers more efficiently.

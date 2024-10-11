@@ -142,8 +142,8 @@ const BulkWhatsappPage: React.FC = () => {
             <p className="text-lg mb-8 font-semibold">
               Leverage the power of WhatsApp for your marketing campaigns. With
               Agilis, you can automate messages, track responses, and engage
-              customers in real-time through one of the world's most popular
-              messaging platforms.
+              customers in real-time through one of the world&apos;s most
+              popular messaging platforms.
             </p>
             <button className="bg-black hover:text-black hover:border-black text-white border-2 border-amber-400 font-bold py-3 px-6 rounded-lg hover:bg-yellow-500 transition duration-300">
               <Link href="#demo">Request a Demo</Link>

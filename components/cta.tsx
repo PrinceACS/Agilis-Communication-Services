@@ -37,7 +37,9 @@ const CTA1 = () => {
             Shedule Demo
           </Link>
           <Link
-            href="#"
+            href="https://wa.me/+919810787931?text=Hello%20I%20am%20interested%20in%20your%20services"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center w-[12rem] justify-center rounded-md border-2 border-[#FFD700] px-4 py-2 text-lg font-semibold text-[#FFD700] transition hover:bg-[#d4af37] hover:text-black shadow-lg"
           >
             <Phone size={20} className="mr-2" />
@@ -144,7 +146,7 @@ export const CTACallToAction = () => {
                   Call Now
                 </a>
                 <a
-                  href="https://wa.me/917004960557"
+                  href="https://wa.me/+919810787931"
                   className="bg-primary text-primary-foreground px-4 py-2 rounded-md"
                 >
                   WhatsApp

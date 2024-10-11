@@ -58,11 +58,15 @@ const Footer = () => {
             </li>
             <li className="flex items-center">
               <MailIcon className="h-5 w-5 text-[#d4af37] mr-2" />
-              <span>contact@agilis.com</span>
+              <span>Info@agiliscommunications.com</span>
             </li>
             <li className="flex items-center">
               <MapPinIcon className="h-5 w-5 text-[#d4af37] mr-2" />
-              <span>123 Business Ave, City, Country</span>
+              <span className="ml-3">
+                Office No 206, EMCA House, 23, Ansari Rd
+                <br />
+                Daryaganj, Delhi, 110002
+              </span>
             </li>
           </ul>
         </div>
@@ -77,7 +81,10 @@ const Footer = () => {
           <a href="https://twitter.com" className="hover:text-[#d4af37]">
             <FaTwitter className="h-6 w-6" />
           </a> */}
-          <a href="https://linkedin.com" className="hover:text-[#d4af37]">
+          <a
+            href="https://www.linkedin.com/in/agilis-communication-services-822a8a320/"
+            className="hover:text-[#d4af37]"
+          >
             <FaLinkedinIn className="h-6 w-6" />
           </a>
           {/* <a href="https://instagram.com" className="hover:text-[#d4af37]">

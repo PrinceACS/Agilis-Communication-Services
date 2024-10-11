@@ -45,7 +45,9 @@ const Contact = () => {
       subject: formData.subject,
       type: "contact",
     });
-    toast.success(`Thank you for contacting us.${response}`);
+    toast.success(`Thank you for contacting us. We'll get back to you soon.`, {
+      duration: 5000,
+    });
     if (!response) {
       toast.error("Failed to send email. Please try again later.", {
         position: "top-right",
@@ -53,13 +55,6 @@ const Contact = () => {
       });
       return;
     }
-
-    // toast.success("Thank you for contacting us. We'll get back to you soon.", {
-    //   position: "top-right",
-    //   duration: 5000,
-    // });
-    // Handle form submission logic here (e.g., send data to backend or email service)
-    console.log("Form submitted:", formData);
   };
 
   return (
@@ -71,8 +66,8 @@ const Contact = () => {
           <MarkSvg />
         </div>
         <p className="text-gray-600 text-lg mt-4">
-          We'd love to hear from you! Feel free to reach out with any questions,
-          feedback, or business inquiries.
+          We&apos;d love to hear from you! Feel free to reach out with any
+          questions, feedback, or business inquiries.
         </p>
       </div>
 
@@ -87,7 +82,9 @@ const Contact = () => {
           </div>
           <div className="flex items-center">
             <MailIcon className="h-6 w-6 text-[#d4af37]" />
-            <span className="ml-3 text-gray-700">contact@agilis.com</span>
+            <span className="ml-3 text-gray-700">
+              Info@agiliscommunications.com
+            </span>
           </div>
           <div className="flex items-center">
             <MapPinIcon className="h-6 w-6 text-[#d4af37]" />

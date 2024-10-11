@@ -127,7 +127,7 @@ const PrivacyPolicy: React.FC = () => {
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-4">
-        8. Children's Privacy
+        8. Children&apos;s Privacy
       </h2>
       <p className="mb-4">
         Agilis does not knowingly collect personal data from children under the

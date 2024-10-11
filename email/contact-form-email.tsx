@@ -38,11 +38,11 @@ export default function ContactFormEmail({
               <Text className="text-lg">{message}</Text>
               <Hr className="my-4 border-gray-300" />
               <Text className="text-lg">
-                The sender's name is:{" "}
+                The sender&apos;s name is:{" "}
                 <span className="font-bold">{senderName}</span>
               </Text>
               <Text className="text-lg">
-                The sender's email is:{" "}
+                The sender&apos;s email is:{" "}
                 <a
                   href={`mailto:${senderEmail}`}
                   className="text-blue-600 font-bold hover:underline"

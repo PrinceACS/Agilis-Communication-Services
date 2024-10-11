@@ -58,7 +58,7 @@ const LoginModal = () => {
       <div className="mt-4">
         <p className="text-gray-800 text-sm text-center">
           <span className="text-red-400">
-            Don't have an account? Call us at{" "}
+            Don&apos;t have an account? Call us at{" "}
           </span>
           <a href="tel:9810787931" className="text-blue-500">
             +91 9810787931

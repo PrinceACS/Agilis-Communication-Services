@@ -1,11 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import {
-  FaDollarSign,
-  FaChartLine,
-  FaHeadset,
-  FaDatabase,
-} from "react-icons/fa";
 import { motion } from "framer-motion";
 import {
   PhoneCall,
@@ -89,8 +83,6 @@ const IVRPage: React.FC = () => {
       </header>
 
       <main className="container mx-auto px-4 ">
-        {/* <HeroSection /> */}
-        {/* <EnhancedHeroSection /> */}
         <OverviewSection />
         <TypesOfIVR />
         <Benefits />
@@ -98,10 +90,9 @@ const IVRPage: React.FC = () => {
 
         <FeaturesSection />
 
-        {/* <BenefitsSection /> */}
         <Specific />
         <PricingSection />
-        <ContactSection />
+        <DemoSection />
       </main>
     </div>
   );
@@ -119,14 +110,6 @@ const OverviewSection: React.FC = () => (
     {/* Background accent for added visual appeal */}
     <div className="absolute inset-0 bg-gradient-to-tr from-white via-transparent to-transparent opacity-10 pointer-events-none"></div>
 
-    {/* Section Title */}
-    {/* <h2
-      className="text-4xl xl:text-5xl font-semibold mb-12 text-center tracking-tight leading-tight"
-      style={{ color: theme.primary }}
-    >
-      What is IVR?
-    </h2> */}
-
     {/* Content grid */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       {/* Left column: Textual content */}
@@ -140,8 +123,8 @@ const OverviewSection: React.FC = () => (
         <p className="mb-6 text-lg leading-relaxed">
           IVR is an automated telephony system that interacts with callers,
           gathers information, and routes calls to the appropriate recipients.
-          It's a powerful tool for managing high call volumes efficiently and
-          providing 24/7 customer service.
+          It&apos;s a powerful tool for managing high call volumes efficiently
+          and providing 24/7 customer service.
         </p>
         <ul className="list-disc list-inside text-lg space-y-3">
           <li>Automate routine inquiries</li>
@@ -250,126 +233,14 @@ const PricingSection: React.FC = () => {
             <h3 className="text-2xl font-semibold">Start with Minimum Price</h3>
             <p className="text-3xl font-bold mt-2">(Best Price Guaranteed)</p>
           </div>
-          {/* <div className="bg-gray-50 p-6">
-            <ul className="space-y-4">
-              <li className="flex justify-between">
-                <span>Incoming</span>
-                <span>Unlimited</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Channel(s)</span>
-                <span>1 Pair(s)</span>
-              </li>
-              <li className="flex justify-between">
-                <span>User(s)</span>
-                <span>1 User(s)</span>
-              </li>
-            </ul>
-          </div> */}
         </motion.div>
-        {/* <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="border rounded-lg shadow-md p-6 max-w-md mx-auto bg-white"
-        >
-          <div className="bg-red-500 text-white p-4 rounded-t-lg text-center">
-            <h3 className="text-xl font-semibold">Growth</h3>
-            <p className="text-3xl font-bold mt-2">₹ 2,599/month</p>
-          </div>
-          {/* <div className="bg-gray-50 p-6">
-            <ul className="space-y-4">
-              <li className="flex justify-between">
-                <span>Incoming</span>
-                <span>Unlimited</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Channel(s)</span>
-                <span>2 Pair(s)</span>
-              </li>
-              <li className="flex justify-between">
-                <span>User(s)</span>
-                <span>2 User(s)</span>
-              </li>
-            </ul>
-          </div> */}
-        {/* </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="border rounded-lg shadow-md p-6 max-w-md mx-auto bg-white"
-        >
-          <div className="bg-red-500 text-white p-4 rounded-t-lg text-center">
-            <h3 className="text-xl font-semibold">Professional</h3>
-            <p className="text-3xl font-bold mt-2">₹ 4,999/month</p>
-          </div> */}
-        {/* <div className="bg-gray-50 p-6">
-            <ul className="space-y-4">
-              <li className="flex justify-between">
-                <span>Incoming</span>
-                <span>Unlimited</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Channel(s)</span>
-                <span>5 Pair(s)</span>
-              </li>
-              <li className="flex justify-between">
-                <span>User(s)</span>
-                <span>5 User(s)</span>
-              </li>
-            </ul>
-          </div> */}
-        {/* </motion.div> */}
       </div>
     </section>
   );
 };
 
-const ContactSection: React.FC = () => (
+const DemoSection: React.FC = () => (
   <section id="contact" className="py-20 mb-10">
-    {/* <div className="container mx-auto px-4">
-      <h2
-        className="text-4xl font-bold mb-8 text-center"
-        style={{ color: theme.primary }}
-      >
-        Ready to Get Started?
-      </h2>
-      <p className="text-xl mb-8 text-center">
-        Reach out to us for a personalized IVR solution tailored to your
-        business needs.
-      </p>
-      <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
-        <a
-          href="mailto:info@ivrsolutions.com"
-          className="flex items-center text-lg hover:text-accent transition-colors"
-        >
-          <Mail className="mr-2" /> contact@agilis.com
-        </a>
-        <a
-          href="tel:+919810787931"
-          className="flex items-center text-lg hover:text-accent transition-colors"
-        >
-          <Phone className="mr-2" /> +1 (800) 123-4567
-        </a>
-      </div>
-      <form className="max-w-lg mx-auto mt-12">
-        <input
-          type="email"
-          placeholder="Enter your email"
-          className="w-full mb-4 p-3 rounded-lg"
-          style={{ backgroundColor: theme.primary, color: theme.secondary }}
-        />
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="w-full font-bold py-3 px-6 rounded-lg text-lg transition duration-300"
-          style={{ backgroundColor: theme.accent, color: theme.primary }}
-        >
-          Request a Demo
-        </motion.button>
-      </form>
-    </div> */}
     <div id="demo">
       <Demo />
     </div>
@@ -398,61 +269,5 @@ const FeatureCard: React.FC<{
     </CardContent>
   </Card>
 );
-
-// const BenefitCard: React.FC<{ title: string; description: string }> = ({
-//   title,
-//   description,
-// }) => (
-//   <Card
-//     className="h-full hover:shadow-lg transition-shadow duration-300"
-//     style={{ backgroundColor: theme.secondary, borderColor: theme.accent }}
-//   >
-//     <CardHeader>
-//       <CardTitle className="text-xl font-bold" style={{ color: theme.primary }}>
-//         {title}
-//       </CardTitle>
-//     </CardHeader>
-//     <CardContent>
-//       <p style={{ color: theme.primary }}>{description}</p>
-//     </CardContent>
-//   </Card>
-// );
-
-// const PricingCard: React.FC<{
-//   title: string;
-//   price: string;
-//   features: string[];
-// }> = ({ title, price, features }) => (
-//   <Card
-//     className="h-full hover:shadow-lg transition-shadow duration-300"
-//     style={{ backgroundColor: theme.primary, borderColor: theme.accent }}
-//   >
-//     <CardHeader>
-//       <CardTitle className="text-xl font-bold" style={{ color: theme.accent }}>
-//         {title}
-//       </CardTitle>
-//       <p className="text-2xl font-bold mt-2" style={{ color: theme.secondary }}>
-//         {price}
-//       </p>
-//     </CardHeader>
-//     <CardContent>
-//       <ul className="space-y-2">
-//         {features.map((feature, index) => (
-//           <li
-//             key={index}
-//             className="flex items-center"
-//             style={{ color: theme.secondary }}
-//           >
-//             <ThumbsUp
-//               className="h-5 w-5 mr-2"
-//               style={{ color: theme.accent }}
-//             />
-//             {feature}
-//           </li>
-//         ))}
-//       </ul>
-//     </CardContent>
-//   </Card>
-// );
 
 export default IVRPage;

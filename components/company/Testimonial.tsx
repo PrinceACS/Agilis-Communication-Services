@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import avatar from "@/public/jake-nackos-IF9TK5Uy-KI-unsplash.jpg";
 import quotg_icon from "@/public/quote.png";
@@ -74,7 +73,7 @@ export default function Testimonial() {
                   alt="quote"
                   className="text-yellow-300"
                 />
-                <blockquote className="text-xl ml-10 py-2 -mt-6 italic mb-4">
+                <blockquote className="text-xl ml-10 py-2 -mt-2 italic mb-4">
                   {testimonial.content}
                 </blockquote>
               </div>

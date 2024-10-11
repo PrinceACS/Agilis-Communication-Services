@@ -6,7 +6,7 @@ import hero from "../public/images/hero.jpg";
 
 const HeroSection = () => {
   return (
-    <main className="text-gray-900 flex flex-col items-center mb-10  bg-gray-50 ">
+    <main className="text-gray-900 flex flex-col items-center mb-10  bg-gray-100 ">
       <section className="relative mt-10 lg:mt-20 mx-10  px-6 flex flex-col md:flex-row items-center ">
         {/* Text Content */}
         <div className="md:w-[60%] lg:mr-14 text-center space-y-6">
@@ -29,7 +29,7 @@ const HeroSection = () => {
             </Link>
             <Link
               href="#contact"
-              className="inline-flex items-center justify-center rounded-md border border-[#FFD700] px-8 py-3 text-base font-medium text-[#FFD700] transition hover:bg-[#d4af37] hover:text-[#0d0d0d] shadow-lg"
+              className="inline-flex bg-gray-900 items-center justify-center rounded-md border border-[#FFD700] px-8 py-3 text-base font-medium text-[#FFD700] transition hover:bg-[#d4af37] hover:text-[#0d0d0d] shadow-lg"
             >
               Contact Us
             </Link>

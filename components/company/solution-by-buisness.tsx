@@ -52,7 +52,7 @@ const SolutionByBusiness = () => {
       >
         <p className="text-center text-2xl">
           At Agilis, we provide comprehensive solutions that help businesses
-          thrive in an ever-changing landscape. Whether you're looking to
+          thrive in an ever-changing landscape. Whether you&apos;re looking to
           enhance communication, streamline operations, or ensure compliance,
           Agilis offers the expertise and tools you need.
         </p>

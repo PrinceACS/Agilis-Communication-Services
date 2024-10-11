@@ -152,7 +152,7 @@ const Demo: React.FC<{
               required
             />
             <span className="text-sm text-gray-700">
-              By submitting this form, you acknowledge and accept Agilis's{" "}
+              By submitting this form, you acknowledge and accept Agilis&apos;s{" "}
               <a
                 href="https://www.agilis.com/privacy-policy"
                 target="_blank"

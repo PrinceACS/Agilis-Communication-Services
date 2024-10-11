@@ -114,8 +114,8 @@ const Specific = () => {
           Start Converting Leads into Customers Today
         </h2>
         <p className="text-xl text-center mb-8">
-          Don't miss another business opportunity. Our IVR system ensures you
-          are always available to your customers.
+          Don&apos;t miss another business opportunity. Our IVR system ensures
+          you are always available to your customers.
         </p>
         <div className="flex justify-center space-x-4">
           <Button className="bg-[#1A1A1A] text-amber-500 hover:bg-black">
