@@ -4,7 +4,7 @@ import {
   PhoneIcon,
   MessageCircleIcon,
   PhoneOutgoingIcon,
-  WifiIcon,
+  TrendingUpIcon,
   HeadsetIcon,
   BarChartIcon,
   CalculatorIcon,
@@ -12,12 +12,11 @@ import {
   DockIcon as DocumentTextIcon,
   HelpCircleIcon,
   CheckCircleIcon,
-  ServerIcon,
-  ShieldIcon,
+  PaletteIcon,
+  SearchIcon,
   CodeIcon,
-  CloudUploadIcon,
+  ImageIcon,
   HardDriveIcon,
-  PauseCircleIcon,
 } from "lucide-react";
 
 const servicesGrouped = {
@@ -47,11 +46,10 @@ const servicesGrouped = {
         "Create custom voice menus and direct callers to the right team with ease.",
     },
     {
-      icon: <PauseCircleIcon className="h-[3rem] w-[3rem] text-[#673ab7]" />,
-
-      title: "Call Recording",
+      icon: <ImageIcon className="h-[3rem] w-[3rem] text-[#673ab7]" />,
+      title: "Bulk Marketing",
       description:
-        "Record calls automatically for training, quality, and compliance purposes.",
+        "Reach large audiences with automated voice calls, SMS, and WhatsApp messages.",
     },
     {
       icon: <BarChartIcon className="h-[3rem] w-[3rem] text-[#4caf50]" />,
@@ -100,40 +98,40 @@ const servicesGrouped = {
   ],
   "IT Solutions": [
     {
-      icon: <ServerIcon className="h-[3rem] w-[3rem] text-[#2196f3]" />,
-      title: "Cloud Computing",
-      description:
-        "Reliable and scalable cloud hosting solutions to meet your business needs.",
-    },
-    {
-      icon: <ShieldIcon className="h-[3rem] w-[3rem] text-[#4caf50]" />,
-      title: "Cybersecurity",
-      description:
-        "Protect your business with advanced cybersecurity services and proactive monitoring.",
-    },
-    {
       icon: <CodeIcon className="h-[3rem] w-[3rem] text-[#ff9800]" />,
-      title: "Software Development",
+      title: "Websites Design & Update",
       description:
-        "Custom software development solutions tailored to your unique business requirements.",
+        "Transform your online presence with our expert web design and development services.",
     },
     {
-      icon: <HardDriveIcon className="h-[3rem] w-[3rem] text-[#00bcd4]" />,
+      icon: <TrendingUpIcon className="h-[3rem] w-[3rem] text-[#00bcd4]" />,
+      title: "Digital Marketing",
+      description:
+        "Reach new heights with our digital marketing services, including SEO, PPC, and social media.",
+    },
+    {
+      icon: <PaletteIcon className="h-[3rem] w-[3rem] text-[#673ab7]" />,
+      title: "Software Design",
+      description:
+        "Design and develop software that meets your business needs with our expert software design services.",
+    },
+    {
+      icon: <SearchIcon className="h-[3rem] w-[3rem] text-[#4caf50]" />,
+      title: "SEO",
+      description:
+        "Improve your website's visibility with our search engine optimization services.",
+    },
+    {
+      icon: <ImageIcon className="h-[3rem] w-[3rem] text-[#ff5722]" />,
+      title: "Graphic Design",
+      description:
+        "Create visually appealing designs with our expert graphic design services.",
+    },
+    {
+      icon: <HardDriveIcon className="h-[3rem] w-[3rem] text-[#2196f3]" />,
       title: "IT Infrastructure Management",
       description:
         "Monitor and manage your IT infrastructure to ensure seamless business operations.",
-    },
-    {
-      icon: <WifiIcon className="h-[3rem] w-[3rem] text-[#673ab7]" />,
-      title: "Network Security",
-      description:
-        "Secure your business data with advanced firewall and VPN services.",
-    },
-    {
-      icon: <CloudUploadIcon className="h-[3rem] w-[3rem] text-[#ff5722]" />,
-      title: "Data Backup & Recovery",
-      description:
-        "Backup critical business data and recover it in case of system failure.",
     },
   ],
 };

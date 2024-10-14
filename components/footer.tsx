@@ -8,8 +8,8 @@ const Footer = () => {
     <footer className="bg-gray-900 text-gray-300 py-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Company Info */}
-        <div className="">
-          <div className="flex items-start">
+        <div>
+          <div className="flex items-start -ml-1">
             <Image
               src={acs_logo}
               alt="Agilis Communication Services"
@@ -50,11 +50,11 @@ const Footer = () => {
                 Contact Us
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="/careers" className="hover:text-[#d4af37]">
                 Careers
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
 
@@ -72,7 +72,7 @@ const Footer = () => {
             </li>
             <li className="flex items-center">
               <MapPinIcon className="h-5 w-5 text-[#d4af37] mr-2" />
-              <span className="ml-3">
+              <span>
                 Office No 206, EMCA House, 23, Ansari Rd
                 <br />
                 Daryaganj, Delhi, 110002

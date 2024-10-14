@@ -12,6 +12,7 @@ import { motion, useInView } from "framer-motion";
 import { CTAButton } from "@/components/cta";
 import Demo from "@/components/company/demo";
 import FNQ from "@/components/company/fnq";
+import Testimonial from "@/components/company/Testimonial";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -121,6 +122,41 @@ const DialerPage: React.FC = () => {
       title: "Cost-Effective Campaigns",
       description:
         "Optimize your outbound calling strategy by using the right dialer for each situation, ensuring maximum return on investment.",
+    },
+  ];
+
+  const testimonials = [
+    {
+      id: 1,
+      name: "Vishal Sharma",
+      role: "Sales Manager at NextGen Solutions",
+      content:
+        "The manual dialer from Agilis Communication Services has made our outreach efforts incredibly efficient. Our sales team can now connect with prospects more easily and manage calls effectively. The user-friendly interface has improved our workflow significantly. We're seeing better conversion rates thanks to this tool!",
+      avatar: "",
+    },
+    {
+      id: 2,
+      name: "Ronny",
+      role: "Operations Director at ConnectWise",
+      content:
+        "Agilis's auto dialer has transformed our calling process! It allows us to reach more clients in less time, and the system is incredibly reliable. We've noticed a substantial increase in our call volume and overall productivity. The support from the Agilis team has been top-notch, making it a seamless experience!",
+      avatar: "",
+    },
+    {
+      id: 3,
+      name: "Sanjay Shrivastava",
+      role: "Head of Customer Engagement at BrightFuture Inc.",
+      content:
+        "Implementing Agilis's dialer solutions has significantly enhanced our team's productivity. The manual dialer gives us control when we need it, while the auto dialer maximizes our reach. This flexibility has allowed us to tailor our outreach strategies effectively, and our results speak for themselves!",
+      avatar: "",
+    },
+    {
+      id: 4,
+      name: "Priyanka Tiwari",
+      role: "CEO at MarketReach",
+      content:
+        "Agilis Communication Services has been a fantastic partner for our dialing needs. The combination of manual and auto dialer solutions has allowed us to customize our approach based on our clients' needs. The exceptional customer service and support from their team have made this partnership incredibly valuable!",
+      avatar: "",
     },
   ];
 
@@ -352,6 +388,9 @@ const DialerPage: React.FC = () => {
           </div>
         </div>
       </motion.section>
+
+      {/* ****testimonial***** */}
+      <Testimonial testimonials={testimonials} />
 
       {/* FAQ Section and Demo Request */}
       <motion.section

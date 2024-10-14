@@ -32,7 +32,7 @@ const CTA1 = () => {
         <div className="flex flex-row md:flex-row gap-4 justify-center md:justify-start">
           <Link
             href="#"
-            className="flex items-center w-[12rem] justify-center rounded-md bg-[#d2b71d] px-4 py-2 text-lg font-semibold text-black transition hover:bg-[#c0a030] shadow-lg"
+            className="flex items-center w-[12rem] justify-center rounded-md bg-[#e6c81e] px-4 py-2 text-lg font-semibold text-black transition hover:bg-[#e0bd3e] shadow-lg"
           >
             Shedule Demo
           </Link>

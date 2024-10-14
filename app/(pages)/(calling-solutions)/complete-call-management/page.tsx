@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import Demo from "@/components/company/demo";
 import FNQ from "@/components/company/fnq";
 import { motion, useInView } from "framer-motion";
-import Testimonial from "@/components/company/Testimonial";
+// import Testimonial from "@/components/company/Testimonial";
 import { Check } from "lucide-react";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import LoginModal from "@/components/LoginModal";
@@ -231,7 +231,8 @@ const CompleteCallManagementSolution: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <Testimonial />
+      {/* <Testimonial testimonials={testimonials} /> */}
+
       {/* <section className="bg-gray-100 py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-5xl font-bold mb-12">What Our Clients Say</h2>
@@ -259,7 +260,7 @@ const CompleteCallManagementSolution: React.FC = () => {
       <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-5xl font-bold mb-12 text-red-600">
-            Get Started with ₹1,250/month
+            Get Started with ₹899/month
           </h2>
           <p className="text-2xl text-gray-700 mb-12">
             Our Basic plan offers a great way to get started with our Call

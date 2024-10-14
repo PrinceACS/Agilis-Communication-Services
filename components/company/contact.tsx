@@ -45,9 +45,15 @@ const Contact = () => {
       subject: formData.subject,
       type: "contact",
     });
-    toast.success(`Thank you for contacting us. We'll get back to you soon.`, {
-      duration: 5000,
-    });
+    console.log("response", response);
+    if (!response.error) {
+      toast.success(
+        `Thank you for contacting us. We'll get back to you soon.`,
+        {
+          duration: 5000,
+        }
+      );
+    }
     if (!response) {
       toast.error("Failed to send email. Please try again later.", {
         position: "top-right",

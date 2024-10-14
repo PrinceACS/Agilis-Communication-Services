@@ -73,7 +73,7 @@ const WhyChooseAgilis = () => {
           className="bg-white rounded-lg shadow-lg overflow-hidden"
           variants={itemVariants}
         >
-          <div className="h-40 bg-primary flex items-center justify-center">
+          <div className="h-40 bg-yellow-400 flex items-center justify-center">
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -92,7 +92,7 @@ const WhyChooseAgilis = () => {
             </motion.svg>
           </div>
           <div className="p-6 text-center">
-            <h2 className="text-xl font-semibold text-[#d2b71d] mb-4">
+            <h2 className="text-xl font-semibold text-[#e6c81e] mb-4">
               Cloud Telephony Solutions
             </h2>
             <p className="text-lg text-gray-600">
@@ -107,7 +107,7 @@ const WhyChooseAgilis = () => {
           className="bg-white rounded-lg shadow-lg overflow-hidden"
           variants={itemVariants}
         >
-          <div className="h-40 bg-muted-foreground flex items-center justify-center">
+          <div className="h-40 bg-black flex items-center justify-center">
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -126,7 +126,7 @@ const WhyChooseAgilis = () => {
             </motion.svg>
           </div>
           <div className="p-6 text-center">
-            <h2 className="text-xl font-semibold text-[#d2b71d] mb-4">
+            <h2 className="text-xl font-semibold text-[#e6c81e] mb-4">
               Expert Tax Solutions
             </h2>
             <p className="text-lg text-gray-600">
@@ -141,7 +141,7 @@ const WhyChooseAgilis = () => {
           className="bg-white rounded-lg shadow-lg overflow-hidden"
           variants={itemVariants}
         >
-          <div className="h-40 bg-primary flex items-center justify-center">
+          <div className="h-40 bg-yellow-400 flex items-center justify-center">
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -160,7 +160,7 @@ const WhyChooseAgilis = () => {
             </motion.svg>
           </div>
           <div className="p-6 text-center">
-            <h2 className="text-xl font-semibold text-[#d2b71d] mb-4">
+            <h2 className="text-xl font-bold text-[#e6c81e] mb-4">
               Comprehensive IT Solutions
             </h2>
             <p className="text-lg text-gray-600">
@@ -175,7 +175,7 @@ const WhyChooseAgilis = () => {
           className="bg-white rounded-lg shadow-lg overflow-hidden"
           variants={itemVariants}
         >
-          <div className="h-40 bg-muted-foreground flex items-center justify-center">
+          <div className="h-40 bg-black flex items-center justify-center">
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -194,7 +194,7 @@ const WhyChooseAgilis = () => {
             </motion.svg>
           </div>
           <div className="p-6 text-center">
-            <h2 className="text-xl font-semibold text-[#d2b71d] mb-4">
+            <h2 className="text-xl font-semibold text-[#e6c81e] mb-4">
               Client-Centric Approach
             </h2>
             <p className="text-lg text-gray-600">

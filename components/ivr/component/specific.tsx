@@ -6,10 +6,45 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import TestimonialCarousel from "../../company/Testimonial";
+import Testimonial from "../../company/Testimonial";
 import { Button } from "@/components/ui/button";
 import { Star, Clock, Headphones, Database, Phone } from "lucide-react";
 import Link from "next/link";
+
+const testimonials = [
+  {
+    id: 1,
+    name: "Prashant",
+    role: "Customer Service Manager at HealthFirst Clinics",
+    content:
+      "Agilis Communication Services has truly elevated our patient communication with their IVR toll-free solution. Patients can easily navigate through the system to book appointments or get information, and the ease of use has significantly reduced our call wait times. We’re thrilled with the efficiency it has brought to our operations!",
+    avatar: "",
+  },
+  {
+    id: 2,
+    name: "Raj Pratap",
+    role: "Operations Head at TechSolutions Ltd.",
+    content:
+      "The normal IVR system implemented by Agilis has transformed our customer support. The intuitive design allows our clients to get the assistance they need without frustration. Since launching, we’ve seen a marked improvement in customer satisfaction and faster resolution times. Highly recommend their services!",
+    avatar: "",
+  },
+  {
+    id: 3,
+    name: "Ms Durga",
+    role: "Marketing Director at GreenLeaf Products",
+    content:
+      "Working with Agilis for our IVR needs has been fantastic. Their team took the time to understand our requirements and delivered a customized IVR system that fits perfectly with our brand. The ability to update messages and manage calls efficiently has made a significant impact on our customer interactions!",
+    avatar: "",
+  },
+  {
+    id: 4,
+    name: "Ms Trushika",
+    role: "CEO at RetailConnect",
+    content:
+      "Agilis Communication Services has been a game-changer for our business. Their IVR solutions, both toll-free and normal, have streamlined our communication processes and improved our customer experience. The professionalism and support from the Agilis team have made this journey smooth and successful!",
+    avatar: "",
+  },
+];
 
 const Specific = () => {
   const [activeFeature, setActiveFeature] = useState(0);
@@ -105,7 +140,7 @@ const Specific = () => {
         <h2 className="text-3xl font-bold mb-8 text-center text-amber-500">
           Happy Clients Speak for Us
         </h2>
-        <TestimonialCarousel />
+        <Testimonial testimonials={testimonials} />
       </section>
 
       <section className="mb-24 bg-amber-400 text-[#1A1A1A] p-12 rounded-lg">

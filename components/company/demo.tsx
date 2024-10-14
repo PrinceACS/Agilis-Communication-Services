@@ -89,7 +89,12 @@ const Demo: React.FC<{
         throw error;
       }
 
-      toast.success(`Form submitted: ${JSON.stringify(values)}`);
+      toast.success(
+        `Thank you for your demo request. We'll get back to you soon.`,
+        {
+          duration: 5000,
+        }
+      );
     } catch (error) {
       console.error("Error - demo", error);
       toast.error(`Error submitting form: ${error}`);
