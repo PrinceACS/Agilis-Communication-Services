@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import { Check } from "lucide-react";
+import { IoRocket } from "react-icons/io5";
+
 import agile_team from "@/public/creative-team.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -9,18 +11,16 @@ const WorkWithUs = () => {
     <div className="my-10 mx-10  md:mx-20 px-4  items-center">
       <div className="flex flex-col md:flex-row items-center">
         <div className="[w-50%] lg:w-1/2 lg:pr-8 mb-10">
-          <h2 className="text-4xl font-bold mb-4 leading-tight">
-            Let our Agilis Team understand and serve your needs.
+          <h2 className="text-3xl md:text-4xl font-bold mb-4  leading-tight">
+            Let our Agilis Team understand and serve your needs.{" "}
+            <span className="inline-flex">
+              <IoRocket />
+            </span>
           </h2>
           <p className="text-gray-700 text-wrap mb-6 text-xl">
-            Our dedicated team of cloud telephony experts will work closely with
-            you to understand your business communication needs and goals. We
-            will develop a customized cloud telephony solution tailored to your
-            specific requirements. Our agile approach ensures that your project
-            is delivered on time and within budget. You can count on our
-            expertise to provide you with exceptional after-sales service and
-            support, ensuring your cloud telephony solution is always running
-            smoothly and efficiently.
+            Our cloud telephony experts craft tailored solutions to meet your
+            business communication goals, ensuring timely delivery and
+            exceptional support.
           </p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

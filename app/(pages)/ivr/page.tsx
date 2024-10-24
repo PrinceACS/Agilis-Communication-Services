@@ -52,7 +52,7 @@ const IVRPage: React.FC = () => {
         className="sticky top-0 bg-opacity-90 backdrop-filter backdrop-blur-lg"
         style={{ backgroundColor: theme.primary }}
       >
-        <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <nav className="container hidden mx-auto px-4 py-4 md:flex justify-between items-center">
           <h1 className="text-2xl font-bold" style={{ color: theme.accent }}>
             IVR Solutions
           </h1>
@@ -101,17 +101,17 @@ const IVRPage: React.FC = () => {
 const OverviewSection: React.FC = () => (
   <section
     id="overview"
-    className="py-14 px-8 lg:px-16 bg-opacity-90 backdrop-filter backdrop-blur-lg rounded-3xl relative overflow-hidden"
+    className="py-12 mt-10 px-8 lg:px-16 bg-opacity-90 backdrop-filter backdrop-blur-lg rounded-3xl relative overflow-hidden"
     style={{
       backgroundColor: theme.secondary,
       color: theme.primary,
     }}
   >
     {/* Background accent for added visual appeal */}
-    <div className="absolute inset-0 bg-gradient-to-tr from-white via-transparent to-transparent opacity-10 pointer-events-none"></div>
+    {/* <div className="absolute inset-0 bg-gradient-to-tr from-white via-transparent to-transparent opacity-10 pointer-events-none"></div> */}
 
     {/* Content grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
       {/* Left column: Textual content */}
       <div>
         <h3

@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/accordion";
 import Testimonial from "../../company/Testimonial";
 import { Button } from "@/components/ui/button";
-import { Star, Clock, Headphones, Database, Phone } from "lucide-react";
+import { Star, Clock, Headphones, Database } from "lucide-react";
 import Link from "next/link";
 
 const testimonials = [
@@ -143,21 +143,20 @@ const Specific = () => {
         <Testimonial testimonials={testimonials} />
       </section>
 
-      <section className="mb-24 bg-amber-400 text-[#1A1A1A] p-12 rounded-lg">
-        <h2 className="text-2xl font-bold mb-4 flex items-center justify-center">
-          <Phone className="w-14 h-14 mr-2" />
-          Start Converting Leads into Customers Today
+      <section className="mb-24 bg-amber-400 text-[#1A1A1A] p-10 rounded-lg">
+        <h2 className="text-xl font-bold mb-4 text-center  justify-center">
+          Start Converting Leads into Customers Today{" "}
         </h2>
-        <p className="text-xl text-center mb-8">
+        <p className="text-lg text-center mb-8">
           Don&apos;t miss another business opportunity. Our IVR system ensures
           you are always available to your customers.
         </p>
-        <div className="flex justify-center space-x-4">
-          <Button className="bg-[#1A1A1A] text-amber-500 hover:bg-black">
-            <a href="tel:+919810787931">Call Now:+91 98107 87931</a>
-          </Button>
+        <div className="flex flex-col gap-y-4 items-center justify-center space-x-4">
           <Button className="bg-[#1A1A1A] text-amber-500 hover:bg-black">
             <Link href="#demo">Book a Demo</Link>
+          </Button>
+          <Button className="bg-[#1A1A1A] text-amber-500 hover:bg-black">
+            <a href="tel:+919810787931">Call Now:+91 98107 87931</a>
           </Button>
         </div>
       </section>
@@ -169,7 +168,7 @@ const Specific = () => {
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-lg font-semibold">
+              <AccordionTrigger className="text-lg font-semibold text-start">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="text-[#333333]">

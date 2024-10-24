@@ -1,3 +1,4 @@
+"use client";
 import { sendEmail } from "@/actions/sendEmail";
 import React from "react";
 import toast from "react-hot-toast";
@@ -96,7 +97,7 @@ const Demo: React.FC<{
         }
       );
     } catch (error) {
-      console.error("Error - demo", error);
+      // console.error("Error - demo", error);
       toast.error(`Error submitting form: ${error}`);
     } finally {
       setIsSending(false);
@@ -107,8 +108,8 @@ const Demo: React.FC<{
   };
 
   return (
-    <div className="bg-yellow-300 rounded-lg p-10 mx-10 lg:mx-0">
-      <h2 className="text-3xl font-bold">{title}</h2>
+    <div className="bg-yellow-300 rounded-lg p-10">
+      <h2 className="text-2xl md:text-3xl font-bold">{title}</h2>
       <p className="mt-4">{description}</p>
       <form onSubmit={onFinishHandler} className="mt-8">
         {fields.map((field) => (

@@ -44,10 +44,10 @@ const CompleteCallManagementSolution: React.FC = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-yellow-400 to-yellow-300 text-white py-24">
         <div className="container mx-auto text-center">
-          <h1 className="text-6xl font-extrabold mb-6 tracking-tight">
+          <h1 className="md:text-5xl text-3xl font-extrabold mb-6 tracking-tight">
             Complete Call Management Solution
           </h1>
-          <p className="text-2xl max-w-3xl mx-auto mb-8">
+          <p className="md:text-2xl text-xl max-w-3xl mx-auto mb-8 px-1">
             Agilis Communication Services provides an advanced Autodialer
             Solution to optimize your business&apos;s outbound communication,
             increasing efficiency and streamlining operations.
@@ -288,9 +288,9 @@ const CompleteCallManagementSolution: React.FC = () => {
             animate={isFaqInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, ease: "easeInOut" }}
           >
-            <div className="bg-gray-800 grid grid-cols-1 lg:grid-cols-2 mx-auto p-10 rounded-lg shadow-lg">
+            <div className="bg-gray-800 grid grid-cols-1 lg:grid-cols-2 mx-auto p-5 rounded-lg shadow-lg">
               <FNQ faqItems={faqItems} />
-              <div id="demo" className="p-6 rounded-lg">
+              <div id="demo" className="p-5 rounded-lg">
                 <Demo
                   title="Request A Demo"
                   description="Contact us today to schedule a demonstration and know how our solution can benefit your organization."

@@ -20,21 +20,21 @@ type CTAProps = {
 
 const CTA1 = () => {
   return (
-    <div className="flex mx-20 flex-col md:flex-row items-center justify-between gap-10 mb-10 ">
-      <div className="max-w-[60rem] md:ml-20 md:justify-center text-center md:text-left">
-        <h1 className="text-3xl font-bold mb-5 text-gray-800 leading-tight">
+    <div className="flex mx-auto flex-col md:flex-row items-center justify-center mb-10 ">
+      <div className="max-w-[50rem] px-10 md:ml-20 md:justify-center text-center md:text-left">
+        <h1 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800 leading-tight">
           Grow Your Business With Us
         </h1>
-        <p className="text-lg mb-6 text-gray-600">
+        {/* <p className=" md:text-lg mb-6 text-gray-600">
           We help you take your business to the next level with tailored
           solutions.
-        </p>
-        <div className="flex flex-row md:flex-row gap-4 justify-center md:justify-start">
+        </p> */}
+        <div className="flex flex-col md:flex-row gap-4 justify-center items-center md:justify-start">
           <Link
             href="#"
             className="flex items-center w-[12rem] justify-center rounded-md bg-[#e6c81e] px-4 py-2 text-lg font-semibold text-black transition hover:bg-[#e0bd3e] shadow-lg"
           >
-            Shedule Demo
+            Schedule a Demo
           </Link>
           <Link
             href="https://wa.me/+919810787931?text=Hello%20I%20am%20interested%20in%20your%20services"
@@ -51,7 +51,7 @@ const CTA1 = () => {
         <Image
           alt="talk to expert"
           src={cta_1}
-          className="rounded-lg object-contain "
+          className="rounded-lg object-contain w-full h-full"
         />
       </div>
     </div>

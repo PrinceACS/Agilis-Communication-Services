@@ -240,16 +240,16 @@ const BulkWhatsappPage: React.FC = () => {
       {/* FAQ Section */}
       <motion.section
         ref={faqRef}
-        className="bg-gray-900 py-16"
+        className="bg-gray-900 py-10 mb-10"
         initial={{ opacity: 0, y: 20 }}
         animate={isFaqInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
       >
-        <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ">
           <div className="col-span-1 sm:col-span-2 lg:col-span-2">
             <FNQ faqItems={faqItems} />
           </div>
-          <div className="col-span-1 sm:col-span-2 lg:col-span-2">
+          <div className="col-span-1 mx-5 sm:col-span-2 lg:col-span-2">
             <Demo />
           </div>
         </div>

@@ -11,7 +11,7 @@ type TestimonialProps = {
 
 export default function Testimonial({ testimonials }: TestimonialProps) {
   return (
-    <div className="max-w-7xl  mx-auto p-8 items-center">
+    <div className="max-w-7xl mb-10  mx-auto  items-center">
       <h2 className="text-4xl font-bold text-center mb-2">
         Client Testimonials
       </h2>
@@ -37,12 +37,12 @@ export default function Testimonial({ testimonials }: TestimonialProps) {
               <div className="flex-grow">
                 <Image
                   src={quotg_icon}
-                  width={30}
-                  height={30}
+                  width={25}
+                  height={25}
                   alt="quote"
                   className="text-yellow-300"
                 />
-                <blockquote className="text-xl ml-10 py-2 -mt-2 italic mb-4">
+                <blockquote className="text-md text-pretty ml-10 py-2 -mt-2 italic mb-4">
                   {testimonial.content}
                 </blockquote>
               </div>

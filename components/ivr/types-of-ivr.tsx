@@ -16,23 +16,30 @@ const TypesOfIVR = () => {
       </div>
 
       {/* Toll-Free IVR */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center items-center mb-16">
-        <div className="justify-center ml-16 md:flex md:flex-row md:items-center md:justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center items-center mb-16 md:mb-0">
+        <div className="justify-center md:flex md:flex-row md:items-center md:justify-center md:order-last">
           <Link href="/ivr/toll-free-ivr">
-            <Image
-              alt="Toll Free"
-              height={400}
-              width={400}
-              src={ivr_toll_free}
-              className="rounded-lg shadow-lg cursor-pointer"
-            />
+            <div className="relative">
+              <Image
+                alt="Toll Free"
+                height={400}
+                width={400}
+                src={ivr_toll_free}
+                className="rounded-lg shadow-lg cursor-pointer"
+              />
+              <div className="absolute top-0 left-0 w-full h-full hover:bg-black hover:bg-opacity-25 transition duration-300">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl font-bold text-white">
+                  Explore
+                </div>
+              </div>
+            </div>
           </Link>
         </div>
-        <div className="text-center justify-center mx-5">
+        <div className="text-center justify-center mx-5 md:order-first">
           <h2 className="text-3xl font-bold text-yellow-500 mb-4">
             Toll Free IVR
           </h2>
-          <p className="text-xl text-gray-700 mb-6">
+          <p className="text-md md:text-lg text-gray-700 mb-6">
             A Toll-Free IVR with a 1800 number is a customer service solution
             that allows callers to reach your business without incurring any
             charges. The 1800 number is widely recognized and accessible from
@@ -53,23 +60,30 @@ const TypesOfIVR = () => {
       </div>
 
       {/* 10 Digit IVR */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center items-center">
-        <div className="justify-center ml-16 md:flex md:flex-row md:items-center md:justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center items-center mt-16 md:mt-0">
+        <div className="justify-center md:flex md:flex-row md:items-center md:justify-center md:order-last">
           <Link href="/ivr/10-digit-ivr">
-            <Image
-              alt="10 Digit IVR"
-              height={400}
-              width={400}
-              src={ten_digit_ivr}
-              className="rounded-lg shadow-lg cursor-pointer"
-            />
+            <div className="relative">
+              <Image
+                alt="10 Digit IVR"
+                height={400}
+                width={400}
+                src={ten_digit_ivr}
+                className="rounded-lg shadow-lg cursor-pointer"
+              />
+              <div className="absolute top-0 left-0 w-full h-full hover:bg-black hover:bg-opacity-25 transition duration-300">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl font-bold text-white">
+                  Explore
+                </div>
+              </div>
+            </div>
           </Link>
         </div>
-        <div className="text-center justify-center mx-5">
+        <div className="text-center justify-center mx-5 md:order-first">
           <h2 className="text-3xl font-bold text-yellow-500 mb-4">
             10 Digit IVR
           </h2>
-          <p className="text-xl text-gray-700 mb-6">
+          <p className="text-md md:text-lg text-center text-gray-700 mb-6">
             A normal IVR system using a 10-digit mobile number allows businesses
             to automate customer interactions through a standard phone line.
             Unlike toll-free numbers, callers may incur charges based on their

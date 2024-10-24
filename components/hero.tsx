@@ -6,8 +6,8 @@ import hero from "../public/images/hero.jpg";
 
 const HeroSection = () => {
   return (
-    <main className="text-gray-900 flex flex-col items-center mb-10 bg-gray-100 ">
-      <section className="relative mt-10 lg:mt-20 mx-10  px-6 flex flex-col md:flex-row items-center ">
+    <main className="text-gray-900 flex flex-col items- justify-center gap-5 mb-10 bg-gray-100 ">
+      <section className="relative mt-10 lg:mt-20 mx-10 flex flex-col md:flex-row items-center ">
         {/* Text Content */}
         <div className="md:w-[60%] lg:mr-14 text-center md:justify-start space-y-6">
           <h1 className="text-3xl font-extrabold mb-6 mt-5 md:text-4xl lg:text-5xl text-gray-800 leading-tight">
@@ -37,7 +37,7 @@ const HeroSection = () => {
         </div>
 
         {/* Image Content */}
-        <div className="w-full md:mt-0 my-10 md:w-[30%] lg: justify-center bg-white">
+        <div className="w-full md:mt-0 my-10 md:w-[30%] lg:justify-center bg-white">
           <Image
             src={hero}
             alt="Hero Image"

@@ -1,5 +1,5 @@
 import HeroSection from "@/components/hero";
-import Services from "@/components/company/services";
+// import Services from "@/components/company/services";
 import Contact from "@/components/company/contact";
 import Testimonial from "@/components/company/Testimonial";
 import WorkWithUs from "@/components/company/work-wth-us";
@@ -45,9 +45,9 @@ const testimonials = [
 
 export default function Home() {
   return (
-    <div className=" items-center justify-center min-h-screen font-[var(--font-geist-sans)]">
+    <div>
       <HeroSection />
-      <Services />
+
       <CTA1 />
       <WhyChooseAgilis />
       <SolutionByBusiness />

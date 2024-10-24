@@ -32,14 +32,14 @@ const SolutionByBusiness = () => {
 
   return (
     <motion.div
-      className="py-16 md:px-10 px-6 lg:px-8 mx-20"
+      className="py-16 md:px-10 lg:px-8 mx-10"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
       {/* Main Heading Section */}
       <motion.div variants={itemVariants} className="text-center mb-16">
-        <h1 className="text-4xl sm:text-5xl font-bold  mb-4">
+        <h1 className="text-3xl sm:text-5xl font-bold  mb-4">
           Solutions for Businesses
         </h1>
         {/* <div className="w-24 h-1 bg-secondary mx-auto"></div> */}
@@ -48,9 +48,9 @@ const SolutionByBusiness = () => {
       {/* Introduction Paragraph */}
       <motion.div
         variants={itemVariants}
-        className="text-2xl text-gray-700 max-w-4xl md:max-w-6xl mx-auto mb-20"
+        className=" text-gray-700  md:max-w-6xl mx-auto mb-20"
       >
-        <p className="text-center text-2xl">
+        <p className="text-center text-xl md:text-2xl">
           At Agilis, we provide comprehensive solutions that help businesses
           thrive in an ever-changing landscape. Whether you&apos;re looking to
           enhance communication, streamline operations, or ensure compliance,

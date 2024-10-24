@@ -45,7 +45,7 @@ const Contact = () => {
       subject: formData.subject,
       type: "contact",
     });
-    console.log("response", response);
+
     if (!response.error) {
       toast.success(
         `Thank you for contacting us. We'll get back to you soon.`,
@@ -64,7 +64,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="mx-auto w-full py-16 px-5 bg-gray-100">
+    <section id="contact" className="mx-auto w-full py-16 px-10 bg-gray-100">
       {/* Header */}
       <div className=" text-center">
         <h2 className="text-4xl font-bold text-gray-800">Contact Us</h2>

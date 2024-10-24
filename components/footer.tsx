@@ -41,12 +41,12 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="/services" className="hover:text-[#d4af37]">
+              <a href="#services" className="hover:text-[#d4af37]">
                 Services
               </a>
             </li>
             <li>
-              <a href="/contact" className="hover:text-[#d4af37]">
+              <a href="#contact" className="hover:text-[#d4af37]">
                 Contact Us
               </a>
             </li>
@@ -101,7 +101,7 @@ const Footer = () => {
             <FaInstagram className="h-6 w-6" />
           </a> */}
         </div>
-        <p className="mt-6 mr-5 md:mt-0">
+        <p className="mt-2 text-sm mr-5 md:mt-0">
           &copy; 2024 Agilis Communication. All rights reserved.
         </p>
       </div>

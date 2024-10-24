@@ -221,14 +221,14 @@ const InboundCallingPage: React.FC = () => {
       {/* FAQ Section */}
       <motion.section
         id="demo"
-        ref={faqRef}
         className="py-16"
+        ref={faqRef}
         initial={{ opacity: 0, y: 50 }}
         animate={isFaqInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.7, delay: 0.1, ease: "easeInOut" }}
       >
-        <div className="bg-gray-800 grid grid-cols-1 lg:grid-cols-2 mx-20">
-          <div className=" p-6 rounded-lg ">
+        <div className="bg-gray-800 grid grid-cols-1 lg:grid-cols-2">
+          <div className="p-5 rounded-lg ">
             <Demo
               title="Request A Demo"
               description="Contact us today to schedule a demonstration and know how our solution can benefit your organization."

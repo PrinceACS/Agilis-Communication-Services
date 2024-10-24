@@ -14,11 +14,20 @@ const Header = () => {
 
   return (
     <header className="flex justify-between sticky z-50 w-full top-0 sm:px-10 items-center px-4 md:px-20 py-3 bg-[#000000] shadow-md">
-      <Link href={"/"} className="text-center justify-center items-center">
-        <div className="ml-12">
-          <Image src={logo} alt="ACS Logo" width={100} height={100} />
+      <Link
+        href={"/"}
+        className="flex flex-col items-center md:flex-row md:items-center space-y-1 md:space-y-0 md:space-x-4"
+      >
+        <div className="md:ml-12">
+          <Image
+            src={logo}
+            alt="ACS Logo"
+            width={80}
+            height={80}
+            className="md:w-24 md:h-24"
+          />
         </div>
-        <div className="text-white text-sm text-center">
+        <div className="text-white text-center text-sm md:text-base">
           Agilis Communication Service
         </div>
       </Link>

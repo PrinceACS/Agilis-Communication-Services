@@ -1,9 +1,10 @@
 "use server";
+
 import { Resend } from "resend";
 import ContactFormEmail from "@/email/contact-form-email";
 import DemoRequestEmail from "@/email/demo-form-email";
-import React from "react";
 import { getErrorMessage } from "@/lib/utils/utils";
+import React from "react";
 
 if (!process.env.RESEND_API_KEY) {
   throw new Error("Missing RESEND_API_KEY");
@@ -34,17 +35,19 @@ export const sendEmail = async ({
 }: SendEmailArgs) => {
   try {
     let data;
+    const sanitizedEmail = senderEmail.trim().toLowerCase();
+
     if (type === "contact") {
       data = await resend.emails.send({
         from: "Contact Form <onboarding@resend.dev>",
-        to: "princetiwari180@gmail.com", // Change to your email
+        to: "princetiwari180@gmail.com",
         subject: subject || "Message from contact form",
-        replyTo: senderEmail,
+        replyTo: sanitizedEmail,
         react: React.createElement(ContactFormEmail, {
-          message: message,
-          senderEmail: senderEmail,
-          senderName: senderName,
-        }),
+          senderName,
+          senderEmail,
+          message
+        })
       });
     } else if (type === "demo-request") {
       if (!option || typeof option !== "string") {
@@ -52,20 +55,21 @@ export const sendEmail = async ({
       }
       data = await resend.emails.send({
         from: `${option} Demo Request <onboarding@resend.dev>`,
-        to: "princetiwari180@gmail.com", // Change to your email
+        to: "princetiwari180@gmail.com",
         subject: subject || `${option} Demo Request`,
-        replyTo: senderEmail,
+        replyTo: sanitizedEmail,
         react: React.createElement(DemoRequestEmail, {
-          senderName: senderName,
-          senderEmail: senderEmail,
-          phone: phone,
-          company: company,
-          option: option,
-        }),
+          senderName,    
+          senderEmail,
+          phone,
+          company,
+          option
+        })
       });
     } else {
       return { error: "Invalid request type" };
     }
+
     return { ...data };
   } catch (error) {
     return { error: getErrorMessage(error) };

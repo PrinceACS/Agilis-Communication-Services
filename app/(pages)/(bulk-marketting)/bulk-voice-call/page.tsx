@@ -245,7 +245,7 @@ const BulkVoiceCallPage: React.FC = () => {
         </div>
       </motion.section>
 
-      {/* FAQ Section and Blog Section */}
+      {/* FAQ Section */}
       <motion.section
         ref={faqRef}
         className="py-16"
@@ -255,9 +255,9 @@ const BulkVoiceCallPage: React.FC = () => {
       >
         <div
           id="demo"
-          className="bg-gray-800 grid grid-cols-1 lg:grid-cols-2 mx-20"
+          className="bg-gray-800 grid grid-cols-1 lg:grid-cols-2 p-10"
         >
-          <div className=" p-6 rounded-lg ">
+          <div className="p-5 rounded-lg ">
             <Demo
               title="Request A Demo"
               description="Contact us today to schedule a demonstration and know how our solution can benefit your organization."

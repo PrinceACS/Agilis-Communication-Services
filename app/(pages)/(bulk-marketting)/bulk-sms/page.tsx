@@ -255,8 +255,8 @@ const BulkSMSPage: React.FC = () => {
         animate={isFaqInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
       >
-        <div className="container items-center md:flex md:flex-row lg:justify-center  mx-auto px-4">
-          <div className="max-w-4xl mx-auto lg:w-1/2 lg:pr-14">
+        <div className="container items-center md:flex md:flex-row lg:justify-center px-4">
+          <div className="max-w-5xl mx-auto lg:w-1/2 lg:pr-14">
             <FNQ faqItems={faqItems} />
           </div>
           <div className="max-w-4xl mx-auto lg:w-1/2 lg:pl-16">
