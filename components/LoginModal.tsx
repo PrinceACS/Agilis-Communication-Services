@@ -73,7 +73,7 @@ const LoginModal = () => {
             ).value;
             if (number) {
               window.open(
-                `https://wa.me/+919810787931?text=Hi%20I%20need%20help%20with%20getting%20started%20on%20SEATech%20Dialer.%20My%20number%20is%20${number}`,
+                `https://wa.me/+919810787931?text=Hello%20I%20am%20interested%20in%20your%20services%20My%20number%20is%20${number}`,
                 "_blank"
               );
             }

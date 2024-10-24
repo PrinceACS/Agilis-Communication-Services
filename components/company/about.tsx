@@ -4,6 +4,7 @@ import company from "@/public/Team work-amico.svg";
 
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import Contact from "./contact";
 
 const LongTermPartnershipComponent = () => {
   return (
@@ -104,6 +105,7 @@ const About = () => {
         </div>
       </div>
       <LongTermPartnershipComponent />
+      <Contact />
     </section>
   );
 };

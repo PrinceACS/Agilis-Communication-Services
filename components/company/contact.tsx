@@ -7,6 +7,7 @@ import MarkSvg from "../ui/mark-svg";
 import toast from "react-hot-toast";
 
 import { sendEmail } from "@/actions/sendEmail";
+import { useFormStatus } from "react-dom";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +16,8 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+
+  const { pending } = useFormStatus();
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -117,7 +120,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Form */}
-        <div className="bg-white p-6 rounded-lg shadow-lg">
+        <section className="bg-white p-6 rounded-lg shadow-lg">
           <h3 className="text-2xl font-semibold text-gray-700 mb-6">
             Send us a message
           </h3>
@@ -202,16 +205,15 @@ const Contact = () => {
               {/* Submit Button */}
               <div className="mt-6">
                 <button
-                  onClick={handleSubmit}
                   type="submit"
                   className="w-full bg-[#f8e67e] text-white px-4 py-2 rounded-md font-semibold hover:bg-[#ddad20] transition duration-300"
                 >
-                  Send Message
+                  {pending ? "Sending..." : "Send Message"}
                 </button>
               </div>
             </div>
           </form>
-        </div>
+        </section>
       </div>
     </section>
   );

@@ -6,9 +6,7 @@ import DemoRequestEmail from "@/email/demo-form-email";
 import { getErrorMessage } from "@/lib/utils/utils";
 import React from "react";
 
-if (!process.env.RESEND_API_KEY) {
-  throw new Error("Missing RESEND_API_KEY");
-}
+console.log(process.env.RESEND_API_KEY);
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -72,6 +70,7 @@ export const sendEmail = async ({
 
     return { ...data };
   } catch (error) {
+    console.error("Email sending error:", error);
     return { error: getErrorMessage(error) };
   }
 };

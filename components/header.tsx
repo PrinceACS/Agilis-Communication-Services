@@ -16,18 +16,18 @@ const Header = () => {
     <header className="flex justify-between sticky z-50 w-full top-0 sm:px-10 items-center px-4 md:px-20 py-3 bg-[#000000] shadow-md">
       <Link
         href={"/"}
-        className="flex flex-col items-center md:flex-row md:items-center space-y-1 md:space-y-0 md:space-x-4"
+        className="flex flex-col items-center  md:items-center space-y-1 md:space-y-0 md:space-x-4"
       >
-        <div className="md:ml-12">
+        <div className="md:ml-6">
           <Image
             src={logo}
             alt="ACS Logo"
-            width={80}
-            height={80}
-            className="md:w-24 md:h-24"
+            width={70}
+            height={70}
+            className="md:w-16 md:h-14"
           />
         </div>
-        <div className="text-white text-center text-sm md:text-base">
+        <div className="text-white text-center text-xs">
           Agilis Communication Service
         </div>
       </Link>
