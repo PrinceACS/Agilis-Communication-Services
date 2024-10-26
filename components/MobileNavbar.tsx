@@ -2,6 +2,7 @@ import { useState } from "react"; // To handle toggle state
 
 // Sample data imports (or you can use actual imports)
 import { FaPhone, FaWhatsapp, FaSms, FaCloud, FaRobot } from "react-icons/fa";
+import Login from "./login";
 
 // Accordion component for each category
 const Accordion = ({
@@ -154,10 +155,14 @@ const MobileNavbar = () => {
   // ];
 
   return (
-    <nav className="w-full max-w-md mx-auto mt-2 bg-white rounded-lg shadow-lg">
+    <nav className="w-full h-auto max-w-md mx-auto mt-2 items-center bg-white rounded-lg shadow-lg">
       <Accordion title="Bulk Marketing" items={bulk_marketing} />
       <Accordion title="Call Management" items={call_management} />
       <Accordion title="IVR" items={ivr} />
+      <div className="border-t border-gray-600 p-2">
+        <Login />
+      </div>
+
       {/* <Accordion title="Other Services" items={other_services} /> */}
       {/* <Accordion title="Services" items={services} /> */}
     </nav>

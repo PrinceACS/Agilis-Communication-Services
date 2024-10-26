@@ -3,74 +3,71 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Dialog, DialogTrigger } from "@/components/ui/dialog";
+
 import logo from "../public/acs-logo-removebg-preview.png";
 import Navbar from "./navbar"; // Your existing full navbar for larger devices
 import MobileNavbar from "./MobileNavbar";
-import LoginModal from "./LoginModal";
+import Login from "./login";
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="flex justify-between sticky z-50 w-full top-0 sm:px-10 items-center px-4 md:px-20 py-3 bg-[#000000] shadow-md">
-      <Link
-        href={"/"}
-        className="flex flex-col items-center  md:items-center space-y-1 md:space-y-0 md:space-x-4"
-      >
-        <div className="md:ml-6">
-          <Image
-            src={logo}
-            alt="ACS Logo"
-            width={70}
-            height={70}
-            className="md:w-16 md:h-14"
-          />
-        </div>
-        <div className="text-white text-center text-xs">
-          Agilis Communication Service
-        </div>
-      </Link>
-
-      {/* Full Navbar for large devices */}
-      <div className="hidden lg:flex items-center">
-        <Navbar />
-      </div>
-
-      <div className="flex gap-x-4">
-        {/* Call to Action (Login/Sign Up) */}
-        <div className="hidden sm:flex space-x-4">
-          {/* Use shadcn Dialog component */}
-          <Dialog>
-            <DialogTrigger asChild>
-              <button className="bg-[#FFD700] hover:bg-[#f8db5a] focus:ring-4 focus:ring-yellow-400 text-[#000000] px-4 py-2 rounded-md transition-all duration-300 ease-in-out font-semibold">
-                Login
-              </button>
-            </DialogTrigger>
-            <LoginModal />
-          </Dialog>
-        </div>
-
-        {/* Hamburger Icon for mobile */}
-        <div className="flex md:hidden items-center">
-          <button
-            className="text-[#FFD700] text-2xl"
-            onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? (
-              <FaTimes />
-            ) : (
-              <FaBars className="text-2xl h-8 w-8" />
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="absolute pb-5 z-10  top-[4.5rem] left-0 w-full bg-[#000000] text-white">
-            <MobileNavbar />
+    <header
+      className="fixed top-0 left-0 z-50 w-full bg-[#000000] shadow-md"
+      style={{ backdropFilter: "blur(2px)" }}
+    >
+      <div className="flex justify-between items-center px-4 md:px-20 py-3">
+        <Link
+          href={"/"}
+          className="flex flex-col items-center  md:items-center space-y-1 md:space-y-0 md:space-x-4"
+        >
+          <div className="md:ml-6">
+            <Image
+              src={logo}
+              alt="ACS Logo"
+              width={70}
+              height={70}
+              className="md:w-16 md:h-14"
+            />
           </div>
-        )}
+          <div className="text-white text-center text-xs">
+            Agilis Communication Service
+          </div>
+        </Link>
+
+        {/* Full Navbar for large devices */}
+        <div className="hidden lg:flex items-center">
+          <Navbar />
+        </div>
+
+        <div className="flex gap-x-4">
+          {/* Call to Action (Login/Sign Up) */}
+          <div className="hidden md:flex">
+            <Login />
+          </div>
+
+          {/* Hamburger Icon for mobile */}
+          <div className="flex md:hidden items-center">
+            <button
+              className="text-[#FFD700] text-2xl"
+              onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <FaTimes />
+              ) : (
+                <FaBars className="text-2xl h-8 w-8" />
+              )}
+            </button>
+          </div>
+
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+            <div className="absolute items-center pb-5 z-10  top-[4.7rem] left-0 w-full bg-[#000000] text-white">
+              <MobileNavbar />
+            </div>
+          )}
+        </div>
       </div>
     </header>
   );

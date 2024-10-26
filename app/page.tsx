@@ -1,5 +1,5 @@
 import HeroSection from "@/components/hero";
-// import Services from "@/components/company/services";
+import Services from "@/components/company/services";
 import Contact from "@/components/company/contact";
 import Testimonial from "@/components/company/Testimonial";
 import WorkWithUs from "@/components/company/work-wth-us";
@@ -49,6 +49,7 @@ export default function Home() {
       <HeroSection />
 
       <CTA1 />
+      <Services />
       <WhyChooseAgilis />
       <SolutionByBusiness />
       <OurCustomers />
