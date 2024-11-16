@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Toaster } from "react-hot-toast";
+import TawkTo from "@/components/company/tawk";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={`${nunito.className} relative`}>
         <Header />
         {children}
+        <TawkTo />
         <Footer />
         <Toaster />
       </body>

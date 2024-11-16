@@ -47,9 +47,8 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
-
-      <CTA1 />
       <Services />
+      <CTA1 />
       <WhyChooseAgilis />
       <SolutionByBusiness />
       <OurCustomers />

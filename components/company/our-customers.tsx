@@ -6,27 +6,29 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import company from "@/public/images/company.jpg";
-import company1 from "@/public/images/company1jpg.jpg";
-import company2 from "@/public/images/company2.jpg";
-import company4 from "@/public/images/company4.jpg";
-import company5 from "@/public/images/company5.jpg";
-import company6 from "@/public/images/company6.jpg";
-import company7 from "@/public/images/company7.jpg";
-import company8 from "@/public/images/company8.jpg";
-import company9 from "@/public/images/company9.jpg";
+import company1 from "@/public/images/testimonials/company1.png";
+import company2 from "@/public/images/testimonials/company2.png";
+import company3 from "@/public/images/testimonials/company3.png";
+import company4 from "@/public/images/testimonials/company4.png";
+import company5 from "@/public/images/testimonials/company5.png";
+import company6 from "@/public/images/testimonials/company6.png";
+import company7 from "@/public/images/testimonials/company7.png";
+import company8 from "@/public/images/testimonials/company8.png";
+import company9 from "@/public/images/testimonials/company9.png";
+import company10 from "@/public/images/testimonials/company10.png";
 
 const OurCustomers = () => {
   const customers = [
-    { name: "Company", logo: company },
     { name: "Company1", logo: company1 },
     { name: "Company2", logo: company2 },
+    { name: "Company3", logo: company3 },
     { name: "Company4", logo: company4 },
     { name: "Company5", logo: company5 },
     { name: "Company6", logo: company6 },
     { name: "Company7", logo: company7 },
     { name: "Company8", logo: company8 },
     { name: "Company9", logo: company9 },
+    { name: "Company10", logo: company10 },
   ];
 
   return (

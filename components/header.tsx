@@ -27,8 +27,8 @@ const Header = () => {
               src={logo}
               alt="ACS Logo"
               width={70}
-              height={70}
-              className="md:w-16 md:h-14"
+              height={50}
+              className="md:w-16 md:h-11"
             />
           </div>
           <div className="text-white text-center text-xs">
