@@ -16,6 +16,10 @@ import company7 from "@/public/images/testimonials/company7.png";
 import company8 from "@/public/images/testimonials/company8.png";
 import company9 from "@/public/images/testimonials/company9.png";
 import company10 from "@/public/images/testimonials/company10.png";
+import company11 from "@/public/images/testimonials/company11.png";
+import company12 from "@/public/images/testimonials/company12.png";
+import company13 from "@/public/images/testimonials/company13.png";
+import company14 from "@/public/images/testimonials/company14.png";
 
 const OurCustomers = () => {
   const customers = [
@@ -29,6 +33,10 @@ const OurCustomers = () => {
     { name: "Company8", logo: company8 },
     { name: "Company9", logo: company9 },
     { name: "Company10", logo: company10 },
+    { name: "Company11", logo: company11 },
+    { name: "Company12", logo: company12 },
+    { name: "Company13", logo: company13 },
+    { name: "Company14", logo: company14 },
   ];
 
   return (

@@ -58,7 +58,7 @@ const servicesGrouped = {
         "Gain insights into customer interactions and agent performance with call analytics.",
     },
   ],
-  "Product Tax Services": [
+  "Tax Services": [
     {
       icon: <CalculatorIcon className="h-[3rem] w-[3rem] text-[#ff5722]" />,
       title: "Tax Calculation",
@@ -148,7 +148,7 @@ export default function ServicesPage() {
 
   return (
     <div id="services" className="mx-10 md:mx-20  py-12">
-      <div className=" mx-auto space-y-4 mb-10 text-center">
+      <div className="mx-auto space-y-4 mb-10 text-center">
         <h2 className="inline-block text-2xl text-center md:text-4xl font-semibold bg-[#f8e67e] px-3 py-1 rounded-lg text-[#0d0d0d]">
           Our Services
         </h2>
@@ -160,9 +160,12 @@ export default function ServicesPage() {
 
       {Object.entries(servicesGrouped).map(([category, services], index) => (
         <section key={index} className="mb-16 mx-10">
-          <h2 className="text-4xl font-semibold text-gray-800 mb-6">
+          <h2 className="text-3xl md:text-4xl text-center font-semibold text-gray-800 mb-4">
             {category}
           </h2>
+          <div className="flex justify-center mb-12">
+            <div className={`w-[16rem] h-2 bg-yellow-300`}></div>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, idx) => (
               <div
@@ -172,7 +175,7 @@ export default function ServicesPage() {
                 <div className="flex items-center justify-center mb-4">
                   {service.icon}
                 </div>
-                <h3 className="text-3xl font-bold text-gray-700 mb-2">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-700 mb-2">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 text-xl">{service.description}</p>
