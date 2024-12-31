@@ -35,7 +35,6 @@ export default function EnhancedHeroSection() {
   return (
     <section className="w-full py-16 bg-black text-white overflow-hidden">
       <div className="container px-4 md:px-6 relative">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('/api/placeholder/1920/1080')] opacity-10 bg-cover bg-center" />
         <div className="relative z-10">
           <div className="flex flex-col items-center space-y-8 text-center mb-16">
             <div className="space-y-4">

@@ -15,7 +15,7 @@ import { PhoneOutgoingIcon, ShieldPlus } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between p-4 bg-[#000000]">
+    <nav className="flex items-center justify-between p-4 from-black via-gray-900 to-gray-800 shadow-md backdrop-blur-md">
       <NavigationMenu>
         <NavigationMenuList>
           {/* Bulk Marketing */}

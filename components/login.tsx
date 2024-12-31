@@ -8,7 +8,7 @@ const Login = () => {
       {/* Use shadcn Dialog component */}
       <Dialog>
         <DialogTrigger asChild>
-          <button className="bg-[#FFD700] hover:bg-[#f8db5a] focus:ring-4 focus:ring-yellow-400 text-[#000000] px-4 py-2 rounded-md transition-all duration-300 ease-in-out font-semibold">
+          <button className="bg-[#d2b71d] hover:bg-[#f8db5a] focus:ring-4 focus:ring-yellow-400 text-gray-900 px-4 py-2 rounded-md transition-all duration-300 ease-in-out font-semibold">
             Login
           </button>
         </DialogTrigger>

@@ -13,14 +13,11 @@ const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header
-      className="fixed top-0 left-0 z-50 w-full bg-[#000000] shadow-md"
-      style={{ backdropFilter: "blur(2px)" }}
-    >
-      <div className="flex justify-between items-center px-4 md:px-20 py-3">
+    <header className="fixed top-0 left-0 z-50 w-full bg-gradient-to-b from-black via-gray-900 to-gray-800 shadow-md backdrop-blur-md">
+      <div className="flex justify-between items-center px-6 md:px-20 py-4 mt-10 md:mt-8 ">
         <Link
           href={"/"}
-          className="flex flex-col items-center  md:items-center space-y-1 md:space-y-0 md:space-x-4"
+          className="flex flex-col items-center md:items-center space-y-1 md:space-y-0 md:space-x-4"
         >
           <div className="md:ml-6">
             <Image
@@ -63,7 +60,7 @@ const Header = () => {
 
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
-            <div className="absolute items-center pb-5 z-10  top-[4.7rem] left-0 w-full bg-[#000000] text-white">
+            <div className="absolute items-center pb-5 z-10 top-[4.7rem] left-0 w-full bg-gradient-to-b from-black to-gray-800 text-white">
               <MobileNavbar />
             </div>
           )}

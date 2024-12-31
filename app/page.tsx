@@ -7,6 +7,7 @@ import { CTA1 } from "@/components/cta";
 import WhyChooseAgilis from "@/components/company/WhyCooseAgilis";
 import SolutionByBusiness from "@/components/company/solution-by-buisness";
 import OurCustomers from "@/components/company/our-customers";
+import NewYearOverlay from "@/components/newyear-overlays";
 
 const testimonials = [
   {
@@ -46,6 +47,7 @@ const testimonials = [
 export default function Home() {
   return (
     <div>
+      <NewYearOverlay />
       <HeroSection />
       <Services />
       <CTA1 />
