@@ -8,8 +8,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 const WorkWithUs = () => {
   return (
-    <div className="my-10 mx-10  md:mx-20 px-4  items-center">
-      <div className="flex flex-col md:flex-row items-center">
+    <div className="bg-gradient-to-b from-orange-200 p-10 via-white to-green-200 items-center">
+      <div className="flex flex-col md:flex-row items-center px-10">
         <div className="[w-50%] lg:w-1/2 lg:pr-8 mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-4  leading-tight">
             Let our Agilis Team understand and serve your needs.{" "}

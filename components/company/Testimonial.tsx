@@ -11,7 +11,7 @@ type TestimonialProps = {
 
 export default function Testimonial({ testimonials }: TestimonialProps) {
   return (
-    <div className="max-w-7xl mb-10  mx-auto  items-center">
+    <div className="bg-gradient-to-b from-orange-200 via-white to-green-200 items-center p-10">
       <h2 className="text-4xl font-bold text-center mb-2">
         Client Testimonials
       </h2>
@@ -42,7 +42,7 @@ export default function Testimonial({ testimonials }: TestimonialProps) {
                   alt="quote"
                   className="text-yellow-300"
                 />
-                <blockquote className="text-md text-pretty ml-10 py-2 -mt-2 italic mb-4">
+                <blockquote className="text-md text-pretty ml-10 py-2 -mt-2 italic mb-4 ">
                   {testimonial.content}
                 </blockquote>
               </div>

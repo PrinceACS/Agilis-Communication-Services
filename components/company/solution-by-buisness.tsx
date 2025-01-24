@@ -32,14 +32,14 @@ const SolutionByBusiness = () => {
 
   return (
     <motion.div
-      className="py-16 md:px-10 lg:px-8 mx-10"
+      className="py-16 md:px-10 lg:px-8 bg-gradient-to-b from-orange-200 via-white to-green-200"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
       {/* Main Heading Section */}
-      <motion.div variants={itemVariants} className="text-center mb-16">
-        <h1 className="text-3xl sm:text-5xl font-bold  mb-4">
+      <motion.div variants={itemVariants} className="text-center mb-14">
+        <h1 className="text-4xl sm:text-5xl font-bold mb-4">
           Solutions for Businesses
         </h1>
         {/* <div className="w-24 h-1 bg-secondary mx-auto"></div> */}
@@ -48,7 +48,7 @@ const SolutionByBusiness = () => {
       {/* Introduction Paragraph */}
       <motion.div
         variants={itemVariants}
-        className=" text-gray-700  md:max-w-6xl mx-auto mb-20"
+        className=" text-gray-700 md:max-w-6xl mx-auto mb-20"
       >
         <p className="text-center text-xl md:text-2xl">
           At Agilis, we provide comprehensive solutions that help businesses
@@ -59,25 +59,28 @@ const SolutionByBusiness = () => {
       </motion.div>
 
       {/* Solutions Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-20">
+      <div className="grid grid-cols-1 mx-10 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-20">
         {/* Cloud Telephony Section */}
-        <motion.div variants={itemVariants} className="flex flex-col space-y-6">
+        <motion.div
+          variants={itemVariants}
+          className=" rounded-md shadow-md p-4 flex flex-col space-y-6"
+        >
           <motion.img
             src={cloud_services.src}
             alt="Cloud Telephony"
-            className="w-full h-64 object-fill rounded-lg shadow-lg"
+            className="w-full h-64 object-contain rounded-lg shadow-md"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           />
           <h2 className="text-2xl font-bold ">
             Transform Your Communication with Cloud Telephony
           </h2>
-          <p className="text-gray-700 text-2xl">
+          <p className="text-gray-700 text-xl">
             Our cloud telephony solutions offer a reliable, scalable platform to
             streamline communication. Boost efficiency, save costs, and improve
             customer service with our advanced call management features.
           </p>
-          <ul className="list-disc pl-5 text-gray-700 text-xl space-y-2">
+          <ul className="list-disc pl-5 text-gray-700 text-lg space-y-2">
             <li>
               <span className="font-bold">Boost Efficiency:</span> Smart routing
               and real-time analytics
@@ -94,24 +97,27 @@ const SolutionByBusiness = () => {
         </motion.div>
 
         {/* Tax Solutions Section */}
-        <motion.div variants={itemVariants} className="flex flex-col space-y-6">
+        <motion.div
+          variants={itemVariants}
+          className="rounded-lg shadow-md p-4 flex flex-col space-y-6"
+        >
           <motion.img
             src={tax_solutions.src}
             alt="Tax Solutions"
             loading="lazy"
-            className="w-full h-64 object-contain  rounded-lg shadow-lg"
+            className="w-full h-64 object-contain  rounded-lg shadow-md"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           />
           <h2 className="text-2xl font-bold ">
             Ensure Compliance and Optimize Finances with Tax Solutions
           </h2>
-          <p className="text-gray-700 text-2xl ">
+          <p className="text-gray-700 text-xl ">
             Navigate complex tax regulations with ease using our expert tax
             solutions. We help businesses stay compliant while maximizing their
             financial outcomes.
           </p>
-          <ul className="list-disc pl-5 text-gray-700 text-xl space-y-2">
+          <ul className="list-disc pl-5 text-gray-700 text-lg space-y-2">
             <li>
               <span className="font-bold">Streamline Tax Management:</span>{" "}
               End-to-end support
@@ -128,22 +134,25 @@ const SolutionByBusiness = () => {
         </motion.div>
 
         {/* IT Solutions Section */}
-        <motion.div variants={itemVariants} className="flex flex-col space-y-6">
+        <motion.div
+          variants={itemVariants}
+          className="rounded-lg shadow-md p-4  flex flex-col space-y-6"
+        >
           <motion.img
             src={it_services.src}
             alt="IT Solutions"
-            className="w-full h-64 object-contain rounded-lg shadow-lg"
+            className="w-full h-64 object-contain rounded-lg shadow-md"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           />
           <h2 className="text-2xl font-bold ">
             Boost Productivity with Comprehensive IT Solutions
           </h2>
-          <p className="text-gray-700 text-2xl">
+          <p className="text-gray-700 text-xl">
             From infrastructure to cybersecurity, our IT solutions are designed
             to support your business in achieving digital transformation.
           </p>
-          <ul className="list-disc pl-5 text-gray-700 text-xl space-y-2">
+          <ul className="list-disc pl-5 text-gray-700 text-lg space-y-2">
             <li>
               <span className="font-bold">Modern Infrastructure:</span>{" "}
               Cutting-edge IT solutions
@@ -168,7 +177,7 @@ const SolutionByBusiness = () => {
         <motion.img
           src={client_centeric_approach.src}
           alt="Client-Centric Approach"
-          className="w-full md:w-1/3 h-64 object-cover rounded-lg shadow-lg"
+          className="w-full md:w-1/3 h-64 object-cover rounded-lg shadow-md"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         />
@@ -176,7 +185,7 @@ const SolutionByBusiness = () => {
           <h2 className="text-3xl font-bold  mb-4">
             Our Client-Centric Approach
           </h2>
-          <p className="text-gray-700  text-2xl mb-4">
+          <p className="text-gray-700  text-xl mb-4">
             At Agilis, we prioritize your success. Our dedicated team works
             closely with you to understand your challenges and deliver solutions
             that add real value to your business.

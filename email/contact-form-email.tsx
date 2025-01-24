@@ -17,12 +17,14 @@ type ContactFormEmailProps = {
   message: string;
   senderEmail: string;
   senderName: string;
+  phone?: string;
 };
 
 export default function ContactFormEmail({
   message,
   senderEmail,
   senderName,
+  phone,
 }: ContactFormEmailProps) {
   return (
     <Html>
@@ -48,6 +50,15 @@ export default function ContactFormEmail({
                   className="text-blue-600 font-bold hover:underline"
                 >
                   {senderEmail}
+                </a>
+              </Text>
+              <Text className="text-lg">
+                The sender&apos;s phone:{" "}
+                <a
+                  href={`mailto:${phone}`}
+                  className="text-blue-600 font-bold hover:underline"
+                >
+                  {phone}
                 </a>
               </Text>
               <Button
