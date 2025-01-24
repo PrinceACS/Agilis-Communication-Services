@@ -20,7 +20,7 @@ type CTAProps = {
 
 const CTA1 = () => {
   return (
-    <div className="flex mx-auto flex-col md:flex-row items-center justify-center mb-10 ">
+    <div className="flex mx-auto bg-gradient-to-b from-orange-200 via-white to-green-200 flex-col md:flex-row items-center justify-center p-10">
       <div className="max-w-[50rem] px-10 md:ml-20 md:justify-center text-center md:text-left">
         <h1 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800 leading-tight">
           Grow Your Business With Us

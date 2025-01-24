@@ -147,7 +147,10 @@ export default function ServicesPage() {
   }, []);
 
   return (
-    <div id="services" className="mx-10 md:mx-20  py-12">
+    <div
+      id="services"
+      className="py-10 bg-gradient-to-b from-orange-200 via-white to-green-200"
+    >
       <div className="mx-auto space-y-4 mb-10 text-center">
         <h2 className="inline-block text-2xl text-center md:text-4xl font-semibold bg-[#f8e67e] px-3 py-1 rounded-lg text-[#0d0d0d]">
           Our Services
@@ -175,10 +178,12 @@ export default function ServicesPage() {
                 <div className="flex items-center justify-center mb-4">
                   {service.icon}
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-700 mb-2">
+                <h3 className="sm:text-2xl text-xl md:text-3xl font-bold text-gray-700 mb-2">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-xl">{service.description}</p>
+                <p className="text-gray-600 sm:text-xl text-lg">
+                  {service.description}
+                </p>
               </div>
             ))}
           </div>

@@ -7,7 +7,6 @@ import { getErrorMessage } from "@/lib/utils/utils";
 import React from "react";
 
 console.log(process.env.RESEND_API_KEY);
-
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export type SendEmailArgs = {
@@ -38,13 +37,14 @@ export const sendEmail = async ({
     if (type === "contact") {
       data = await resend.emails.send({
         from: "Contact Form <onboarding@resend.dev>",
-        to: "princetiwari180@gmail.com",
+        to: "info@agiliscommunications.com",
         subject: subject || "Message from contact form",
         replyTo: sanitizedEmail,
         react: React.createElement(ContactFormEmail, {
           senderName,
           senderEmail,
-          message
+          message,
+          phone
         })
       });
     } else if (type === "demo-request") {
@@ -53,7 +53,7 @@ export const sendEmail = async ({
       }
       data = await resend.emails.send({
         from: `${option} Demo Request <onboarding@resend.dev>`,
-        to: "princetiwari180@gmail.com",
+        to: "info@agiliscommunications.com",
         subject: subject || `${option} Demo Request`,
         replyTo: sanitizedEmail,
         react: React.createElement(DemoRequestEmail, {

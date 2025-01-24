@@ -40,9 +40,9 @@ const OurCustomers = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <div className="py-10 px-auto sm:px-6 lg:px-8 bg-gradient-to-b from-orange-200 via-white to-green-200">
       {/* Title Section */}
-      <h2 className="text-center text-4xl font-bold text-amber-500 mb-10">
+      <h2 className="text-center text-4xl font-bold text-amber-500 ">
         Thousands of teams love Agilis, including:
       </h2>
 
@@ -63,13 +63,13 @@ const OurCustomers = () => {
         {customers.map((customer) => (
           <SwiperSlide key={customer.name}>
             <div className="flex justify-center items-center">
-              <div className="w-[150px] h-[150px] bg-white flex items-center justify-center p-4 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+              <div className="w-[10rem] h-[10rem] my-10 bg-white flex items-center justify-center rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
                 <Image
                   src={customer.logo}
                   alt={`${customer.name} logo`}
                   className="object-contain"
-                  width={120}
-                  height={120}
+                  width={160}
+                  height={160}
                 />
               </div>
             </div>

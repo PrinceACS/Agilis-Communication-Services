@@ -8,11 +8,12 @@ import toast from "react-hot-toast";
 
 import { sendEmail } from "@/actions/sendEmail";
 import { useFormStatus } from "react-dom";
-
+import { Button } from "../ui/button";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     subject: "",
     message: "",
   });
@@ -31,6 +32,7 @@ const Contact = () => {
     if (
       !formData.name ||
       !formData.email ||
+      !formData.message ||
       !formData.subject ||
       !formData.message
     ) {
@@ -44,6 +46,7 @@ const Contact = () => {
     const response = await sendEmail({
       senderEmail: formData.email,
       senderName: formData.name,
+      phone: formData.phone,
       message: formData.message,
       subject: formData.subject,
       type: "contact",
@@ -67,7 +70,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="mx-auto w-full py-16 px-10 bg-gray-100">
+    <section
+      id="contact"
+      className="mx-auto w-full py-16 px-10 bg-gray-100 from-orange-200 via-white to-green-200 items-center "
+    >
       {/* Header */}
       <div className=" text-center">
         <h2 className="text-4xl font-bold text-gray-800">Contact Us</h2>
@@ -92,7 +98,7 @@ const Contact = () => {
           <div className="flex items-center">
             <MailIcon className="h-6 w-6 text-[#d4af37]" />
             <span className="ml-3 text-gray-700">
-              Info@agiliscommunications.com
+              info@agiliscommunications.com
             </span>
           </div>
           <div className="flex items-center">
@@ -164,6 +170,25 @@ const Contact = () => {
                 />
               </div>
 
+              {/* phone number */}
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#d4af37] focus:border-[#d4af37] sm:text-sm"
+                  required
+                />
+              </div>
+
               {/* Subject Field */}
               <div>
                 <label
@@ -204,12 +229,9 @@ const Contact = () => {
 
               {/* Submit Button */}
               <div className="mt-6">
-                <button
-                  type="submit"
-                  className="w-full bg-[#f8e67e] text-white px-4 py-2 rounded-md font-semibold hover:bg-[#ddad20] transition duration-300"
-                >
+                <Button type="submit">
                   {pending ? "Sending..." : "Send Message"}
-                </button>
+                </Button>
               </div>
             </div>
           </form>

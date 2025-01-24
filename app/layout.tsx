@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${nunito.className} relative`}>
+      <body className={`${nunito.className} relative `}>
         <Header />
         {children}
         <TawkTo />
