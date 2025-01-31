@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import quotg_icon from "@/public/quote.png";
+import quotg_icon from "@/public/images/quote.png";
 import { motion } from "framer-motion";
 import type { Testimonial } from "@/type";
 
@@ -11,7 +11,7 @@ type TestimonialProps = {
 
 export default function Testimonial({ testimonials }: TestimonialProps) {
   return (
-    <div className="bg-gradient-to-b from-orange-200 via-white to-green-200 items-center p-10">
+    <div className=" items-center p-10">
       <h2 className="text-4xl font-bold text-center mb-2">
         Client Testimonials
       </h2>
@@ -34,13 +34,13 @@ export default function Testimonial({ testimonials }: TestimonialProps) {
             className="mx-5 md:mx-0 bg-white shadow-md rounded-lg p-10"
           >
             <div className="flex flex-col h-full">
-              <div className="flex-grow">
+              <div className="flex-grow bg-white">
                 <Image
                   src={quotg_icon}
                   width={25}
                   height={25}
                   alt="quote"
-                  className="text-yellow-300"
+                  className="text-yellow-300 bg-white"
                 />
                 <blockquote className="text-md text-pretty ml-10 py-2 -mt-2 italic mb-4 ">
                   {testimonial.content}

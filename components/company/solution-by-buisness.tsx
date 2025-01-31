@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import it_services from "@/public/images/It_services.png";
 import tax_solutions from "@/public/images/tax_solutions.png";
 import cloud_services from "@/public/images/cloudpng.png";
-import client_centeric_approach from "@/public/images/client-centeric.jpg";
+import client_centeric_approach from "@/public/images/client-centeric.png";
 import Link from "next/link";
 
 const SolutionByBusiness = () => {
@@ -32,7 +32,7 @@ const SolutionByBusiness = () => {
 
   return (
     <motion.div
-      className="py-16 md:px-10 lg:px-8 bg-gradient-to-b from-orange-200 via-white to-green-200"
+      className="py-16 md:px-10 lg:px-8 "
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -50,7 +50,7 @@ const SolutionByBusiness = () => {
         variants={itemVariants}
         className=" text-gray-700 md:max-w-6xl mx-auto mb-20"
       >
-        <p className="text-center text-xl md:text-2xl">
+        <p className="text-center mx-5 text-lg md:text-2xl">
           At Agilis, we provide comprehensive solutions that help businesses
           thrive in an ever-changing landscape. Whether you&apos;re looking to
           enhance communication, streamline operations, or ensure compliance,
@@ -63,19 +63,19 @@ const SolutionByBusiness = () => {
         {/* Cloud Telephony Section */}
         <motion.div
           variants={itemVariants}
-          className=" rounded-md shadow-md p-4 flex flex-col space-y-6"
+          className=" p-4 flex flex-col space-y-6 border-2"
         >
           <motion.img
             src={cloud_services.src}
             alt="Cloud Telephony"
-            className="w-full h-64 object-contain rounded-lg shadow-md"
+            className="w-full h-64 object-contain rounded-lg shadow-md border-2 border-yellow-500"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           />
-          <h2 className="text-2xl font-bold ">
+          <h3 className="text-2xl font-bold text-center ">
             Transform Your Communication with Cloud Telephony
-          </h2>
-          <p className="text-gray-700 text-xl">
+          </h3>
+          <p className="text-gray-700 text-lg">
             Our cloud telephony solutions offer a reliable, scalable platform to
             streamline communication. Boost efficiency, save costs, and improve
             customer service with our advanced call management features.
@@ -105,14 +105,14 @@ const SolutionByBusiness = () => {
             src={tax_solutions.src}
             alt="Tax Solutions"
             loading="lazy"
-            className="w-full h-64 object-contain  rounded-lg shadow-md"
+            className="w-full h-64 object-contain  rounded-lg  shadow-md border-2 border-yellow-500"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           />
-          <h2 className="text-2xl font-bold ">
+          <h3 className="text-2xl font-bold text-center ">
             Ensure Compliance and Optimize Finances with Tax Solutions
-          </h2>
-          <p className="text-gray-700 text-xl ">
+          </h3>
+          <p className="text-gray-700 text-lg ">
             Navigate complex tax regulations with ease using our expert tax
             solutions. We help businesses stay compliant while maximizing their
             financial outcomes.
@@ -136,19 +136,19 @@ const SolutionByBusiness = () => {
         {/* IT Solutions Section */}
         <motion.div
           variants={itemVariants}
-          className="rounded-lg shadow-md p-4  flex flex-col space-y-6"
+          className="rounded-lg shadow-md p-4 flex flex-col space-y-6"
         >
           <motion.img
             src={it_services.src}
             alt="IT Solutions"
-            className="w-full h-64 object-contain rounded-lg shadow-md"
+            className="w-full h-64 object-contain rounded-lg shadow-md border-2 border-yellow-500"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           />
-          <h2 className="text-2xl font-bold ">
+          <h3 className="text-2xl font-bold text-center">
             Boost Productivity with Comprehensive IT Solutions
-          </h2>
-          <p className="text-gray-700 text-xl">
+          </h3>
+          <p className="text-gray-700 text-lg">
             From infrastructure to cybersecurity, our IT solutions are designed
             to support your business in achieving digital transformation.
           </p>
@@ -172,25 +172,25 @@ const SolutionByBusiness = () => {
       {/* Client-Centric Approach Section */}
       <motion.div
         variants={itemVariants}
-        className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12 mb-20"
+        className="flex flex-col rounded-lg shadow-md p-4 mx-6 md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12 mb-20"
       >
         <motion.img
           src={client_centeric_approach.src}
           alt="Client-Centric Approach"
-          className="w-full md:w-1/3 h-64 object-cover rounded-lg shadow-md"
+          className="w-full md:w-1/3 h-64 object-cover rounded-lg shadow-md border-2 border-yellow-500"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         />
         <div className="md:w-2/3">
-          <h2 className="text-3xl font-bold  mb-4">
+          <h3 className="text-2xl font-bold mb-1">
             Our Client-Centric Approach
-          </h2>
-          <p className="text-gray-700  text-xl mb-4">
+          </h3>
+          <p className="text-gray-700 text-lg mb-4">
             At Agilis, we prioritize your success. Our dedicated team works
             closely with you to understand your challenges and deliver solutions
             that add real value to your business.
           </p>
-          <ul className="list-disc pl-5  text-gray-700 text-xl space-y-2">
+          <ul className="list-disc pl-5  text-gray-700 text-lg space-y-2">
             <li>
               <span className="font-bold">Tailored Solutions:</span> Crafted to
               fit your specific business needs

@@ -10,7 +10,7 @@ import {
   ThumbsUp,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import ivr from "@/public/ivr.jpg";
+import ivr from "@/public/images/ivr.png";
 import Specific from "../../../components/ivr/component/specific";
 import Image from "next/image";
 import Benefits from "@/components/ivr/benifits";

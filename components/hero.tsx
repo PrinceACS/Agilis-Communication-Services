@@ -2,21 +2,19 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import republicday from "../public/images/repbulicday.png";
+import hero from "../public/images/hero.png";
 import { Button } from "./ui/button";
+import { ContactRound, SearchIcon } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <main className="text-gray-900 flex flex-col items-center justify-center gap-5 mt-20 bg-gradient-to-b from-orange-200 via-white to-green-200">
-      <section className="relative mt-14 lg:mt-20 mx-10 flex flex-col md:flex-row items-center">
+    <main className="text-gray-900 bg-gray-100 flex flex-col items-center justify-center gap-5 mt-20 ">
+      <section className="relative m-16 lg:mt-20  flex flex-col md:flex-row items-center justify-between">
         {/* Text Content */}
-        <div className="md:w-[60%] lg:mr-14 text-center md:text-left space-y-6">
-          <h1 className="text-4xl md:text-6xl font-extrabold mt-5 text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-neutral-500 to-green-600 mb-6 animate-shimmer">
-            Happy Republic Day!
-          </h1>
-          <h1 className="text-3xl font-extrabold mb-6 md:text-4xl lg:text-5xl text-gray-800 leading-tight">
+        <div className="md:w-[50%] lg:mr-14 text-center md:text-left space-y-6 md:ml-10">
+          <h1 className="text-3xl font-extrabold  md:text-5xl text-gray-900 leading-tight relative ">
             Power Your Business with{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-500 to-green-600 mb-6 animate-shimmer">
+            <span className="text-transparent text-nowrap bg-clip-text bg-gradient-to-r from-yellow-400  to-yellow-600 mb-6 animate-shimmer">
               Cloud Telephony Solutions
             </span>
           </h1>
@@ -25,30 +23,32 @@ const HeroSection = () => {
             Discover unparalleled cloud solutions this year and revolutionize
             your business operations with us!
           </p>
-          <div className="flex md:pb-10 justify-center md:justify-start flex-col sm:flex-row gap-4">
+          <div className="flex md:pb-10  justify-center md:justify-start flex-col sm:flex-row gap-4">
             <Button
               size={"lg"}
               variant={"default"}
-              className="bg-gradient-to-r from-orange-500 to-green-500 text-white hover:from-orange-600 hover:to-green-600"
+              className="hover:scale-105 text-lg font-semibold text-foreground transition shadow"
             >
+              <SearchIcon size={20} className="mr-2" />
               <Link href="#services">Explore Services</Link>
             </Button>
             <Button
               variant="default"
               size={"lg"}
-              className="bg-gradient-to-r from-blue-500 to-blue-700 text-white hover:from-blue-600 hover:to-blue-800"
+              className="hover:scale-105 text-lg font-semibold text-foreground transition shadow"
             >
+              <ContactRound size={20} className="mr-2" />
               <Link href="#contact">Contact Us</Link>
             </Button>
           </div>
         </div>
 
         {/* Image Content */}
-        <div className="w-full md:mt-0 my-10 md:w-[30%] lg:justify-center bg-white rounded-2xl shadow-lg">
+        <div className="w-[75%] md:mt-0 my-10 md:w-[30%] lg:justify-center md:mr-10">
           <Image
-            src={republicday}
+            src={hero}
             alt="Republic Day Image"
-            className="w-full object-cover rounded-2xl border-4 border-transparent bg-gradient-to-r from-orange-500 via-white to-green-500"
+            className="w-full object-cover rounded-xl border-2 border-yellow-500 shadow-lg"
           />
         </div>
       </section>

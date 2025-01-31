@@ -101,58 +101,7 @@ const MobileNavbar = () => {
       href: "/ivr",
       icon: <FaRobot className="h-5 w-5 text-[#f8e67e]" />,
     },
-    // {
-    //   title: "10 Digit IVR",
-    //   href: "/ivr",
-    //   icon: <FaPhone className="h-5 w-5 text-[#f8e67e]" />,
-    // },
-    // {
-    //   title: "Toll Free IVR",
-    //   href: "/ivr",
-    //   icon: <FaPhone className="h-5 w-5 text-[#f8e67e]" />,
-    // },
   ];
-
-  // const other_services = [
-  //   {
-  //     title: "AI Powered Solutions",
-  //     href: "/ai-solutions",
-  //     icon: <FaRobot className="h-5 w-5 text-[#f8e67e]" />,
-  //   },
-  //   {
-  //     title: "CRM Integration",
-  //     href: "/crm-integration",
-  //     icon: <FiSettings className="h-5 w-5 text-[#f8e67e]" />,
-  //   },
-  //   {
-  //     title: "Customized Solution",
-  //     href: "/customized-solution",
-  //     icon: <FaSms className="h-5 w-5 text-[#f8e67e]" />,
-  //   },
-  //   {
-  //     title: "API Integration",
-  //     href: "/api-integration",
-  //     icon: <FaCloud className="h-5 w-5 text-[#f8e67e]" />,
-  //   },
-  // ];
-
-  // const services = [
-  //   {
-  //     title: "CRM Integration",
-  //     href: "/crm-integration",
-  //     icon: <FiSettings className="h-5 w-5 text-[#f8e67e]" />,
-  //   },
-  //   {
-  //     title: "Call Tracking",
-  //     href: "/call-tracking",
-  //     icon: <MdOutlineContactPhone className="h-5 w-5 text-[#f8e67e]" />,
-  //   },
-  //   {
-  //     title: "AI Powered Solutions",
-  //     href: "/ai-solutions",
-  //     icon: <FaRobot className="h-5 w-5 text-[#f8e67e]" />,
-  //   },
-  // ];
 
   return (
     <nav className="w-full h-auto max-w-md mx-auto mt-2 items-center bg-white rounded-lg shadow-lg">

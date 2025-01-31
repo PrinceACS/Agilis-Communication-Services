@@ -67,10 +67,10 @@ const WhyChooseAgilis = () => {
       </motion.div>
 
       {/* Features Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 ">
         {/* Cloud Telephony Section */}
         <motion.div
-          className="bg-white rounded-lg shadow-lg overflow-hidden"
+          className="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-yellow-500"
           variants={itemVariants}
         >
           <div className="h-40 bg-yellow-400 flex items-center justify-center">
@@ -104,7 +104,7 @@ const WhyChooseAgilis = () => {
 
         {/* Tax Solutions Section */}
         <motion.div
-          className="bg-white rounded-lg shadow-lg overflow-hidden"
+          className="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-yellow-500"
           variants={itemVariants}
         >
           <div className="h-40 bg-black flex items-center justify-center">
@@ -138,7 +138,7 @@ const WhyChooseAgilis = () => {
 
         {/* IT Solutions Section */}
         <motion.div
-          className="bg-white rounded-lg shadow-lg overflow-hidden"
+          className="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-yellow-500"
           variants={itemVariants}
         >
           <div className="h-40 bg-yellow-400 flex items-center justify-center">
@@ -172,7 +172,7 @@ const WhyChooseAgilis = () => {
 
         {/* Client-Centric Approach Section */}
         <motion.div
-          className="bg-white rounded-lg shadow-lg overflow-hidden"
+          className="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-yellow-500"
           variants={itemVariants}
         >
           <div className="h-40 bg-black flex items-center justify-center">

@@ -23,24 +23,24 @@ import company14 from "@/public/images/testimonials/company14.png";
 
 const OurCustomers = () => {
   const customers = [
-    { name: "Company1", logo: company1 },
-    { name: "Company2", logo: company2 },
-    { name: "Company3", logo: company3 },
-    { name: "Company4", logo: company4 },
-    { name: "Company5", logo: company5 },
-    { name: "Company6", logo: company6 },
-    { name: "Company7", logo: company7 },
-    { name: "Company8", logo: company8 },
-    { name: "Company9", logo: company9 },
-    { name: "Company10", logo: company10 },
-    { name: "Company11", logo: company11 },
-    { name: "Company12", logo: company12 },
-    { name: "Company13", logo: company13 },
-    { name: "Company14", logo: company14 },
+    { name: "Betterr walls", logo: company1 },
+    { name: "Probity", logo: company2 },
+    { name: "Texta", logo: company3 },
+    { name: "Cred Mart", logo: company4 },
+    { name: "Mantri Election Compaign", logo: company5 },
+    { name: "Merry gal", logo: company6 },
+    { name: "Bean Bliss", logo: company7 },
+    { name: "Group Genic", logo: company8 },
+    { name: "Labour Unioin", logo: company9 },
+    { name: "Mahavir Finelease Ltd.", logo: company10 },
+    { name: "DE", logo: company11 },
+    { name: "Recovery Layer", logo: company12 },
+    { name: "Promise Myself", logo: company13 },
+    { name: "Odwanis", logo: company14 },
   ];
 
   return (
-    <div className="py-10 px-auto sm:px-6 lg:px-8 bg-gradient-to-b from-orange-200 via-white to-green-200">
+    <div className="py-10 px-auto sm:px-6 lg:px-8 ">
       {/* Title Section */}
       <h2 className="text-center text-4xl font-bold text-amber-500 ">
         Thousands of teams love Agilis, including:
@@ -63,13 +63,15 @@ const OurCustomers = () => {
         {customers.map((customer) => (
           <SwiperSlide key={customer.name}>
             <div className="flex justify-center items-center">
-              <div className="w-[10rem] h-[10rem] my-10 bg-white flex items-center justify-center rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+              <div className="w-[10rem] h-[10rem] my-10  flex items-center justify-center hover:scale-105 transition-transform duration-300">
                 <Image
                   src={customer.logo}
                   alt={`${customer.name} logo`}
                   className="object-contain"
                   width={160}
                   height={160}
+                  loading="lazy"
+                  quality={90}
                 />
               </div>
             </div>

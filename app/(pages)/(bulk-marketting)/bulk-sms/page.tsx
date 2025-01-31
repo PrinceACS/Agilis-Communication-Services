@@ -1,18 +1,11 @@
 "use client";
 import React, { useRef } from "react";
-import {
-  FaEnvelopeOpenText,
-  FaRobot,
-  FaChartLine,
-  FaCogs,
-  FaListAlt,
-  FaHeadset,
-} from "react-icons/fa";
+import { faqItems, benefits, features } from "@/constants/data";
 import FNQ from "@/components/company/fnq";
 import { motion, useInView } from "framer-motion";
 import Demo from "@/components/company/demo";
 import Image from "next/image";
-import bulk_sms_hero from "@/public/images/bulk-sms-hero.jpg";
+import bulk_sms_hero from "@/public/images/bulk-sms-hero.png";
 import Link from "next/link";
 
 const BulkSMSPage: React.FC = () => {
@@ -26,101 +19,6 @@ const BulkSMSPage: React.FC = () => {
   const isFeaturesInView = useInView(featuresRef);
   const isBenefitsInView = useInView(benefitsRef);
   const isFaqInView = useInView(faqRef);
-
-  const features = [
-    {
-      icon: <FaEnvelopeOpenText />,
-      title: "Personalized SMS Campaigns",
-      description:
-        "Easily send personalized messages to customers using their name or other details from your CRM.",
-    },
-    {
-      icon: <FaCogs />,
-      title: "Automated SMS Scheduling",
-      description:
-        "Set up automated campaigns to send messages at optimal times based on customer engagement data.",
-    },
-    {
-      icon: <FaRobot />,
-      title: "Smart Segmentation",
-      description:
-        "Segment your audience based on preferences, demographics, or behaviors to send targeted SMS campaigns.",
-    },
-    {
-      icon: <FaChartLine />,
-      title: "Real-Time Analytics",
-      description:
-        "Track SMS delivery rates, open rates, and customer responses in real-time to optimize campaign performance.",
-    },
-    {
-      icon: <FaListAlt />,
-      title: "Compliance Management",
-      description:
-        "Easily manage opt-out requests and ensure compliance with regulations like GDPR and TCPA.",
-    },
-    {
-      icon: <FaHeadset />,
-      title: "Customer Support Integration",
-      description:
-        "Automatically route SMS replies to your support team for immediate follow-up and personalized customer service.",
-    },
-  ];
-
-  const benefits = [
-    {
-      title: "Instant Communication",
-      description:
-        "Reach your customers instantly through SMS, with messages typically opened within minutes of receipt.",
-    },
-    {
-      title: "High Open Rates",
-      description:
-        "SMS boasts one of the highest open rates of any marketing channel, ensuring your message is seen by most recipients.",
-    },
-    {
-      title: "Cost-Effective Marketing",
-      description:
-        "Bulk SMS campaigns allow you to reach a large audience with minimal investment, offering a high return on marketing spend.",
-    },
-    {
-      title: "Personalized Engagement",
-      description:
-        "Easily personalize each message to create a more tailored experience for your audience.",
-    },
-    {
-      title: "Two-Way Communication",
-      description:
-        "Enable customers to reply to SMS campaigns for enhanced interaction, customer support, or feedback.",
-    },
-    {
-      title: "Real-Time Results",
-      description:
-        "Monitor the effectiveness of your campaigns in real-time, allowing for quick adjustments to improve performance.",
-    },
-  ];
-
-  const faqItems = [
-    {
-      question: "How does Bulk SMS Marketing work?",
-      answer:
-        "Bulk SMS Marketing allows you to send large volumes of SMS messages to a group of customers or prospects simultaneously, promoting products, services, or events in a fast and cost-effective way.",
-    },
-    {
-      question: "Can I personalize SMS messages?",
-      answer:
-        "Yes, you can easily personalize each SMS by including variables like the recipient's name, location, or other details pulled from your CRM.",
-    },
-    {
-      question: "Is SMS marketing compliant with regulations?",
-      answer:
-        "Yes, our platform ensures that all messages comply with regulations such as GDPR and TCPA, and we provide tools to manage opt-outs and maintain a clean subscriber list.",
-    },
-    {
-      question: "What is the benefit of using SMS over email?",
-      answer:
-        "SMS offers higher open rates compared to email, making it a great tool for time-sensitive promotions or updates. It's also more direct and personal.",
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-gray-100 text-gray-600">
@@ -187,7 +85,9 @@ const BulkSMSPage: React.FC = () => {
                   delay: index * 0.1,
                 }}
               >
-                <div className="text-3xl mb-4 text-center">{feature.icon}</div>
+                <div className="text-3xl mb-4 text-center">
+                  {React.createElement(feature.icon, { className: "w-8 h-8" })}
+                </div>
                 <h3 className="text-xl font-semibold mb-2 text-gray-900">
                   {feature.title}
                 </h3>

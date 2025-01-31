@@ -12,7 +12,7 @@ import FNQ from "@/components/company/fnq";
 import { motion, useInView } from "framer-motion";
 
 import Demo from "@/components/company/demo";
-import bulk_whatsapp_hero from "@/public/images/bulk-whatsapp.jpg";
+import bulk_whatsapp_hero from "@/public/images/bulk-whatsapp.png";
 
 import Image from "next/image";
 import Link from "next/link";

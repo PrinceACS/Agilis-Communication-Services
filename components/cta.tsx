@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import { Phone } from "lucide-react";
+import { Button } from "./ui/button";
+import { Phone, LucideSquareDashedMousePointer } from "lucide-react";
 import Link from "next/link";
 import {
   Dialog,
@@ -10,7 +11,7 @@ import {
   DialogOverlay,
 } from "./ui/dialog";
 
-import cta_1 from "@/public/cta_1.jpg";
+import cta_1 from "@/public/images/cta_1.png";
 
 type CTAProps = {
   message: string;
@@ -20,7 +21,7 @@ type CTAProps = {
 
 const CTA1 = () => {
   return (
-    <div className="flex mx-auto bg-gradient-to-b from-orange-200 via-white to-green-200 flex-col md:flex-row items-center justify-center p-10">
+    <div className="flex mx-auto  flex-col md:flex-row items-center justify-center p-10">
       <div className="max-w-[50rem] px-10 md:ml-20 md:justify-center text-center md:text-left">
         <h1 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800 leading-tight">
           Grow Your Business With Us
@@ -32,15 +33,16 @@ const CTA1 = () => {
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center md:justify-start">
           <Link
             href="#"
-            className="flex items-center w-[12rem] justify-center rounded-md bg-[#e6c81e] px-4 py-2 text-lg font-semibold text-black transition hover:bg-[#e0bd3e] shadow-lg"
+            className="flex items-center w-[12rem] hover:scale-105 justify-center rounded-md bg-primary px-4 py-2 text-lg font-semibold text-foreground transition shadow-md"
           >
-            Schedule a Demo
+            <LucideSquareDashedMousePointer size={20} className="mr-2" />
+            Schedule Demo
           </Link>
           <Link
             href="https://wa.me/+919810787931?text=Hello%20I%20am%20interested%20in%20your%20services"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center w-[12rem] justify-center rounded-md border-2 border-[#FFD700] px-4 py-2 text-lg font-semibold text-[#FFD700] transition hover:bg-[#d4af37] hover:text-black shadow-lg"
+            className="flex items-center w-[12rem] hover:scale-105 justify-center rounded-md border-2 bg-primary border-yellow-300 px-4 py-2 text-lg font-semibold text-foreground transition shadow-md"
           >
             <Phone size={20} className="mr-2" />
             Talk to Expert
@@ -118,12 +120,12 @@ export const CTACallToAction = () => {
 
   return (
     <div className="space-y-6">
-      <button
+      <Button
         className="bg-black border-2 border-amber-400 text-primary-foreground px-4 py-2 rounded-md"
         onClick={openDialog}
       >
         Get Started
-      </button>
+      </Button>
       {showDialog && (
         <Dialog open={showDialog} onOpenChange={setShowDialog}>
           <DialogTrigger asChild>

@@ -33,7 +33,7 @@ const IVRServicesAdvanced: React.FC = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
             Why Choose Agilis for Your IVR Needs?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 ">
             <div className="p-6 border rounded-lg shadow-lg hover:shadow-xl transition">
               <FaPhoneAlt className="text-blue-600 text-5xl mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Easy Navigation</h3>

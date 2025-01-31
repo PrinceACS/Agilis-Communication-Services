@@ -3,15 +3,15 @@ import React from "react";
 import { Check } from "lucide-react";
 import { IoRocket } from "react-icons/io5";
 
-import agile_team from "@/public/creative-team.svg";
+import agile_team from "@/public/svg/creative-team.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 const WorkWithUs = () => {
   return (
-    <div className="bg-gradient-to-b from-orange-200 p-10 via-white to-green-200 items-center">
-      <div className="flex flex-col md:flex-row items-center px-10">
+    <div className="items-center mx-10">
+      <div className="flex flex-col md:flex-row items-center justify-between">
         <div className="[w-50%] lg:w-1/2 lg:pr-8 mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4  leading-tight">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4  leading-tight">
             Let our Agilis Team understand and serve your needs.{" "}
             <span className="inline-flex">
               <IoRocket />
@@ -41,7 +41,7 @@ const WorkWithUs = () => {
                 transition={{
                   duration: 0.7,
                   ease: "easeInOut",
-                  delay: index * 0.12,
+                  delay: index * 0.2,
                 }}
                 className="flex items-center"
               >
@@ -55,7 +55,7 @@ const WorkWithUs = () => {
             ))}
           </motion.div>
         </div>
-        <div className="relative mb-4">
+        <div className="relative mb-4 md:w-[35%]">
           <Image
             src={agile_team}
             alt="Illustration"

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import agile_team from "@/public/building_websites.svg";
-import company from "@/public/Team work-amico.svg";
+import agile_team from "@/public/svg/building_websites.svg";
+import company from "@/public/svg/team work-amico.svg";
 
 import React from "react";
 import { ArrowRight } from "lucide-react";

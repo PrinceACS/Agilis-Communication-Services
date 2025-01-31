@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Contact from "@/components/company/contact";
 import Image from "next/image";
-import crm from "@/public/hello.svg";
+import crm from "@/public/svg/hello.svg";
 
 export default function CRMPage() {
   const services = [

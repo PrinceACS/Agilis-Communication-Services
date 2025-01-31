@@ -74,3 +74,23 @@ export const sendEmail = async ({
     return { error: getErrorMessage(error) };
   }
 };
+
+
+export type BulkEmailArgs = {
+  clients: SendEmailArgs[];
+};
+
+export const sendBulkEmails = async ({ clients }: BulkEmailArgs) => {
+  const results = [];
+
+  for (const client of clients) {
+    try {
+      const response = await sendEmail(client);
+      results.push({ email: client.senderEmail, status: "success", data: response });
+    } catch (error) {
+      results.push({ email: client.senderEmail, status: "failed", error: getErrorMessage(error) });
+    }
+  }
+
+  return results;
+}

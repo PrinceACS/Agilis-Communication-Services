@@ -1,7 +1,7 @@
 import { MailIcon, PhoneIcon, MapPinIcon } from "lucide-react";
 import { FaLinkedinIn } from "react-icons/fa";
 import Image from "next/image";
-import acs_logo from "@/public/acs-logo-removebg-preview.png";
+import acs_logo from "@/public/images/acs-logo.png";
 
 const Footer = () => {
   return (
@@ -18,7 +18,7 @@ const Footer = () => {
             />
           </div>
           <h3 className="text-lg font-semibold text-white">
-            Agilis Communication
+            Agilis Communication Services
           </h3>
           <p className="mt-4 text-gray-400">
             Empowering businesses with innovative communication solutions to

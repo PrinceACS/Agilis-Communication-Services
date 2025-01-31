@@ -20,7 +20,7 @@ const Navbar = () => {
         <NavigationMenuList>
           {/* Bulk Marketing */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="text-white ">
+            <NavigationMenuTrigger className="text-white text-md">
               Bulk Marketing
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -52,7 +52,7 @@ const Navbar = () => {
 
           {/* Calling Solutions */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="text-white ">
+            <NavigationMenuTrigger className="text-white text-md ">
               Calling Solutions
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -124,13 +124,13 @@ const Navbar = () => {
               <NavigationMenuLink
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  "text-white "
+                  "text-white text-md "
                 )}
               >
                 IVR
               </NavigationMenuLink>
             </Link> */}
-            <NavigationMenuTrigger className="text-white text-md  ">
+            <NavigationMenuTrigger className="text-white text-md text-md  ">
               IVR
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -162,7 +162,7 @@ const Navbar = () => {
 
           {/* Other Services */}
           {/* <NavigationMenuItem> */}
-          {/* <NavigationMenuTrigger className="text-white ">
+          {/* <NavigationMenuTrigger className="text-white text-md ">
               Other Services
             </NavigationMenuTrigger> */}
           {/* <NavigationMenuContent> */}
@@ -202,7 +202,10 @@ const Navbar = () => {
           {/* Documentation Link */}
           <NavigationMenuItem>
             <NavigationMenuTrigger
-              className={cn(navigationMenuTriggerStyle(), "text-white ")}
+              className={cn(
+                navigationMenuTriggerStyle(),
+                "text-white text-md "
+              )}
             >
               Company
             </NavigationMenuTrigger>
