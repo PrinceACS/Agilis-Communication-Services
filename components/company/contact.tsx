@@ -226,6 +226,29 @@ const Contact = () => {
                   required
                 ></textarea>
               </div>
+              <div className="mb-4">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    name="acceptPrivacyPolicy"
+                    className="mr-2"
+                    required
+                  />
+                  <span className="text-sm text-gray-700">
+                    By submitting this form, you acknowledge and accept
+                    Agilis&apos;s{" "}
+                    <a
+                      href="https://www.agilis.com/privacy-policy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className=" hover:text-[#f3e00ef1] underline"
+                    >
+                      privacy policy
+                    </a>
+                    .
+                  </span>
+                </label>
+              </div>
 
               {/* Submit Button */}
               <div className="mt-6">

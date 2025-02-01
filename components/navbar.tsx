@@ -15,12 +15,12 @@ import { PhoneOutgoingIcon, ShieldPlus } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between p-4 from-black via-gray-900 to-gray-800 shadow-md backdrop-blur-md">
+    <nav>
       <NavigationMenu>
         <NavigationMenuList>
           {/* Bulk Marketing */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="text-white text-md">
+            <NavigationMenuTrigger className="text-white text-md hover:text-yellow-300">
               Bulk Marketing
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -52,7 +52,7 @@ const Navbar = () => {
 
           {/* Calling Solutions */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="text-white text-md ">
+            <NavigationMenuTrigger className="text-white text-md hover:text-yellow-300 ">
               Calling Solutions
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -124,13 +124,13 @@ const Navbar = () => {
               <NavigationMenuLink
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  "text-white text-md "
+                  "text-white text-md hover:text-yellow-300 "
                 )}
               >
                 IVR
               </NavigationMenuLink>
             </Link> */}
-            <NavigationMenuTrigger className="text-white text-md text-md  ">
+            <NavigationMenuTrigger className="text-white text-md hover:text-yellow-300  ">
               IVR
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -162,7 +162,7 @@ const Navbar = () => {
 
           {/* Other Services */}
           {/* <NavigationMenuItem> */}
-          {/* <NavigationMenuTrigger className="text-white text-md ">
+          {/* <NavigationMenuTrigger className="text-white text-md hover:text-yellow-300 ">
               Other Services
             </NavigationMenuTrigger> */}
           {/* <NavigationMenuContent> */}
@@ -204,7 +204,7 @@ const Navbar = () => {
             <NavigationMenuTrigger
               className={cn(
                 navigationMenuTriggerStyle(),
-                "text-white text-md "
+                "text-white text-md hover:text-yellow-300 "
               )}
             >
               Company

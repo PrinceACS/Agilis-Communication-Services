@@ -8,59 +8,60 @@ import {
   FaCogs,
   FaListAlt,
 } from "react-icons/fa";
-import FNQ from "@/components/company/fnq";
 import { motion, useInView } from "framer-motion";
-
+import FNQ from "@/components/company/fnq";
 import Demo from "@/components/company/demo";
 import bulk_whatsapp_hero from "@/public/images/bulk-whatsapp.png";
-
 import Image from "next/image";
 import Link from "next/link";
 
-// Bulk WhatsApp Page
 const BulkWhatsappPage: React.FC = () => {
+  // Refs for sections
+  const heroRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
   const benefitsRef = useRef<HTMLDivElement>(null);
   const faqRef = useRef<HTMLDivElement>(null);
 
-  const isFeaturesInView = useInView(featuresRef);
-  const isBenefitsInView = useInView(benefitsRef);
-  const isFaqInView = useInView(faqRef);
+  // Check if sections are in view
+  const isHeroInView = useInView(heroRef, { once: true });
+  const isFeaturesInView = useInView(featuresRef, { once: true });
+  const isBenefitsInView = useInView(benefitsRef, { once: true });
+  const isFaqInView = useInView(faqRef, { once: true });
 
   // Features specific to Bulk WhatsApp Marketing
   const features = [
     {
-      icon: <FaWhatsapp />,
+      icon: <FaWhatsapp className="w-8 h-8 text-[#FFD700]" />,
       title: "Automated WhatsApp Campaigns",
       description:
         "Send personalized WhatsApp messages with automation, including text, images, and documents.",
     },
     {
-      icon: <FaRobot />,
+      icon: <FaRobot className="w-8 h-8 text-[#FFD700]" />,
       title: "Smart Audience Segmentation",
       description:
         "Segment your contacts based on behavior, demographics, or interests for tailored messages.",
     },
     {
-      icon: <FaUserAlt />,
+      icon: <FaUserAlt className="w-8 h-8 text-[#FFD700]" />,
       title: "Two-Way Communication",
       description:
         "Engage in real-time conversations with your customers through WhatsApp for instant feedback.",
     },
     {
-      icon: <FaChartLine />,
+      icon: <FaChartLine className="w-8 h-8 text-[#FFD700]" />,
       title: "Analytics and Tracking",
       description:
         "Monitor delivery rates, read receipts, and customer replies in real time to optimize campaigns.",
     },
     {
-      icon: <FaCogs />,
+      icon: <FaCogs className="w-8 h-8 text-[#FFD700]" />,
       title: "API Integration",
       description:
         "Integrate WhatsApp campaigns with your existing CRM or marketing tools for seamless automation.",
     },
     {
-      icon: <FaListAlt />,
+      icon: <FaListAlt className="w-8 h-8 text-[#FFD700]" />,
       title: "Compliance Management",
       description:
         "Ensure all your campaigns comply with WhatsApp's policies, including opt-in and opt-out features.",
@@ -126,53 +127,65 @@ const BulkWhatsappPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-600">
+    <div className="min-h-screen bg-[#F3F4F6] text-gray-900">
       {/* Hero Section */}
-      <section className="relative bg-yellow-400 text-white font-bold py-20 flex items-center justify-center overflow-hidden">
+      <motion.section
+        ref={heroRef}
+        className="relative bg-gradient-to-r from-[#FFD700] to-[#F8E67E] py-20 flex items-center justify-center overflow-hidden"
+        initial={{ opacity: 0, y: -20 }}
+        animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
           {/* Left Side - Text */}
-          <div className="text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+          <motion.div
+            className="text-center md:text-left"
+            initial={{ opacity: 0, x: -50 }}
+            animate={isHeroInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ delay: 0.2, duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight text-black">
               Bulk WhatsApp Marketing by Agilis
             </h1>
-            <p className="text-xl md:text-2xl mb-4">
+            <p className="text-xl md:text-2xl mb-4 text-gray-800">
               Instantly Reach Customers and Drive Engagement with WhatsApp
             </p>
-            <p className="text-lg mb-8 font-semibold">
+            <p className="text-lg mb-8 font-semibold text-gray-700">
               Leverage the power of WhatsApp for your marketing campaigns. With
               Agilis, you can automate messages, track responses, and engage
               customers in real-time through one of the world&apos;s most
               popular messaging platforms.
             </p>
-            <button className="bg-black hover:text-black hover:border-black text-white border-2 border-amber-400 font-bold py-3 px-6 rounded-lg hover:bg-yellow-500 transition duration-300">
+            <motion.button
+              className="bg-black text-[#FFD700] border-2 border-[#FFD700] font-bold py-3 px-6 rounded-lg hover:bg-[#FFD700] hover:text-black transition duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               <Link href="#demo">Request a Demo</Link>
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
 
           {/* Right Side - Illustration */}
-          <div className="mt-8 md:mt-0">
+          <motion.div
+            className="mt-8 md:mt-0"
+            initial={{ opacity: 0, x: 50 }}
+            animate={isHeroInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ delay: 0.4, duration: 0.8 }}
+          >
             <Image
               src={bulk_whatsapp_hero}
               alt="Bulk WhatsApp Marketing Illustration"
               className="max-w-xs md:max-w-md lg:max-w-lg object-cover"
             />
-          </div>
+          </motion.div>
         </div>
-
-        {/* Background Decoration (Optional) */}
-        <div className="absolute inset-0 z-[-1] opacity-30">
-          {/* Optional background decoration, like abstract shapes */}
-          <svg className="w-full h-full" viewBox="0 0 800 800">
-            <circle cx="400" cy="400" r="400" fill="rgba(255,255,255,0.1)" />
-          </svg>
-        </div>
-      </section>
+      </motion.section>
 
       {/* Features Section */}
       <motion.section
         ref={featuresRef}
-        className="bg-gray-200 py-16"
-        initial={{ opacity: 0, y: 50 }}
+        className="bg-white py-16"
+        initial={{ opacity: 0, y: 40 }}
         animate={isFeaturesInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.7, delay: 0.1, ease: "easeInOut" }}
       >
@@ -182,14 +195,11 @@ const BulkWhatsappPage: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md hover:bg-gradient-to-t hover:from-yellow-500 hover:to-orange-300 transition-all duration-500"
-                initial={{ scale: 0.8, opacity: 0, y: 100 }}
-                animate={isFeaturesInView ? { scale: 1, opacity: 1, y: 0 } : {}}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
-                  ease: "easeInOut",
-                }}
+                className="bg-[#F3F4F6] p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isFeaturesInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: index * 0.1, duration: 0.4 }}
+                whileHover={{ scale: 1.02 }}
               >
                 <div className="text-3xl mb-4 text-center">{feature.icon}</div>
                 <h3 className="text-xl font-semibold mb-2 text-gray-900">
@@ -210,26 +220,21 @@ const BulkWhatsappPage: React.FC = () => {
         animate={isBenefitsInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, delay: 0.05, ease: "easeInOut" }}
       >
-        <div className="container mx-auto p-10 bg-gray-900">
-          <h2 className="text-3xl text-gray-300 font-bold mb-8 text-center">
+        <div className="container mx-auto p-10 bg-[#FFD700] text-black rounded-lg">
+          <h2 className="text-3xl font-bold mb-8 text-center">
             Benefits of Bulk WhatsApp Marketing
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md hover:bg-gradient-to-t hover:from-yellow-500 hover:to-orange-300 transition-all duration-500"
-                initial={{ scale: 0.8, opacity: 0, y: 100 }}
-                animate={isBenefitsInView ? { scale: 1, opacity: 1, y: 0 } : {}}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
-                  ease: "easeInOut",
-                }}
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isBenefitsInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: index * 0.1, duration: 0.4 }}
+                whileHover={{ scale: 1.02 }}
               >
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                  {benefit.title}
-                </h3>
+                <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
                 <p className="text-gray-700">{benefit.description}</p>
               </motion.div>
             ))}
@@ -240,43 +245,24 @@ const BulkWhatsappPage: React.FC = () => {
       {/* FAQ Section */}
       <motion.section
         ref={faqRef}
-        className="bg-gray-900 py-10 mb-10"
-        initial={{ opacity: 0, y: 20 }}
+        className="py-16"
+        initial={{ opacity: 0, y: 50 }}
         animate={isFaqInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.7, delay: 0.1, ease: "easeInOut" }}
       >
-        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ">
-          <div className="col-span-1 sm:col-span-2 lg:col-span-2">
-            <FNQ faqItems={faqItems} />
+        <div
+          id="demo"
+          className="bg-gray-900 grid grid-cols-1 lg:grid-cols-2 p-10 rounded-lg"
+        >
+          <div className="p-5 rounded-lg">
+            <Demo
+              title="Request A Demo"
+              description="Contact us today to schedule a demonstration and know how our solution can benefit your organization."
+            />
           </div>
-          <div className="col-span-1 mx-5 sm:col-span-2 lg:col-span-2">
-            <Demo />
-          </div>
+          <FNQ faqItems={faqItems} />
         </div>
       </motion.section>
-
-      {/* Blog Section
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">
-            Latest Articles
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogs.map((blog, index) => (
-              <div
-                key={index}
-                className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-              >
-                <h3 className="text-xl font-semibold mb-2">{blog.title}</h3>
-                <p className="text-gray-700 mb-4">{blog.description}</p>
-                <a href={blog.link} className="text-primary hover:underline">
-                  Read more
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 };

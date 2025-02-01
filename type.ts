@@ -6,3 +6,8 @@ export interface Testimonial  {
     content: string;
     avatar?: string | StaticImport | undefined;
 }
+
+export interface OurCustomers {
+    name: string;
+    logo: StaticImport
+}

@@ -1,5 +1,8 @@
 import { PhoneIcon, MessageCircleIcon,  PhoneOutgoingIcon, HeadsetIcon, ImageIcon, DockIcon, CalculatorIcon, FileTextIcon, BarChartIcon, HelpCircleIcon, CheckCircleIcon, CodeIcon, TrendingUpIcon, PaletteIcon, SearchIcon, HardDriveIcon, Icon } from "lucide-react"
 import { FaEnvelopeOpenText, FaCogs, FaRobot, FaChartLine, FaListAlt, FaHeadset } from "react-icons/fa";
+import { Testimonial } from "@/type";
+import { OurCustomers } from "@/type";
+
 
 interface ServicesGroup {
     [key: string]: {
@@ -240,3 +243,74 @@ export const SERVICES_GROUPED : ServicesGroup = {
         "SMS offers higher open rates compared to email, making it a great tool for time-sensitive promotions or updates. It's also more direct and personal.",
     },
   ];
+
+  
+
+  export const testimonials : Testimonial[] = [
+    {
+      id: 1,
+      name: "Tushar",
+      role: "Marketing Manager at BrightFuture Corp.",
+      content:
+        "Agilis Communication Services has transformed our outreach strategy!...",
+      avatar: "",
+    },
+    {
+      id: 2,
+      name: "Ms Priyanshi",
+      role: "Head of Communications at EcoGreen Solutions",
+      content:
+        "Agilis Communication Services' bulk WhatsApp messaging has revolutionized how we connect...",
+      avatar: "",
+    },
+    {
+      id: 3,
+      name: "Ms Bhagyalaxmi",
+      role: "Operations Director at TechSavvy Inc.",
+      content:
+        "The IVR and dialer solutions from Agilis have streamlined our customer support processes...",
+      avatar: "",
+    },
+    {
+      id: 4,
+      name: "Manish Tiwari",
+      role: "CEO at FinancePro Group",
+      content:
+        "Partnering with Agilis for our tax and IT solutions was a game-changer...",
+      avatar: "",
+    },
+  ];
+
+
+import company1 from "@/public/images/testimonials/company1.png";
+import company2 from "@/public/images/testimonials/company2.png";
+import company3 from "@/public/images/testimonials/company3.png";
+import company4 from "@/public/images/testimonials/company4.png";
+import company5 from "@/public/images/testimonials/company5.png";
+import company6 from "@/public/images/testimonials/company6.png";
+import company7 from "@/public/images/testimonials/company7.png";
+import company8 from "@/public/images/testimonials/company8.png";
+import company9 from "@/public/images/testimonials/company9.png";
+import company10 from "@/public/images/testimonials/company10.png";
+import company11 from "@/public/images/testimonials/company11.png";
+import company12 from "@/public/images/testimonials/company12.png";
+import company13 from "@/public/images/testimonials/company13.png";
+import company14 from "@/public/images/testimonials/company14.png";
+
+
+export const customers : OurCustomers[] = [
+  { name: "Betterr walls", logo: company1 },
+  { name: "Probity", logo: company2 },
+  { name: "Texta", logo: company3 },
+  { name: "Cred Mart", logo: company4 },
+  { name: "Mantri Election Compaign", logo: company5 },
+  { name: "Merry gal", logo: company6 },
+  { name: "Bean Bliss", logo: company7 },
+  { name: "Group Genic", logo: company8 },
+  { name: "Labour Unioin", logo: company9 },
+  { name: "Mahavir Finelease Ltd.", logo: company10 },
+  { name: "DE", logo: company11 },
+  { name: "Recovery Layer", logo: company12 },
+  { name: "Promise Myself", logo: company13 },
+  { name: "Odwanis", logo: company14 },
+];

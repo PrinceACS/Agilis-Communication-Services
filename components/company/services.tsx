@@ -31,10 +31,7 @@ export default function ServicesPage() {
                 key={idx}
                 className="shadow-md p-2 border-yellow-500 border-2"
               >
-                <CardHeader
-                  aria-setsize={index}
-                  className="flex items-center justify-center mb-4"
-                >
+                <CardHeader className="flex items-center justify-center mb-4">
                   {
                     // @ts-expect-error : ts(2769)
                     React.createElement(service.icon, {

@@ -1,6 +1,7 @@
 "use client";
-import { sendEmail } from "@/actions/sendEmail";
 import React from "react";
+import { motion } from "framer-motion";
+import { sendEmail } from "@/actions/sendEmail";
 import toast from "react-hot-toast";
 
 interface SelectProps {
@@ -97,7 +98,6 @@ const Demo: React.FC<{
         }
       );
     } catch (error) {
-      // console.error("Error - demo", error);
       toast.error(`Error submitting form: ${error}`);
     } finally {
       setIsSending(false);
@@ -108,12 +108,25 @@ const Demo: React.FC<{
   };
 
   return (
-    <div className="bg-yellow-300 rounded-lg p-10">
-      <h2 className="text-2xl md:text-3xl font-bold">{title}</h2>
-      <p className="mt-4">{description}</p>
+    <motion.div
+      className="bg-[#FFD700] rounded-lg p-10"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{title}</h2>
+      <p className="mt-4 text-gray-700">{description}</p>
       <form onSubmit={onFinishHandler} className="mt-8">
-        {fields.map((field) => (
-          <div key={field.name} className="mb-4">
+        {fields.map((field, index) => (
+          <motion.div
+            key={field.name}
+            className="mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1, duration: 0.4 }}
+            viewport={{ once: true }}
+          >
             <label
               htmlFor={field.name}
               className="block text-sm font-medium text-gray-700"
@@ -125,7 +138,7 @@ const Demo: React.FC<{
                 <select
                   id={field.name}
                   name={field.name}
-                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500"
+                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700]"
                 >
                   <option value="">Select an option</option>
                   {options.map((option) => (
@@ -139,14 +152,14 @@ const Demo: React.FC<{
                   type="text"
                   id={field.name}
                   name={field.name}
-                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500"
+                  className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#FFD700] focus:border-[#FFD700]"
                 />
               )}
             </div>
             {errors[field.name] && (
               <p className="mt-2 text-sm text-red-600">{errors[field.name]}</p>
             )}
-          </div>
+          </motion.div>
         ))}
 
         <div className="mb-4">
@@ -163,8 +176,9 @@ const Demo: React.FC<{
                 href="https://www.agilis.com/privacy-policy"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="text-black hover:underline"
               >
-                Privacy Policy
+                privacy policy
               </a>
               .
             </span>
@@ -172,16 +186,18 @@ const Demo: React.FC<{
         </div>
 
         <div className="text-right">
-          <button
+          <motion.button
             type="submit"
-            className="inline-flex items-center justify-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+            className="inline-flex items-center justify-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-gray-900 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
             disabled={isSending}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             {isSending ? "Sending..." : "Submit"}
-          </button>
+          </motion.button>
         </div>
       </form>
-    </div>
+    </motion.div>
   );
 };
 
