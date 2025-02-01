@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 import logo from "../public/images/acs-logo.png";
 import Navbar from "./navbar"; // Your existing full navbar for larger devices
@@ -13,7 +14,12 @@ const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-opacity-95 bg-black shadow-md backdrop-blur-md">
+    <motion.header
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, delay: 1 }} // Delay to sync with splash screen
+      className="fixed top-0 left-0 z-50 w-full bg-opacity-95 bg-black shadow-md backdrop-blur-md"
+    >
       <div className="flex justify-between items-center px-5 md:px-20 py-4">
         <Link
           id="acs-header-logo"
@@ -59,14 +65,22 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu */}
-          {isMobileMenuOpen && (
-            <div className="absolute items-center pb-5 z-10 top-[4.7rem] left-0 w-full bg-gradient-to-b from-black to-gray-800 text-white">
-              <MobileNavbar />
-            </div>
-          )}
+          <AnimatePresence>
+            {isMobileMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3 }}
+                className="absolute items-center pb-5 z-10 top-[4.7rem] left-0 w-full bg-gradient-to-b from-black to-gray-800 text-white"
+              >
+                <MobileNavbar />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

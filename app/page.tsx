@@ -11,26 +11,36 @@ import SolutionByBusiness from "@/components/company/solution-by-buisness";
 import OurCustomers from "@/components/company/our-customers";
 import SplashScreen from "@/components/splash-screen";
 import { testimonials } from "@/constants/data";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home() {
   const [showSplash, setShowSplash] = useState(true);
 
   return (
     <>
-      {showSplash && <SplashScreen onVideoEnd={() => setShowSplash(false)} />}
-      {!showSplash && (
-        <div>
-          <HeroSection />
-          <Services />
-          <CTA1 />
-          <WhyChooseAgilis />
-          <SolutionByBusiness />
-          <OurCustomers />
-          <WorkWithUs />
-          <Testimonial testimonials={testimonials} />
-          <Contact />
-        </div>
-      )}
+      <AnimatePresence>
+        {showSplash && <SplashScreen onVideoEnd={() => setShowSplash(false)} />}
+      </AnimatePresence>
+      <AnimatePresence>
+        {!showSplash && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <HeroSection />
+            <Services />
+            <CTA1 />
+            <WhyChooseAgilis />
+            <SolutionByBusiness />
+            <OurCustomers />
+            <WorkWithUs />
+            <Testimonial testimonials={testimonials} />
+            <Contact />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
