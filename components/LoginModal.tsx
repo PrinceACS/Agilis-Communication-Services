@@ -22,7 +22,7 @@ const LoginModal = () => {
       <div className="flex flex-col gap-3 mt-4">
         {/* Dialer and IVR */}
         <Link
-          href=" https://calls.seatechdigital.com/SEATELCCCLOUD/login"
+          href="http://calls.agiliscommunications.com/"
           target="_blank"
           className="bg-[#6495ED] hover:bg-[#4682B4] text-white py-2 rounded text-center"
         >
@@ -31,7 +31,7 @@ const LoginModal = () => {
 
         {/* Bulk Voice Call */}
         <Link
-          href=" http://103.73.188.14:8094/OBDSEA/user"
+          href="http://obd.agiliscommunications.com/OBDSEA/user"
           target="_blank"
           className="bg-[#32CD32] hover:bg-[#2E8B57] text-white py-2 rounded text-center"
         >

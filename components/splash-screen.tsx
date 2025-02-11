@@ -32,7 +32,7 @@ const SplashScreen = ({ onVideoEnd }: { onVideoEnd: () => void }) => {
           muted
           playsInline
           onEnded={() => setIsShrinking(true)}
-          className="w-full h-full object-cover"
+          className="w-full h-full"
           initial={{ scale: 1, opacity: 1 }}
           animate={{
             scale: isShrinking ? 0.5 : 1,

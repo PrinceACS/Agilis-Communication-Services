@@ -7,7 +7,6 @@ import MarkSvg from "../ui/mark-svg";
 import toast from "react-hot-toast";
 
 import { sendEmail } from "@/actions/sendEmail";
-import { useFormStatus } from "react-dom";
 import { Button } from "../ui/button";
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -18,7 +17,7 @@ const Contact = () => {
     message: "",
   });
 
-  const { pending } = useFormStatus();
+  const [loading, setLoading] = useState(false);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -28,6 +27,7 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+    setLoading(true);
     e.preventDefault();
     if (
       !formData.name ||
@@ -67,6 +67,7 @@ const Contact = () => {
       });
       return;
     }
+    setLoading(false);
   };
 
   return (
@@ -252,8 +253,8 @@ const Contact = () => {
 
               {/* Submit Button */}
               <div className="mt-6">
-                <Button type="submit">
-                  {pending ? "Sending..." : "Send Message"}
+                <Button type="submit" disabled={loading}>
+                  {loading ? "Sending..." : "Send Message"}
                 </Button>
               </div>
             </div>

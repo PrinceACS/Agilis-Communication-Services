@@ -3,7 +3,6 @@ import {
   Html,
   Body,
   Head,
-  Heading,
   Hr,
   Container,
   Preview,
@@ -29,40 +28,38 @@ export default function ContactFormEmail({
   return (
     <Html>
       <Head />
-      <Preview>New message from your portfolio site</Preview>
+      <Preview>New Contact Form Submission</Preview>
       <Tailwind>
-        <Body className="bg-gradient-to-b from-gray-100 to-white text-black font-sans">
-          <Container className="mx-auto px-4">
-            <Section className="bg-white p-10 rounded-md shadow-md my-10">
-              <Heading className="text-3xl font-bold mb-4">
-                You received the following message from the contact form
-              </Heading>
-              <Text className="text-lg">{message}</Text>
+        <Body className="bg-gray-50 text-gray-800 font-sans px-4">
+          <Container className="max-w-2xl mx-auto p-6">
+            <Section className="bg-white p-8 mx-2 rounded-lg shadow-lg border border-gray-200">
+              <Hr className="my-4 border-gray-300" />
+              <Text className="text-lg leading-relaxed">
+                <span className="font-medium text-gray-700">Message:</span>{" "}
+                {message}
+              </Text>
               <Hr className="my-4 border-gray-300" />
               <Text className="text-lg">
-                The sender&apos;s name is:{" "}
-                <span className="font-bold">{senderName}</span>
+                <span className="font-medium text-gray-700">Sender Name:</span>{" "}
+                <span className="font-semibold">{senderName}</span>
               </Text>
               <Text className="text-lg">
-                The sender&apos;s email is:{" "}
+                <span className="font-medium text-gray-700">Email:</span>{" "}
                 <a
                   href={`mailto:${senderEmail}`}
-                  className="text-blue-600 font-bold hover:underline"
+                  className="text-blue-600 font-semibold hover:underline"
                 >
                   {senderEmail}
                 </a>
               </Text>
-              <Text className="text-lg">
-                The sender&apos;s phone:{" "}
-                <a
-                  href={`mailto:${phone}`}
-                  className="text-blue-600 font-bold hover:underline"
-                >
-                  {phone}
-                </a>
-              </Text>
+              {phone && (
+                <Text className="text-lg">
+                  <span className="font-medium text-gray-700">Phone:</span>{" "}
+                  <span className="font-semibold">{phone}</span>
+                </Text>
+              )}
               <Button
-                className="mt-8 px-4 py-2 rounded-md bg-blue-600 text-white font-bold hover:bg-blue-700"
+                className="mt-6 mb-2 inline-block px-4 py-2 rounded-lg bg-blue-600 text-white font-semibold text-lg shadow-md hover:bg-blue-700 transition-all"
                 href={`mailto:${senderEmail}`}
               >
                 Reply
