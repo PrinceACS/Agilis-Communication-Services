@@ -5,11 +5,7 @@ import * as XLSX from "xlsx";
 import { Client } from "@/app/(pages)/(other-services)/private/send-bulk-email/page";
 import { Button } from "./ui/button";
 
-interface ExcelUploaderProps {
-  setClients: (data: Client[]) => void;
-}
-
-const ExcelUploader: React.FC<ExcelUploaderProps> = ({ setClients }) => {
+const ExcelUploader: React.FC = () => {
   const [jsonData, setJsonData] = useState<Client[]>([]);
 
   const handleExcelUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -28,27 +24,16 @@ const ExcelUploader: React.FC<ExcelUploaderProps> = ({ setClients }) => {
         const sheet = workbook.Sheets[sheetName];
         const json = XLSX.utils.sheet_to_json(sheet) as Client[];
         setJsonData(json);
-        setClients(json);
       }
     };
     reader.readAsArrayBuffer(file);
   };
 
-  const handleJsonUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      try {
-        const json = JSON.parse(e.target?.result as string);
-        setJsonData(json);
-        setClients(json);
-      } catch (error) {
-        console.error("Invalid JSON file");
-      }
-    };
-    reader.readAsText(file);
+  const handleCopyToClipboard = () => {
+    const text = `You are given a JSON dataset containing multiple objects, each representing a person. Your task is to modify each object by adding a new field called "Message". This field should contain a unique message related to a personal loan inquiry, as if the person in the object has reached out via my website to inquire about a personal loan.`;
+    navigator.clipboard.writeText(text).then(() => {
+      console.log("Copied to clipboard");
+    });
   };
 
   const handleDownloadJson = () => {
@@ -63,7 +48,7 @@ const ExcelUploader: React.FC<ExcelUploaderProps> = ({ setClients }) => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+    <div className="max-w-3xl mx-auto px-4 bg-white shadow-lg rounded-lg">
       <div className="p-6 border-b border-gray-300">
         <h1 className="text-2xl font-bold mb-2 text-center">
           Excel to JSON Converter
@@ -75,61 +60,90 @@ const ExcelUploader: React.FC<ExcelUploaderProps> = ({ setClients }) => {
 
       <div className="p-6 bg-gray-100 rounded-lg mt-6">
         <h2 className="text-xl font-semibold mb-4">Instructions</h2>
-        <div className="bg-white p-4 rounded-md shadow-md text-gray-700">
-          <ol className="list-decimal list-inside space-y-2">
+        <div className="bg-white p-6 rounded-lg shadow-md text-gray-800">
+          <ol className="list-decimal list-inside space-y-3">
             <li>Upload an Excel file containing your data.</li>
             <li>Download the converted JSON data.</li>
             <li>Upload the JSON file to ChatGPT or DeepSeek.</li>
-            <li>
-              <strong>Prompt LLM: </strong>
-              Please create a new JSON file by adding a personalized message for
-              each entry related to personal loans. Each message should be
-              unique and relevant to personal loans. For example, for the entry
-              &quot;Can I get a personal loan if I am a student?&quot;,message
-              should be different but related to personal loans
+            <li className="flex flex-col items-start space-x-3 ">
+              <div className="flex items-center justify-end space-x-2">
+                <span className="font-semibold">Prompt LLM:</span>{" "}
+                <span className="text-sm text-gray-600">copy prompt</span>
+                <button
+                  type="button"
+                  onClick={handleCopyToClipboard}
+                  className="text-primary hover:text-accent"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <div className="flex-1 text-gray-700 border-2 p-2 border-gray-300 bg-slate-200">
+                You are given a JSON dataset containing multiple objects, each
+                representing a person. Your task is to modify each object by
+                adding a new field called &quot;message&quot;. This field should
+                contain a unique message related to a personal loan inquiry, as
+                if the person in the object has reached out via my website to
+                inquire about a personal loan.
+              </div>
             </li>
+            <li>Now copy and paste the modified data to a JSON file.</li>
             <li>
-              Upload the new file to Upload Json file and click on Send Bulk
-              Email
+              Upload that file to &quot;Upload JSON File&quot; and click on
+              &quot;Send Bulk Email&quot;.
             </li>
           </ol>
         </div>
       </div>
 
-      <div className=" rid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="p-4 bg-gray-200 rounded-lg shadow-md">
-          <h3 className="text-lg font-semibold mb-2">Upload Excel File</h3>
-          <input
-            type="file"
-            accept=".xlsx, .xls"
-            onChange={handleExcelUpload}
-            className="block w-full text-gray-700"
-          />
-        </div>
-
-        <div className="p-4 bg-gray-200 rounded-lg shadow-md">
-          <h3 className="text-lg font-semibold mb-2">Upload JSON File</h3>
-          <input
-            type="file"
-            accept=".json"
-            onChange={handleJsonUpload}
-            className="block w-full text-gray-700"
-          />
+      <div className="mt-2 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="p-6 bg-white rounded-lg shadow-lg">
+          <h3 className="text-xl font-semibold mb-4 text-center">
+            Upload Excel File
+          </h3>
+          <div className="flex flex-col items-center justify-center space-y-4">
+            <input
+              type="file"
+              accept=".xlsx, .xls"
+              onChange={handleExcelUpload}
+              className="block w-full text-center text-gray-700 border border-gray-300 rounded-md p-2"
+            />
+            {jsonData.length > 0 && (
+              <Button
+                onClick={handleDownloadJson}
+                className="w-full p-2 text-white bg-blue-500 rounded-md hover:bg-blue-600"
+              >
+                Download JSON
+              </Button>
+            )}
+          </div>
         </div>
       </div>
 
       {jsonData.length > 0 && (
-        <div className="mt-6 p-4 bg-gray-100 rounded-lg shadow-md">
-          <h2 className="text-lg font-semibold mb-2">Converted JSON Data</h2>
-          <pre className="p-4 bg-gray-200 rounded overflow-x-auto max-h-60">
-            {JSON.stringify(jsonData, null, 2)}
-          </pre>
-          <Button
-            onClick={handleDownloadJson}
-            className="mt-4 w-full py-2 bg-blue-600 text-white rounded-lg"
-          >
-            Download JSON
-          </Button>
+        <div className="mt-4 p-4">
+          <h2 className="text-xl font-semibold mb-4 text-center">
+            Converted JSON Data
+          </h2>
+          <p>{jsonData.length} records</p>
+          <div className="p-4 bg-gray-100 rounded-md overflow-x-auto max-h-60">
+            <pre className="text-sm text-gray-800">
+              {JSON.stringify(jsonData, null, 2)}
+            </pre>
+          </div>
         </div>
       )}
     </div>
