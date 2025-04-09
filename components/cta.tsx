@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
@@ -10,6 +11,8 @@ import {
   DialogPortal,
   DialogOverlay,
 } from "./ui/dialog";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 import cta_1 from "@/public/images/cta_1.png";
 
@@ -19,13 +22,46 @@ type CTAProps = {
   icon: React.ReactNode;
 };
 
-const CTA1 = () => {
+export function CTA1() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5 },
+    },
+  };
+
   return (
-    <div className="flex mx-auto  flex-col md:flex-row items-center justify-center p-10">
-      <div className="max-w-[50rem] px-10 md:ml-20 md:justify-center text-center md:text-left">
-        <h1 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800 leading-tight">
+    <section
+      ref={ref}
+      className="flex mx-auto  flex-col md:flex-row items-center justify-center p-10"
+    >
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        className="max-w-[50rem] px-10 md:ml-20 md:justify-center text-center md:text-left"
+      >
+        <motion.h1
+          variants={itemVariants}
+          className="text-2xl md:text-3xl font-bold mb-4 text-gray-800 leading-tight"
+        >
           Grow Your Business With Us
-        </h1>
+        </motion.h1>
         {/* <p className=" md:text-lg mb-6 text-gray-600">
           We help you take your business to the next level with tailored
           solutions.
@@ -48,7 +84,7 @@ const CTA1 = () => {
             Talk to Expert
           </Link>
         </div>
-      </div>
+      </motion.div>
       <div className="md:w-[20%] w-[60%] md:h-[20%] md:mr-20 relative">
         <Image
           alt="talk to expert"
@@ -56,11 +92,9 @@ const CTA1 = () => {
           className="rounded-lg object-contain w-full h-full"
         />
       </div>
-    </div>
+    </section>
   );
-};
-
-export { CTA1 };
+}
 
 const CTAButton: React.FC<CTAProps> = ({ message, phoneNumber, icon }) => {
   return (
@@ -121,7 +155,7 @@ export const CTACallToAction = () => {
   return (
     <div className="space-y-6">
       <Button
-        className="bg-black border-2 border-amber-400 text-primary-foreground px-4 py-2 rounded-md"
+        className="bg-black text-white rounded-md hover:bg-primary hover:text-black"
         onClick={openDialog}
       >
         Get Started

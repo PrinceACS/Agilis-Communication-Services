@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import HeroSection from "@/components/hero";
+import Hero from "@/components/hero";
 import Services from "@/components/company/services";
 import Contact from "@/components/company/contact";
 import Testimonial from "@/components/company/Testimonial";
@@ -29,7 +29,7 @@ export default function Home() {
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
           >
-            <HeroSection />
+            <Hero />
             <Services />
             <CTA1 />
             <WhyChooseAgilis />

@@ -22,7 +22,7 @@ const BulkSMSPage: React.FC = () => {
   const isFaqInView = useInView(faqRef, { once: true });
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-600">
+    <div className="min-h-screen mt-14 bg-gray-100 text-gray-600">
       {/* Hero Section */}
       <motion.section
         ref={heroRef}
@@ -46,7 +46,7 @@ const BulkSMSPage: React.FC = () => {
               Boost Engagement, Drive Sales, and Enhance Customer Relationships
             </p>
             <motion.button
-              className="bg-black text-white border-2 border-[#FFD700] font-bold py-3 px-6 rounded-lg hover:bg-[#FFD700] hover:text-black transition duration-300"
+              className="bg-black text-white border-2 border-[#FFD700] font-bold py-3 px-6 rounded-lg hover:bg-[#FFD700] hover:border-black hover:text-black transition duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

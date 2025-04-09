@@ -54,7 +54,7 @@ const LongTermPartnershipComponent = () => {
 
 const About = () => {
   return (
-    <section className="py-16 md:py-24 px-6 md:px-10 bg-gray-100">
+    <section className="mt-16 py-14 md:py-24 px-6 md:px-10 bg-gray-100">
       <div className="mx-auto text-center space-y-4">
         {/* Section Header */}
         <h2 className="inline-block text-2xl md:text-4xl font-semibold bg-[#f8e67e] px-3 py-1 rounded-lg text-[#0d0d0d]">

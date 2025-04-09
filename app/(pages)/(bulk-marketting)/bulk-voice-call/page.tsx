@@ -11,7 +11,7 @@ import {
 import { motion, useInView } from "framer-motion";
 import FNQ from "@/components/company/fnq";
 import Demo from "@/components/company/demo";
-import bulk_voice_call_hero from "@/public/images/bulk_voice.png";
+import bulkVoiceCallHero from "@/public/svg/marketing.svg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -149,7 +149,7 @@ const BulkVoiceCallPage: React.FC = () => {
             animate={isHeroInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <h1 className="text-2xl md:text-4xl font-bold mb-1 leading-tight text-black">
+            <h1 className="text-3xl md:text-6xl font-bold mb-1 leading-tight text-black">
               Bulk Voice Call Marketing by Agilis
             </h1>
             <p className="text-lg font-semibold md:text-2xl mb-1 text-gray-800 leading-tight">
@@ -177,7 +177,7 @@ const BulkVoiceCallPage: React.FC = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
           >
             <Image
-              src={bulk_voice_call_hero}
+              src={bulkVoiceCallHero}
               alt="Bulk Voice Call Illustration"
               className="max-w-xs md:max-w-md lg:max-w-lg object-cover"
             />

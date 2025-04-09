@@ -2,7 +2,7 @@ import React from "react";
 import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 const PrivacyPolicy: React.FC = () => {
   return (
-    <div className="container max-w-7xl p-10 mx-10 md:mx-20 px-4 py-8">
+    <div className="container max-w-7xl mx-10 my-16 py-14 md:mx-20 px-4 ">
       <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
 
       <h2 className="text-2xl font-semibold mt-6 mb-4">1. Introduction</h2>

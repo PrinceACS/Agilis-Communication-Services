@@ -5,14 +5,9 @@ import { HiOutlineMail } from "react-icons/hi";
 
 const TollFreeIVRPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800">
+    <div className="min-h-screen mt-14 bg-gray-50 text-gray-800">
       {/* Hero Section */}
       <div className="relative">
-        {/* <img
-          src="https://via.placeholder.com/1920x600.png" // Replace with your hero image
-          alt="Toll-Free IVR Services"
-          className="w-full h-96 object-cover"
-        /> */}
         <div className="bg-yellow-400 w-full h-96"></div>
         <div className="absolute inset-0 bg-opacity-50 flex flex-col justify-center items-center text-center">
           <h1 className="text-5xl text-white font-extrabold">

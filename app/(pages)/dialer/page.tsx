@@ -185,7 +185,7 @@ const DialerPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-600">
+    <div className="min-h-screen mt-14 bg-gray-100 text-gray-600">
       {/* Hero Section */}
       <section className="bg-yellow-400 text-white font-bold py-20">
         <div className="container mx-auto px-4">

@@ -1,78 +1,45 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import it_services from "@/public/images/It_services.png";
 import tax_solutions from "@/public/images/tax_solutions.png";
 import cloud_services from "@/public/images/cloudpng.png";
 import client_centeric_approach from "@/public/images/client-centeric.png";
 import Link from "next/link";
+import Image from "next/image";
 
 const SolutionByBusiness = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   return (
-    <motion.div
-      className="py-16 md:px-10 lg:px-8 "
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-    >
+    <div className="py-16 md:px-10 lg:px-8 bg-gray-50">
       {/* Main Heading Section */}
-      <motion.div variants={itemVariants} className="text-center mb-14">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+      <div className="text-center mb-14">
+        <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-gray-900">
           Solutions for Businesses
         </h1>
-        {/* <div className="w-24 h-1 bg-secondary mx-auto"></div> */}
-      </motion.div>
+        <div className="w-24 h-1 bg-yellow-500 mx-auto"></div>
+      </div>
 
       {/* Introduction Paragraph */}
-      <motion.div
-        variants={itemVariants}
-        className=" text-gray-700 md:max-w-6xl mx-auto mb-20"
-      >
+      <div className="text-gray-700 md:max-w-6xl mx-auto mb-20">
         <p className="text-center mx-5 text-lg md:text-2xl">
           At Agilis, we provide comprehensive solutions that help businesses
-          thrive in an ever-changing landscape. Whether you&apos;re looking to
-          enhance communication, streamline operations, or ensure compliance,
-          Agilis offers the expertise and tools you need.
+          thrive in an ever-changing landscape. Whether youre looking to enhance
+          communication, streamline operations, or ensure compliance, Agilis
+          offers the expertise and tools you need.
         </p>
-      </motion.div>
+      </div>
 
       {/* Solutions Grid */}
       <div className="grid grid-cols-1 mx-10 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-20">
         {/* Cloud Telephony Section */}
-        <motion.div
-          variants={itemVariants}
-          className=" p-4 flex flex-col space-y-6 border-2"
-        >
-          <motion.img
+        <div className="p-4 flex flex-col space-y-6 border-2 border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <Image
             src={cloud_services.src}
             alt="Cloud Telephony"
+            width={500}
+            height={256}
             className="w-full h-64 object-contain rounded-lg shadow-md border-2 border-yellow-500"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
           />
-          <h3 className="text-2xl font-bold text-center ">
+          <h3 className="text-2xl font-bold text-center text-gray-900">
             Transform Your Communication with Cloud Telephony
           </h3>
           <p className="text-gray-700 text-lg">
@@ -94,25 +61,22 @@ const SolutionByBusiness = () => {
               Improve customer interactions
             </li>
           </ul>
-        </motion.div>
+        </div>
 
         {/* Tax Solutions Section */}
-        <motion.div
-          variants={itemVariants}
-          className="rounded-lg shadow-md p-4 flex flex-col space-y-6"
-        >
-          <motion.img
+        <div className="p-4 flex flex-col space-y-6 border-2 border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <Image
             src={tax_solutions.src}
             alt="Tax Solutions"
+            width={500}
+            height={256}
             loading="lazy"
-            className="w-full h-64 object-contain  rounded-lg  shadow-md border-2 border-yellow-500"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
+            className="w-full h-64 object-contain rounded-lg shadow-md border-2 border-yellow-500"
           />
-          <h3 className="text-2xl font-bold text-center ">
+          <h3 className="text-2xl font-bold text-center text-gray-900">
             Ensure Compliance and Optimize Finances with Tax Solutions
           </h3>
-          <p className="text-gray-700 text-lg ">
+          <p className="text-gray-700 text-lg">
             Navigate complex tax regulations with ease using our expert tax
             solutions. We help businesses stay compliant while maximizing their
             financial outcomes.
@@ -131,21 +95,18 @@ const SolutionByBusiness = () => {
               tax strategies
             </li>
           </ul>
-        </motion.div>
+        </div>
 
         {/* IT Solutions Section */}
-        <motion.div
-          variants={itemVariants}
-          className="rounded-lg shadow-md p-4 flex flex-col space-y-6"
-        >
-          <motion.img
+        <div className="p-4 flex flex-col space-y-6 border-2 border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <Image
             src={it_services.src}
             alt="IT Solutions"
+            width={500}
+            height={256}
             className="w-full h-64 object-contain rounded-lg shadow-md border-2 border-yellow-500"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
           />
-          <h3 className="text-2xl font-bold text-center">
+          <h3 className="text-2xl font-bold text-center text-gray-900">
             Boost Productivity with Comprehensive IT Solutions
           </h3>
           <p className="text-gray-700 text-lg">
@@ -166,23 +127,20 @@ const SolutionByBusiness = () => {
               Customized to your unique needs
             </li>
           </ul>
-        </motion.div>
+        </div>
       </div>
 
       {/* Client-Centric Approach Section */}
-      <motion.div
-        variants={itemVariants}
-        className="flex flex-col rounded-lg shadow-md p-4 mx-6 md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12 mb-20"
-      >
-        <motion.img
+      <div className="flex flex-col rounded-lg shadow-lg p-4 mx-6 md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12 mb-20 border-2 border-gray-200 hover:shadow-xl transition-shadow duration-300">
+        <Image
           src={client_centeric_approach.src}
           alt="Client-Centric Approach"
+          width={500}
+          height={256}
           className="w-full md:w-1/3 h-64 object-cover rounded-lg shadow-md border-2 border-yellow-500"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
         />
         <div className="md:w-2/3">
-          <h3 className="text-2xl font-bold mb-1">
+          <h3 className="text-2xl font-bold mb-1 text-gray-900">
             Our Client-Centric Approach
           </h3>
           <p className="text-gray-700 text-lg mb-4">
@@ -190,7 +148,7 @@ const SolutionByBusiness = () => {
             closely with you to understand your challenges and deliver solutions
             that add real value to your business.
           </p>
-          <ul className="list-disc pl-5  text-gray-700 text-lg space-y-2">
+          <ul className="list-disc pl-5 text-gray-700 text-lg space-y-2">
             <li>
               <span className="font-bold">Tailored Solutions:</span> Crafted to
               fit your specific business needs
@@ -205,19 +163,15 @@ const SolutionByBusiness = () => {
             </li>
           </ul>
         </div>
-      </motion.div>
+      </div>
 
       {/* Call to Action */}
-      <motion.div variants={itemVariants} className="text-center">
-        <motion.button
-          className="bg-gradient-to-r from-amber-300 to-amber-500 text-white text-xl font-bold py-4 px-6 rounded-lg leading-4  hover:bg-gradient-to-r hover:from-amber-500 hover:to-amber-700 transition duration-300 shadow-lg shadow-amber-300/50"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
+      <div className="text-center">
+        <button className="bg-gradient-to-r from-amber-300 to-amber-500 text-white text-xl font-bold py-4 px-6 rounded-lg leading-4 hover:bg-gradient-to-r hover:from-amber-500 hover:to-amber-700 transition duration-300 shadow-lg shadow-amber-300/50">
           <Link href="#contact">Get Started</Link>
-        </motion.button>
-      </motion.div>
-    </motion.div>
+        </button>
+      </div>
+    </div>
   );
 };
 

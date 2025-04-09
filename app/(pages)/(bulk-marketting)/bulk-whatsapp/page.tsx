@@ -127,11 +127,11 @@ const BulkWhatsappPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F3F4F6] text-gray-900">
+    <div className="min-h-screen mt-14 bg-[#F3F4F6] text-gray-900">
       {/* Hero Section */}
       <motion.section
         ref={heroRef}
-        className="relative bg-gradient-to-r from-[#FFD700] to-[#F8E67E] py-20 flex items-center justify-center overflow-hidden"
+        className="relative bg-gradient-to-r from-[#f8dd49] to-[#F8E67E] py-20 flex items-center justify-center overflow-hidden"
         initial={{ opacity: 0, y: -20 }}
         animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -157,7 +157,7 @@ const BulkWhatsappPage: React.FC = () => {
               popular messaging platforms.
             </p>
             <motion.button
-              className="bg-black text-[#FFD700] border-2 border-[#FFD700] font-bold py-3 px-6 rounded-lg hover:bg-[#FFD700] hover:text-black transition duration-300"
+              className="bg-black text-gray-200 border-2 hover:border-black  border-[#FFD700] font-bold py-3 px-6 rounded-lg hover:bg-[#FFD700] hover:text-black transition duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

@@ -1,6 +1,3 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import {
   PhoneCall,
   BarChart2,
@@ -10,7 +7,7 @@ import {
   ThumbsUp,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import ivr from "@/public/images/ivr.png";
+import ivrHero from "@/public/images/ivr_hero.png";
 import Specific from "../../../components/ivr/component/specific";
 import Image from "next/image";
 import Benefits from "@/components/ivr/benifits";
@@ -26,70 +23,14 @@ const theme = {
 };
 
 const IVRPage: React.FC = () => {
-  const [activeSection, setActiveSection] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const sections = document.querySelectorAll("section");
-
-      sections.forEach((section, index) => {
-        const sectionTop = section.offsetTop;
-        if (scrollPosition >= sectionTop - windowHeight / 2) {
-          setActiveSection(index);
-        }
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <div style={{ backgroundColor: theme.primary, color: theme.secondary }}>
-      <header
-        className="sticky top-0 bg-opacity-90 backdrop-filter backdrop-blur-lg"
-        style={{ backgroundColor: theme.primary }}
-      >
-        <nav className="container hidden mx-auto px-4 py-4 md:flex justify-between items-center">
-          <h1 className="text-2xl font-bold" style={{ color: theme.accent }}>
-            IVR Solutions
-          </h1>
-          <ul className="flex space-x-6">
-            {["Overview", "Features", "Benefits", "Pricing", "Contact"].map(
-              (item, index) => (
-                <li key={item}>
-                  <a
-                    href={`#${item.toLowerCase()}`}
-                    className={`hover:text-accent transition-colors ${
-                      activeSection === index + 1 ? "border-b-2" : ""
-                    }`}
-                    style={{
-                      color:
-                        activeSection === index + 1
-                          ? theme.accent
-                          : theme.secondary,
-                      borderColor: theme.accent,
-                    }}
-                  >
-                    {item}
-                  </a>
-                </li>
-              )
-            )}
-          </ul>
-        </nav>
-      </header>
-
-      <main className="container mx-auto px-4 ">
+    <div className="mt-10 py-4">
+      <main className="container mt-16 mx-auto px-2">
         <OverviewSection />
         <TypesOfIVR />
         <Benefits />
         <MarketAnalysis />
-
         <FeaturesSection />
-
         <Specific />
         <PricingSection />
         <DemoSection />
@@ -101,7 +42,7 @@ const IVRPage: React.FC = () => {
 const OverviewSection: React.FC = () => (
   <section
     id="overview"
-    className="py-12 mt-10 px-8 lg:px-16 bg-opacity-90 backdrop-filter backdrop-blur-lg rounded-3xl relative overflow-hidden"
+    className="py-14 px-8 lg:px-16 bg-opacity-90 backdrop-filter backdrop-blur-lg rounded-3xl relative overflow-hidden"
     style={{
       backgroundColor: theme.secondary,
       color: theme.primary,
@@ -115,7 +56,7 @@ const OverviewSection: React.FC = () => (
       {/* Left column: Textual content */}
       <div>
         <h3
-          className="text-2xl lg:text-3xl font-semibold mb-6 leading-snug tracking-tight"
+          className="text-3xl lg:text-3xl font-semibold mb-6 leading-snug tracking-tight"
           style={{ color: theme.accent }}
         >
           Interactive Voice Response
@@ -135,15 +76,12 @@ const OverviewSection: React.FC = () => (
       </div>
 
       {/* Right column: Image */}
-      <div className="relative group hover:scale-105 transition-transform duration-300 ease-in-out">
-        <Image
-          src={ivr}
-          alt="IVR System Overview"
-          className="rounded-lg shadow-2xl transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
-        />
-        {/* Decorative shadow for image */}
-        <div className="absolute -inset-2 opacity-20 bg-gradient-to-br from-transparent to-black rounded-lg shadow-2xl group-hover:opacity-30 transition-opacity duration-300"></div>
-      </div>
+      <Image
+        src={ivrHero}
+        alt="IVR System Overview"
+        quality={80}
+        className="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out"
+      />
     </div>
   </section>
 );
@@ -156,7 +94,7 @@ const FeaturesSection: React.FC = () => (
     >
       Key Features
     </h2>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {[
         {
           icon: (
@@ -202,48 +140,30 @@ const FeaturesSection: React.FC = () => (
           description:
             "Create personalized greetings and messages for a branded experience.",
         },
-      ].map((feature, index) => (
-        <motion.div
-          key={feature.title}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
-        >
-          <FeatureCard {...feature} />
-        </motion.div>
+      ].map((feature) => (
+        <FeatureCard key={feature.title} {...feature} />
       ))}
     </div>
   </section>
 );
 
-const PricingSection: React.FC = () => {
-  return (
-    <section id="pricing" className="py-20">
-      <h2 className="text-4xl font-bold mb-12 text-center text-red-600">
-        Flexible Pricing Options
-      </h2>
-      <div className=" justify-center">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="border rounded-lg shadow-md p-6 max-w-md mx-auto bg-white"
-        >
-          <div className="bg-red-500 text-white p-4 rounded-t-lg text-center">
-            <h3 className="text-2xl font-semibold">Start with Minimum Price</h3>
-            <p className="text-3xl font-bold mt-2">(Best Price Guaranteed)</p>
-          </div>
-        </motion.div>
+const PricingSection: React.FC = () => (
+  <section id="pricing" className="py-20">
+    <h2 className="text-4xl font-bold mb-12 text-center text-red-600">
+      Flexible Pricing Options
+    </h2>
+    <div className="border rounded-lg shadow-md p-6 max-w-md mx-auto bg-white transition-transform transform hover:scale-105 duration-300 ease-in-out">
+      <div className="bg-red-500 text-white p-4 rounded-t-lg text-center">
+        <h3 className="text-2xl font-semibold">Start with Minimum Price</h3>
+        <p className="text-3xl font-bold mt-2">(Best Price Guaranteed)</p>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 const DemoSection: React.FC = () => (
   <section id="contact" className="py-20 mb-10">
-    <div id="demo">
-      <Demo />
-    </div>
+    <Demo />
   </section>
 );
 

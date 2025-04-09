@@ -24,14 +24,15 @@ const TypesOfIVR = () => {
                 alt="Toll Free"
                 height={400}
                 width={400}
+                quality={80}
                 src={ivr_toll_free}
                 className="rounded-lg shadow-lg cursor-pointer"
               />
-              <div className="absolute top-0 left-0 w-full h-full hover:bg-black hover:bg-opacity-25 transition duration-300">
+              {/* <div className="absolute top-0 left-0 w-full h-full hover:bg-black hover:bg-opacity-25 transition duration-300">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl font-bold text-white">
                   Explore
                 </div>
-              </div>
+              </div> */}
             </div>
           </Link>
         </div>
@@ -69,13 +70,14 @@ const TypesOfIVR = () => {
                 height={400}
                 width={400}
                 src={ten_digit_ivr}
+                quality={80}
                 className="rounded-lg shadow-lg cursor-pointer"
               />
-              <div className="absolute top-0 left-0 w-full h-full hover:bg-black hover:bg-opacity-25 transition duration-300">
+              {/* <div className="absolute top-0 left-0 w-full h-full hover:bg-black hover:bg-opacity-25 transition duration-300">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl font-bold text-white">
                   Explore
                 </div>
-              </div>
+              </div> */}
             </div>
           </Link>
         </div>

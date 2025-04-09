@@ -1,11 +1,12 @@
 // IVRServicesAdvanced.tsx
+import Link from "next/link";
 import React from "react";
 import { FaPhoneAlt, FaRegSmile, FaCog, FaChartLine } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 
 const IVRServicesAdvanced: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800">
+    <div className="min-h-screen mt-14 bg-gray-50 text-gray-800">
       {/* Hero Section */}
       <div className="relative">
         <div className="bg-yellow-400 w-full h-96"></div>
@@ -18,12 +19,12 @@ const IVRServicesAdvanced: React.FC = () => {
             ensure effortless communication with your customers, anytime,
             anywhere.
           </p>
-          <a
+          <Link
             href="#contact"
-            className="mt-6 bg-black border-amber-400 hover:bg-amber-700 border-2 text-white px-6 py-3 rounded-full shadow-lg transition"
+            className="mt-6 bg-black border-black hover:text-black hover:bg-yellow-400 border-2 text-white px-6 py-3 rounded-full shadow-lg transition"
           >
             Get Started Today
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -35,7 +36,7 @@ const IVRServicesAdvanced: React.FC = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 ">
             <div className="p-6 border rounded-lg shadow-lg hover:shadow-xl transition">
-              <FaPhoneAlt className="text-blue-600 text-5xl mx-auto mb-4" />
+              <FaPhoneAlt className="text-yellow-500 text-5xl mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Easy Navigation</h3>
               <p className="text-gray-600">
                 Customers can easily navigate through options using their
@@ -43,7 +44,7 @@ const IVRServicesAdvanced: React.FC = () => {
               </p>
             </div>
             <div className="p-6 border rounded-lg shadow-lg hover:shadow-xl transition">
-              <FaRegSmile className="text-blue-600 text-5xl mx-auto mb-4" />
+              <FaRegSmile className="text-yellow-500 text-5xl mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">
                 Customized Solutions
               </h3>
@@ -53,7 +54,7 @@ const IVRServicesAdvanced: React.FC = () => {
               </p>
             </div>
             <div className="p-6 border rounded-lg shadow-lg hover:shadow-xl transition">
-              <FaCog className="text-blue-600 text-5xl mx-auto mb-4" />
+              <FaCog className="text-yellow-500 text-5xl mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">24/7 Availability</h3>
               <p className="text-gray-600">
                 Ensure your customers can access information and support any
@@ -61,7 +62,7 @@ const IVRServicesAdvanced: React.FC = () => {
               </p>
             </div>
             <div className="p-6 border rounded-lg shadow-lg hover:shadow-xl transition">
-              <FaChartLine className="text-blue-600 text-5xl mx-auto mb-4" />
+              <FaChartLine className="text-yellow-500 text-5xl mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Data Collection</h3>
               <p className="text-gray-600">
                 Gather valuable customer data effortlessly through our advanced
