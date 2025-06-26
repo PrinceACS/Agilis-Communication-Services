@@ -5,13 +5,7 @@
       "destination": "http://180.150.248.111:8080/OBDSEA/:path*"
     },
     {
-      "source": "/dialer",
-      "has": [
-        {
-          "type": "host",
-          "value": "calls.agiliscommunications.com"
-        }
-      ],
+      "source": "/dialer/:path*",
       "destination": "http://180.150.248.111:8080/SEATELCCCLOUD/login"
     }
   ]
