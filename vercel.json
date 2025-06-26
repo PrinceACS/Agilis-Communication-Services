@@ -5,7 +5,7 @@
       "destination": "http://180.150.248.111:8080/OBDSEA/:path*"
     },
     {
-      "source": "/dialer/:path*",
+      "source": "/DIALER/:path*",
       "destination": "http://180.150.248.111:8080/SEATELCCCLOUD/login"
     }
   ]
