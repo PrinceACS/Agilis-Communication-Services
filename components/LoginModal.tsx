@@ -22,7 +22,7 @@ const LoginModal = () => {
       <div className="flex flex-col gap-3 mt-4">
         {/* Dialer and IVR */}
         <Link
-          href="http://calls.agiliscommunications.com/"
+          href="https://calls.agiliscommunications.com/dailer"
           target="_blank"
           className="bg-[#6495ED] hover:bg-[#4682B4] text-white py-2 rounded text-center"
         >
